@@ -1,3 +1,0 @@
-Wrapper for DAL.EntityService, can includes more DAL.EntityService
-OUTPUT: DTO
-CALLER: API.TAService

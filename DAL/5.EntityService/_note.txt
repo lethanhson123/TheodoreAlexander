@@ -1,3 +1,0 @@
-CRUD for table
-OUTPUT: Entity
-CALLER: BL.BusinessService
