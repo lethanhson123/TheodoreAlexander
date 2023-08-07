@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <link prefix=""/>
+  <!-- Scene7 Parameters -->
+  <scene7>
+    <imageSize name="timeline" s7tag="$csTimeline$" width="248" height="360"/>
+    <imageSize name="fca" s7tag="$csFCA$" width="" height=""/>
+  </scene7>
+  <params>
+    <param id="uiColor" value="0xD86B2C"/>
+    <param id="introNavArrowOver" value="0xa63d08"/>
+    <param id="moreButtonColor" value="0x9f3a1a"/>
+  </params>
+  <boilerplates>
+    <boilerplate id="introCTA">Explore by Collection or Theme.</boilerplate>
+    <boilerplate id="moreButtonLabel">More from this theme</boilerplate>
+    <boilerplate id="moreCollectionButtonLabel">More from this collection</boilerplate>
+    <boilerplate id="loading">Loading</boilerplate>
+  </boilerplates>
+  <assets>
+    <asset id="crown1" src="/assets/images/csOverview/collections/crown1.png"/>
+    <asset id="crown2" src="/assets/images/csOverview/collections/crown2.png"/>
+    <asset id="introNavArrow" src="/assets/images/csOverview/collections/introNavArrow.png"/>
+    <asset id="infoPanelBg" src="/assets/images/csOverview/collections/infoPanelBg.png"/>
+    <asset id="infoPanelExpandArrowUp" src="/assets/images/csOverview/collections/infoPanelExpandArrowUp.jpg"/>
+    <asset id="infoPanelCloseBtnUp" src="/assets/images/csOverview/collections/infoPanelCloseBtnUp.png"/>
+    <asset id="infoCardMoreBtnArrow" src="/assets/images/csOverview/collections/infoCardMoreBtnArrow.png"/>
+    <asset id="imageViewerCloseBtnUp" src="/assets/images/csOverview/collections/imageViewerCloseBtnUp.png"/>
+    <asset id="imageViewerCloseBtnOver" src="/assets/images/csOverview/collections/imageViewerCloseBtnOver.png"/>
+    <asset id="itemInfoCardBg" src="/assets/images/csOverview/collections/itemInfoCardBg.png"/>
+    <asset id="introCatImage1" selectionType="categories" src="/assets/images/csOverview/collections/introCatImage1.png" title="Collections">
+      <![CDATA[Inspired by a vision. <br/>Connected by a legacy.]]>
+    </asset>
+    <asset id="introCatImage2" selectionType="categories" src="/assets/images/csOverview/collections/introCatImage2.png" title="Themes">
+      <![CDATA[Qualities and traits <br/>to suit every taste.]]>
+    </asset>
+    <asset id="slideShowArrowLeft" src="/assets/images/csOverview/collections/slideShowArrowLeft.png"/>
+    <asset id="slideShowArrowRight" src="/assets/images/csOverview/collections/slideShowArrowRight.png"/>
+  </assets>
+  
+  <!-- Build out visual for timeline -->
+  
+  <timeline imageSize="timeline">
+    <item type="categories" itemid="c1" icon="crown1" iconY="0"/>
+    <item type="collections" itemid="01"/>
+    <item type="collections" itemid="02"/>
+    <item type="categories" itemid="c2" icon="crown2" iconY="1"/>
+    <item type="themes" itemid="36"/>
+    <item type="themes" itemid="02"/>
+    <item type="themes" itemid="03"/>
+    <item type="themes" itemid="37"/>
+    <item type="themes" itemid="04"/>
+    <item type="themes" itemid="34"/>
+    <!-- <item type="themes" itemid="06"/> -->
+    <item type="themes" itemid="23"/>
+    <item type="themes" itemid="22"/>
+    <item type="themes" itemid="07"/>
+    <item type="themes" itemid="08"/>
+    <item type="themes" itemid="11"/>
+    <item type="themes" itemid="09"/>
+    <item type="themes" itemid="31"/>
+    <item type="themes" itemid="30"/>
+    <item type="themes" itemid="10"/>
+    <item type="themes" itemid="25"/>
+    <item type="themes" itemid="35"/>
+    <item type="themes" itemid="12"/>
+    <item type="themes" itemid="13"/>
+    <item type="themes" itemid="32"/>
+    <item type="themes" itemid="14"/>
+    <item type="themes" itemid="15"/>
+    <item type="themes" itemid="28"/>
+    <item type="themes" itemid="29"/>
+    <item type="themes" itemid="26"/>
+    <item type="themes" itemid="18"/>
+    <item type="themes" itemid="24"/>
+    <!-- <item type="themes" itemid="19"/>-->
+    <item type="themes" itemid="33"/>
+    <item type="themes" itemid="21"/>
+    <item type="themes" itemid="27"/>
+  </timeline>
+  
+  <!-- Data for Categories -->
+  <categories>
+    <item id="c1" type="collections" image="/assets/images/csOverview/collections/collections.png"/>
+    <item id="c2" type="themes" image="/assets/images/csOverview/collections/themes.png" leftPadding="15" rightPadding="18"/>
+  </categories>
+  
+  <!-- Data for Collections -->
+  <collections>
+    <item id="01" title="Althorp" image="https://theodorealexander.sirv.com/collectionsOverview/collections_collection01.jpg" rightPadding="25" leftPadding="25" catid="/collection/althorp_living_history">
+      <slides>
+        <slide id="1" image="/assets/images/csOverview/collections/Althorp1.jpg" x="428" y="60" tooltip="Althorp House" title="Althorp House">
+          <![CDATA[<p>Located in Nottinghamshire, England, this is the ancestral <br/>home of the Spencer family and <br/>the childhood home of Charles, <br/>9th Earl Spencer and his sister Diana. Having celebrated its 500th anniversary in 2008, the house reflects 500 years of living history.</p>]]>
+        </slide>
+        <slide id="2" image="/assets/images/csOverview/collections/Althorp2.jpg" x="385" y="60" tooltip="The Spencer Family" title="The Spencer Family">
+          <![CDATA[<p>The Spencers have been one of the <br/>great British aristocratic dynasties since <br/>the 16th century. From Knighthood to <br/>Baronetcy and Earldom, from naval <br/>victories to viceroy’s of Ireland, from <br/>patrons of the arts to avid literary <br/>collectors, the family has played a <br/>formative part in England’s history.</p>]]>
+        </slide>
+        <slide id="3" image="/assets/images/csOverview/collections/Althorp3.jpg" x="240" y="60" tooltip="The Althorp Crest" title="The Althorp Crest">
+          <![CDATA[<p>Two legendary creatures flank the overall design. On the left is the mythological Griffin, known for guarding treasures, while on the right is the Wyvern, a form of dragon that symbolizes power and endurance. In addition, lines of text are inscribed on the crest. The text “Honi Soit Qui Mal Y Pense” comes from Ancient English and means “Shame be to him who thinks evil of it.” The second line of text reads “Dieu Defend Le Droit” which translates to “God Protects the Right.” Finally, at the very top of the crest sits a regal ducal coronet, or crown.</p>]]>
+        </slide>
+        <slide id="4" image="/assets/images/csOverview/collections/Althorp4.jpg" x="333" y="60" tooltip="The Oak Bedroom" title="The Oak Bedroom">
+          <![CDATA[<p>On December 20th, 1755, during a ball to celebrate <br/>the coming of age of John Spencer and his fiancée <br/>Georgiana Poyntz, the young couple slipped away <br/>to this bedroom and were secretly married. The <br/>bride later said of the ceremony “we both behaved <br/>very well, spoke distinctly and loudly, but I trembled <br/>so much I could hardly stand.” Thus began a <br/>marriage that was manifestly happy.</p>]]>
+        </slide>
+        <slide id="5" image="/assets/images/csOverview/collections/Althorp5.jpg" x="55" y="60" tooltip="Wootton Hall" title="Wootton Hall">
+          <![CDATA[<p>The striking Palladian hall you first enter incorporates a series of country scenes by the English artist <br/>John Wootton – which lends the hall its name. Wootton’s fame rests as the most stylish English sporting <br/>painter of his day. He would not have painted in situ, but in a studio in London, having taken <br/>measurements of the spaces that needed to be filled. They were painted as part of the scheme ordered <br/>by the Fifth Earl of Sunderland, who, like his brother and heir at Althorp, was a passionate fox-hunter.</p><br/><p>For many tastes the hall’s proportions make it the most satisfying room in the house, with a cool dignity, <br/>appropriately lit. Pevsner calls it “the noblest Georgian room in the county.”</p>]]>
+        </slide>
+      </slides>
+    </item>
+    <item id="02" title="Keno Bros" image="https://theodorealexander.sirv.com/collectionsOverview/collections_collection02.jpg" rightPadding="40" leftPadding="26" catid="/collection/keno_bros">
+      <slides>
+        <slide id="1" image="/assets/images/csOverview/collections/KenoBrothers1.jpg" x="200" y="60" tooltip="The Keno Brothers" title="The Keno Brothers">
+          <![CDATA[<p>Twin brothers Leigh and Leslie Keno have been passionate about rare <br/>Americana for more than 30 years and are acknowledged experts in the <br/>field. Leigh is currently President of Keno Auctions, a full service auction <br/>house based in Manhattan. Prior to Keno Auctions, Leigh owned and <br/>operated Leigh Keno American Antiques for 23 years. Leslie has been <br/>with Sotheby’s in New York for thirty years and serves as the company’s <br/>Senior International Specialist Business Development.</p>]]>
+        </slide>
+        <slide id="2" image="/assets/images/csOverview/collections/KenoBrothers2.jpg" x="296" y="60" tooltip="S-Curve" title="S-Curve">
+          <![CDATA[<p>While the “Keno Bros.” collection reflects historic designs <br/>and organic shapes, the S-curve line also <br/>influences many of the pieces. Commonly known as the <br/>“line of beauty,” the S-curve concept originated with <br/>18th century British artist William Hogarth and was <br/>essential to his book <i>The Analysis of Beauty</i>. He believed <br/>S-shaped lines signify liveliness and activity and excite <br/>the attention of the viewer.</p>]]>
+        </slide>
+        <slide id="3" image="/assets/images/csOverview/collections/KenoBrothers3.jpg" x="370" y="60" tooltip="Working with Theodore Alexander" title="Working with &lt;br /&gt;Theodore Alexander">
+          <![CDATA[<p>This collection is very personal for the Keno <br/>brothers, notes Leigh Keno, and adds to <br/>that by saying, “Theodore Alexander is a <br/>company that cares passionately about <br/>quality construction as well as great design. <br/>After seeing their products, we know that <br/>craftsmanship is key here.”</p>]]>
+        </slide>
+        <slide id="4" image="/assets/images/csOverview/collections/KenoBrothers4.jpg" x="108" y="60" tooltip="The Collection" title="The Keno Brothers Collection">
+          <![CDATA[<p>The "Keno Bros." collection is a captivating assortment encompassing over 40 select pieces, <br/>taking the best of earlier periods and combining them in a perfect synthesis of traditional <br/>styling enhanced with fresh, modern appeal. Realising American homes are a blend of old <br/>and new, the Kenos focused on creating timeless classics with design cues taken from 18th <br/>century through mid-century modern treasures, producing selections that will become the <br/>heirlooms of tomorrow. Their enduring passion for sculpture, furniture, paintings and rare <br/>objects transforms into a line of home furnishings where fine craftsmanship returns to the <br/>forefront. Many items are functional to various interior designs.</p>]]>
+        </slide>
+      </slides>
+    </item>
+  </collections>
+  
+  <!-- Data for Themes -->
+  <themes>
+    <item id="36" title="The Anthony Cox Collection" subtitle="Classical proportions for modern taste" image="https://theodorealexander.sirv.com/collectionsOverview/collections_theme36.jpg" catid="/theme/The_Anthony_Cox_Collection">Anthony Cox is a believer in eclectic interiors, combining textures and materials to create a layered feeling. There runs through his designs a common thread of modern classicism and insightful application of materials. Anthony’s collection builds on a tradition of classical proportions and classic lines translated for modern taste.</item>
+    <item id="02" title="Argento" subtitle="Textural colours of Italy" image="https://theodorealexander.sirv.com/collectionsOverview/collections_theme02.jpg" catid="/theme/Argento">Ever since the Renaissance the quality of light in Venice, Italy has inspired artists to explore rich palettes of colour. In Argento we have drawn on this diversity of colour and combined it with layered, hand painted details of architecture and floral detail, resulting in very tactile and textured surfaces.</item>
+    <item id="03" title="Armoury" subtitle="Medieval accents" image="https://theodorealexander.sirv.com/collectionsOverview/collections_theme03.jpg" catid="/theme/Armoury">This unique Theodore Alexander theme is inspired by Mediaeval and Renaissance armour. Suits of armour were often skillfully decorated to display the family coat of arms, symbolism or mottos. The most famous decorating technique was “damascening,” a complex technique reflected in our very own Armoury designs.</item>
+    <!-- <item id="04" title="Atelier de la Madeleine" subtitle="Inspired by life in Paris" image="https://theodorealexander.sirv.com/collectionsOverview/collections_theme04.jpg" catid="/theme/Atelier_de_la_Madeleine"><![CDATA[Atelier de la Madeleine is a chic, <br/>French inspired theme that evokes <br/>the romance of Parisian society and <br/>the quirky flair of the cafés of St <br/>Germain du Pres. The pieces are <br/>united through the use of an antiqued <br/>ebonised finish or colourful vertical <br/>stripes, providing unconventional <br/>accents to any interior.]]></item> -->
+	  
+	<item id="37" title="Avenue Montaigne" subtitle="Discerning Haute Couture Parisian style" image="https://theodorealexander.sirv.com/collectionsOverview/collections_theme37.jpg" catid="/theme/The_Avenue_Montaigne_Collection">A rich design continuum – linking past and present. Classical symmetry and Art Deco infused style with the imprint of modernity brought to life for the home in Theodore Alexander’s Avenue Montaigne Collection. A curated collection inspired by the world’s great fashion houses in the capital of Haute Couture, Paris.</item>
+    
+    <item id="34" title="Biscayne" subtitle="Hand Finished Natural Forms" image="https://theodorealexander.sirv.com/collectionsOverview/collections_theme34.jpg" catid="/theme/Biscayne">Fine and unique pieces using parchment, faux bone and oak creating intriguing contrasts of pattern and colouration unique to each piece.</item>
+    
+    <!-- <item id="06" title="Brunello" subtitle="Reminiscent of rustic Italy" image="https://theodorealexander.sirv.com/collectionsOverview/collections_theme06.jpg" catid="/theme/Brunello">Brunello furniture overlays solid mahogany with parquetry of oak, parawood and acacia for a soft, rustic and hand distressed finish. Together, these elements merge to evoke the tranquil simplicity of the wine growing regions of Italy, known for their mellow tones and rustic mood. </item> -->
+    <item id="23" title="Brooksby" subtitle="Innovative Combinations" image="https://theodorealexander.sirv.com/collectionsOverview/collections_theme23.jpg" catid="/theme/Brooksby">The Brooksby Collection is a young, casual group with a multitude of stylistic influences, spanning 18th to 20th century forms. Not constrained to a particular period Brooksby finishes creates a casual look which is tied together through innovative veneer and finish combinations.</item>
+    <item id="22" title="The Cabinet Maker" subtitle="Inspired by the craftsmen of the past" image="https://theodorealexander.sirv.com/collectionsOverview/collections_theme22.jpg" catid="/theme/The_English_Cabinet_Maker">The English Cabinet Maker's Drawing Book is a homage to the innovative designs and masterful finishes of the great furniture designers, artisans and craftsmen of the 18th and 19th centuries.</item>
+    <item id="07" title="Campaign" subtitle="Crafted to last generations" image="https://theodorealexander.sirv.com/collectionsOverview/collections_theme27.jpg" catid="/theme/Campaign">As the British Empire expanded across Africa and Asia in the 18th and 19th centuries, the demand for stylish portable furniture increased. The furniture needed to withstand the rigours of warm and harsh climates, collapse in a matter of moments, and keep officers and gentlemen outfitted in style.</item>
+    <item id="08" title="Castle Bromwich" subtitle="Relaxed furnishings redefined" image="https://theodorealexander.sirv.com/collectionsOverview/collections_theme08.jpg" catid="/theme/Castle_Bromwich">The Castle Bromwich name comes from an Elizabethan manor house in rural England. Rustic yet sophisticated, this theme takes styles from the 16th to 19th century and redefines them into relaxed furnishings. Each piece is hand crafted from antiqued hardwoods and given a hand rubbed wax finish.</item>
+    <item id="11" title="Classic yet Casual" subtitle="For the relaxed lifestyle" image="https://theodorealexander.sirv.com/collectionsOverview/collections_theme11.jpg" catid="/theme/Classic_yet_Casual">Perfect for our customers who appreciate the beautiful proportions and shapes of traditional furniture forms and design classics but live a more relaxed lifestyle. Beautifully antiqued with a rich patina, Classic yet Casual furniture creates an informal, comfortable look.</item>
+    <item id="09" title="Composition" subtitle="Simplified Furniture Forms" image="https://theodorealexander.sirv.com/collectionsOverview/collections_theme09.jpg" catid="/theme/Composition">Composition features modern upholstery with vintage French influences and classical furniture forms simplified with neutral lacquers and pared down designs.</item>
+    <item id="31" title="Corallo" subtitle="A Modern Coastal Lifestyle" image="https://theodorealexander.sirv.com/collectionsOverview/collections_theme31.jpg" catid="/theme/Corallo">An intriguing mix of contemporary, the organic and American Art Deco. Clean silhouettes, embossed leather, fine eggshell and hand cast hardware create sleek modern style with an organic touch.</item>
+    <item id="30" title="Custom Palette" subtitle="30+ finish options" image="https://theodorealexander.sirv.com/collectionsOverview/collections_theme30.jpg" catid="/theme/Custom_Palette">More than two hundred pieces, with unique silhouettes and surface treatments, are available to be customized with any one of thirty plus finishes (all with a lead time of just 6-8 weeks). T.A. Custom Palette include bright pops of painted color, smooth and distressed metallic leaf finishes and pale neutrals with a touch of the vintage.</item>
+    <item id="10" title="Distinctly Continental" subtitle="Contemporized Classics" image="https://theodorealexander.sirv.com/collectionsOverview/collections_theme10.jpg" catid="/theme/Distinctly_Continental">Distinctly Continental celebrates the sinuous forms and opulent materials used by the master craftsmen of their age. Varied finishes, from gilding to paint and fine veneers make this collection an intriguing voyage of discovery.</item>
+    <item id="25" title="The Jamie Drake Collection" subtitle="An eclectic juxtaposition of materials" image="https://theodorealexander.sirv.com/collectionsOverview/collections_theme25.jpg" catid="/theme/The_Jamie_Drake_Collection">Designer of some of the country’s most captivating spaces, Jamie Drake believes the best decor expresses personality and place. Known for his exuberant color sense, his eye for the unique and telling detail, Drake creates inviting, delightful, and livable environments.</item>
+    
+    <!--	Linh added 08/02  -->
+    <item id="35" title="The Echoes Collection" subtitle="Textured Style" image="https://theodorealexander.sirv.com/collectionsOverview/collections_theme35.jpg" catid="/theme/The_Echoes_Collection">Echoes has a hand hewn, rustic look in oak, hand cast textured aluminum, vintage style leather and linen upholstery.</item>
+    <item id="12" title="Eglomisé" subtitle="Reflectivity and beauty" image="https://theodorealexander.sirv.com/collectionsOverview/collections_theme12.jpg" catid="/theme/Eglomise">Verre Eglomisé is the French term for reverse painted and gilded glass. Although the origins of this technique can be traced back to Egyptian and Roman antiquity, the technique was revived in the 18th century. Gold leaf and hand painting under glass provides a reflectivity and beauty unseen in other art forms.</item>
+    <item id="13" title="Essential TA" subtitle="Showcases our design classics" image="https://theodorealexander.sirv.com/collectionsOverview/collections_theme13.jpg" catid="/theme/Essential_TA">
+      <![CDATA[Essential TA showcases a selection <br/>of the best of our traditional <br/>furniture, furniture that has been <br/>and will be in fashion for centuries. <br/>These design classics portray <br/>where the Theodore Alexander <br/>craftsmen honed their skills of fine <br/>carving, delicate veneer and inlay <br/>work and exceptional brass accents.]]>
+    </item>
+    <item id="32" title="Highlands" subtitle="Unique Material Combinations" image="https://theodorealexander.sirv.com/collectionsOverview/collections_theme32.jpg" catid="/theme/Highlands">Highlands is furniture with an artisanal aesthetic. Time-honoured parquetry craftsmanship in solid cut mahogany is combined with tonal hair on hide inlays and hand-painted faux horn surfaces.</item>
+    <item id="14" title="Indochine" subtitle="A love affair with the Orient" image="https://theodorealexander.sirv.com/collectionsOverview/collections_theme14.jpg" catid="/theme/Indochine">Indochine brings to life the romance of the Orient with fluid forms and bold designs.  From bamboo to delicate Chinoiserie hand-painting on bold colours and gold leaf, Indochine represents an ongoing love affair of artists and craftsmen from the East.</item>
+    <item id="15" title="Kalahari" subtitle="An exclusive technique" image="https://theodorealexander.sirv.com/collectionsOverview/collections_theme15.jpg" catid="/theme/Kalahari">
+      <![CDATA[Kalahari is an exclusive finishing <br/>technique with a highly tactile <br/>surface that mimics crocodile hide. <br/>Inspired by the luggage of the <br/>Golden age of Travel in the 1920s, <br/>we set Kalahari against materials <br/>such as stainless steel, leather and <br/>rare veneers to create one-of-a-kind <br/>designs with a contemporary edge.]]>
+    </item>
+    <item id="28" title="Marst Hill" subtitle="Casual Parquetry Chic" image="https://theodorealexander.sirv.com/collectionsOverview/collections_theme28.jpg" catid="/theme/Marst_Hill">Timeless parquetry designs cut from solid oak and mahogany are the hallmark of the Marst Hill Collection. Classic silhouettes from throughout the centuries are transformed with mellow tones into comfortably casual chic.</item>
+    <item id="29" title="The Michael Berman Collection" subtitle="Quiet luxury and effortless comfort" image="https://theodorealexander.sirv.com/collectionsOverview/collections_theme29.jpg" catid="/theme/The_Michael_Berman_Collection">Renowned designer Michael Berman’s collection is a perfect mix of glamour and simplicity. The light and airy colour palette and the modernist credo of ‘restraint, quiet luxury and effortless comfort’ creates and evokes Southern California living.</item>
+    <item id="26" title="NoDa" subtitle="Casual Modern Style" image="https://theodorealexander.sirv.com/collectionsOverview/collections_theme26.jpg" catid="/theme/NoDa">Tactile and textured hand-worn wooden surfaces on elegant and essential stylistic forms define NoDa. From Transitional to Classic silhouettes, this collection exudes a casual modern mood with light finishes and a celebration of materials.</item>
+    <item id="18" title="Rep-li-ca" subtitle="True to form" image="https://theodorealexander.sirv.com/collectionsOverview/collections_theme18.jpg" catid="/theme/Replica">
+      <![CDATA[Replica takes exceptional antiques <br/>and important designs and <br/>celebrates the true original by the <br/>sincerest form of flattery – faithful <br/>imitations in craft and material. From <br/>museum pieces to outstanding <br/>designs found at auction, Replica <br/>pays tribute to these masterpieces in <br/>every important detail.]]>
+    </item>
+    <item id="24" title="Sardinia" subtitle="Renaissance grandeur" image="https://theodorealexander.sirv.com/collectionsOverview/collections_theme24.jpg" catid="/theme/Sardinia">Sardinia explores the rich heritage of 17th and 18th century European furniture, drawing on Renaissance ironwork, elaborate carving, and curvaceous forms.</item>
+    <!--
+    <item id="19" title="Stagworks" subtitle="Reflections of nature" image="https://theodorealexander.sirv.com/collectionsOverview/collections_theme19.jpg" catid="/theme/Stagworks">Stagworks pays homage to the natural world. Our pieces are hand crafted from high-strength composite and are hand cast from original antlers and horns. Natural cowhide, hand carved wood and cast brass complement the rustic simplicity of these furnishings in tribute to their 19th century inspirations.</item>
+    -->
+    <item id="33" title="The Steve Leung Collection" subtitle="Luxury of Serenity" image="https://theodorealexander.sirv.com/collectionsOverview/collections_theme33.jpg" catid="/theme/The_Steve_Leung_Collection">This internationally inspired collection has sumptuous and comfortable forms, elegant silhouettes and a restrained color palette.</item>
+    <item id="21" title="Vanucci Eclectics" subtitle="Celebrating the 20th century" image="https://theodorealexander.sirv.com/collectionsOverview/collections_theme21.jpg" catid="/theme/Vanucci_Eclectics">Vanucci interprets and celebrates 20th and 21st century designers and their achievements from the 1920s to the present. A fusion of designs and original concepts are accentuated by materials such as shagreen, stainless steel, bone, mother of pearl and exotic veneers.</item>
+    <item id="27" title="Victory Oak" subtitle="The Age of Oak " image="https://theodorealexander.sirv.com/collectionsOverview/collections_theme27.jpg" catid="/theme/Victory_Oak">Inside Althorp there is a range of beautiful oak furniture, accumulated over five centuries by long-gone members of the Spencer family. Using thick cut reclaimed oak veneer from antique French architectural beams, Theodore Alexander continues the grand tradition of ‘The Age of Oak’ in English Furniture.</item>
+  </themes>
+</root>

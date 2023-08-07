@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" standalone='no'?>
+<root>
+  <Banner>
+    <id>1</id>
+    <isVideo>0</isVideo>
+    <link>https://theodorealexander.com/</link>
+    <image></image>
+  </Banner>
+  <Banner>
+    <id>2</id>
+    <isVideo>1</isVideo>
+    <link>https://theodorealexander.com/</link>
+    <image></image>
+  </Banner>
+  <Banner>
+    <id>3</id>
+    <isVideo>0</isVideo>
+    <link>https://theodorealexander.com/</link>
+    <image></image>
+  </Banner>
+  <Banner>
+    <id>4</id>
+    <isVideo>1</isVideo>
+    <link>https://theodorealexander.com/</link>
+    <image></image>
+  </Banner>
+  <Banner>
+    <id>5</id>
+    <isVideo>0</isVideo>
+    <link>https://theodorealexander.com/</link>
+    <image></image>
+  </Banner>
+</root>

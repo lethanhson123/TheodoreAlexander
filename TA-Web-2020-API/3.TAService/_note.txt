@@ -1,0 +1,3 @@
+Wrapper for BL.BusinessService, can includes more BL.BusinessService
+OUTPUT: ViewModel
+CALLER: API.APIService
