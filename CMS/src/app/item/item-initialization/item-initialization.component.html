@@ -1,0 +1,176 @@
+<div class="row">
+    <div class="col s12">
+        <div class="container">
+            <div class="section section-data-tables">
+                <div class="row">
+                    <div class="col s12 m12 l12">
+                        <div class="card card card-default scrollspy">
+                            <div class="card-content">
+                                <div class="row">
+                                    <div class="col s10 m10 l10">
+                                        <h3 class="card-title"><b>Download images + URL Code</b></h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s6 m6 l6">   
+                                        <input type="text" [(ngModel)]="uRLList" placeholder="uRLList">                                                                               
+                                    </div>                                       
+                                    <div class="col s6 m6 l6">   
+                                        <button title="Download images" (click)="onDownloadImagesByURLList()"
+                                        class="mb-6 btn waves-effect waves-light green darken-1">Download images</button>&nbsp;&nbsp;&nbsp;         
+                                        <button title="Download all images" (click)="onAsyncDownloadAllImages()"
+                                        class="mb-6 btn waves-effect waves-light green darken-1">Download all images</button>&nbsp;&nbsp;&nbsp;             
+                                        <button title="URL Code" (click)="onUpdateItemsURLCode()"
+                                        class="mb-6 btn waves-effect waves-light green darken-1">URL Code</button>&nbsp;&nbsp;&nbsp;                                                                                  
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col s12">
+        <div class="container">
+            <div class="section section-data-tables">
+                <div class="row">
+                    <div class="col s12 m12 l12">
+                        <div class="card card card-default scrollspy">
+                            <div class="card-content">
+                                <div class="row">
+                                    <div class="col s10 m10 l10">
+                                        <h3 class="card-title"><b>HTML Category Page</b></h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s6 m6 l2">
+                                        <div class="input-field">
+                                            <p>
+                                                <label>
+                                                    <input type="checkbox" class="filled-in" name="isRoom"
+                                                        [(ngModel)]="isRoom" />
+                                                    <span>Room</span>
+                                                </label>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col s6 m6 l2">
+                                        <div class="input-field">
+                                            <p>
+                                                <label>
+                                                    <input type="checkbox" class="filled-in" name="isType"
+                                                        [(ngModel)]="isType"/>
+                                                    <span>Type</span>
+                                                </label>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col s6 m6 l2">
+                                        <div class="input-field">
+                                            <p>
+                                                <label>
+                                                    <input type="checkbox" class="filled-in" name="isBrand"
+                                                        [(ngModel)]="isBrand"/>
+                                                    <span>Brand</span>
+                                                </label>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col s6 m6 l2">
+                                        <div class="input-field">
+                                            <p>
+                                                <label>
+                                                    <input type="checkbox" class="filled-in" name="isCollection"
+                                                        [(ngModel)]="isCollection" />
+                                                    <span>Collection</span>
+                                                </label>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col s6 m6 l2">
+                                        <div class="input-field">
+                                            <p>
+                                                <label>
+                                                    <input type="checkbox" class="filled-in" name="isLifeStyle"
+                                                        [(ngModel)]="isLifeStyle" />
+                                                    <span>LifeStyle</span>
+                                                </label>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col s6 m6 l2">
+                                        <div class="input-field">
+                                            <p>
+                                                <label>
+                                                    <input type="checkbox" class="filled-in" name="isStyle"
+                                                        [(ngModel)]="isStyle" />
+                                                    <span>Style</span>
+                                                </label>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col s6 m6 l2">
+                                        <div class="input-field">
+                                            <p>
+                                                <label>
+                                                    <input type="checkbox" class="filled-in" name="isShape"
+                                                        [(ngModel)]="isShape" />
+                                                    <span>Shape</span>
+                                                </label>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col s6 m6 l2">
+                                        <div class="input-field">
+                                            <p>
+                                                <label>
+                                                    <input type="checkbox" class="filled-in" name="isDesigner"
+                                                        [(ngModel)]="isDesigner" />
+                                                    <span>Designer</span>
+                                                </label>
+                                            </p>
+                                        </div>
+                                    </div>      
+                                    <div class="col s6 m6 l2">
+                                        <div class="input-field">
+                                            <p>
+                                                <label>
+                                                    <input type="checkbox" class="filled-in" name="isSpecial"
+                                                        [(ngModel)]="isSpecial" />
+                                                    <span>Special</span>
+                                                </label>
+                                            </p>
+                                        </div>
+                                    </div>            
+                                    <div class="col s6 m6 l2">
+                                        <div class="input-field">
+                                            <p>
+                                                <label>
+                                                    <input type="checkbox" class="filled-in" name="isProduct"
+                                                        [(ngModel)]="isProduct" />
+                                                    <span>Product</span>
+                                                </label>
+                                            </p>
+                                        </div>
+                                    </div>                                 
+                                    <div class="col s6 m6 l4">   
+                                        <button title="LIVE" (click)="onInitializationHTMLCategoryPageInLIVE()"
+                                        class="mb-6 btn waves-effect waves-light green darken-1">LIVE</button>&nbsp;&nbsp;&nbsp;         
+                                        <button title="TEST" (click)="onInitializationHTMLCategoryPageInTEST()"
+                                        class="mb-6 btn waves-effect waves-light green darken-1">TEST</button>&nbsp;&nbsp;&nbsp;             
+                                        <button title="PRE LIVE" (click)="onInitializationHTMLCategoryPageInPRELIVE()"
+                                        class="mb-6 btn waves-effect waves-light green darken-1">PRE LIVE</button>&nbsp;&nbsp;&nbsp;                                                                                  
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-loading *ngIf="isShowLoading"></app-loading>

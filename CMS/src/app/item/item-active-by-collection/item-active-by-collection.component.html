@@ -1,0 +1,125 @@
+<div class="row">
+    <div class="col s12">
+        <div class="container">
+            <div class="section section-data-tables">
+                <div class="row">
+                    <div class="col s12 m12 l12">
+                        <div class="card card card-default scrollspy">
+                            <div class="card-content">
+                                <div class="row">
+                                    <div class="col s10 m10 l10">
+                                        <h3 class="card-title"><b>Item active by Collection <span *ngIf="itemService.listItemDataTransfer">({{itemService.listItemDataTransfer.length}} items)</span></b></h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s6 m6 l2">
+                                        <div class="input-field">
+                                            <p>
+                                                <label>
+                                                    <input type="checkbox" class="filled-in" name="isActiveTAUS"
+                                                        [(ngModel)]="isActiveTAUS" (change)="onChangeIsActiveTAUS()" />
+                                                    <span>US</span>
+                                                </label>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col s6 m6 l2">
+                                        <div class="input-field">
+                                            <p>
+                                                <label>
+                                                    <input type="checkbox" class="filled-in" name="isActiveTAIN"
+                                                        [(ngModel)]="isActiveTAIN" (change)="onChangeIsActiveTAIN()" />
+                                                    <span>INT'L</span>
+                                                </label>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col s6 m6 l6">
+                                        <mat-select class="browser-default"
+                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                            name="collection_IDList" [(ngModel)]="collection_IDList">                                            
+                                            <mat-option *ngFor="let item of collectionService.list" [value]="item.URLCode">
+                                                {{item.Name}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </div>
+                                    
+                                    <div class="col s6 m6 l2">
+                                        <button title="Search" (click)="onSearch()"
+                                            class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                                class="material-icons">search</i></button>&nbsp;&nbsp;&nbsp; <button
+                                            title="Download excel" (click)="onDownloadExcelFile()"
+                                            class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                                class="material-icons">get_app</i></button>
+                                    </div>
+                                    <div class="KhungOverflow">
+                                        <table class="responsive-table">
+                                            <thead
+                                                style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                                <tr>
+                                                    <th>No</th>                                                    
+                                                    <th>SKU</th>
+                                                    <th>Name</th>         
+                                                    <th>Is New</th>     
+                                                    <th>Is Stocked</th>     
+                                                    <th>Is BestSeller</th>            
+                                                    <th>Is Extending</th>      
+                                                    <!-- <th>Is CFPItem</th>      
+                                                    <th>Is AXHCFPItem</th>                                                                                                                                                    
+                                                    <th>Is WoodBack</th>       -->
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr
+                                                    *ngFor="let item of itemService.listItemDataTransfer; let i = index;">
+                                                    <td style="width:20px;">{{i +1 }}</td>                                                    
+                                                    <td><b>{{item.SKU}}</b></td>
+                                                    <td>{{item.ProductName}}</td>          
+                                                    <td>{{item.IsNew}}</td>                    
+                                                    <td>{{item.IsStocked}}</td>                    
+                                                    <td>{{item.IsBestSeller}}</td>  
+                                                    <td>{{item.Extending}}</td>    
+                                                    <!-- <td>{{item.IsCFPItem}}</td>    
+                                                    <td>{{item.IsAXHCFPItem}}</td>                                                                                                                
+                                                    <td>{{item.IsUpholsteredBack_WoodBack}}</td>                                                                                                                 -->
+                                                    <td><a target="_blank" title="View"
+                                                            routerLink="/item-info/{{item.ID}}"
+                                                            class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                                                class="material-icons">info</i></a></td>
+                                                    <td><a target="_blank" title="Website"
+                                                                    href="{{website}}{{productDetail}}/{{item.URLCode}}.html"
+                                                                    class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                                                        class="material-icons">public</i></a></td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot
+                                                style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                                <tr>
+                                                    <th>No</th>                                                    
+                                                    <th>SKU</th>
+                                                    <th>Name</th>     
+                                                    <th>Is New</th>     
+                                                    <th>Is Stocked</th>     
+                                                    <th>Is BestSeller</th>            
+                                                    <th>Is Extending</th>      
+                                                    <!-- <th>Is CFPItem</th>      
+                                                    <th>Is AXHCFPItem</th>                                                                                                                                                        
+                                                    <th>Is WoodBack</th>                                                                                                                                                       -->
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-loading *ngIf="isShowLoading"></app-loading>

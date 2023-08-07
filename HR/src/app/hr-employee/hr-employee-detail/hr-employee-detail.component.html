@@ -1,0 +1,320 @@
+<div class="row">
+    <div class="col s12">
+        <div id="input-fields" class="card card-tabs">
+            <div class="card-content">
+                <div class="card-title">
+                    <div class="row">
+                        <div class="col s6 m6 l8">
+                            <div class="col s6 m6 l2">
+                                <a title="Danh sách" href="javascript:window.open('','_self').close();" style="padding-top: 3px;"
+                                    class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                        class="material-icons">arrow_back</i></a>
+                            </div>
+                            <div class="col s6 m6 l10">
+                                <h3 class="card-title">Nhân viên: {{hR_EmployeeService.formData.Code}} -
+                                    {{hR_EmployeeService.formData.FullName}} </h3>
+                            </div>
+                        </div>
+                        <div class="col s6 m6 l4">
+                            <ul class="tabs">
+                                <li class="tab col s6 p-0"><a class="active p-0" href="#CovidView">Covid</a></li>
+                                <li class="tab col s6 p-0"><a class="p-0" href="#DetailView">Hồ sơ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="CovidView">
+                    <div class="row">
+                        <h1 style="text-align: center;">COVID - Lịch sử xét nghiệm</h1>
+                        <div class="KhungOverflow">
+                            <table class="responsive-table">
+                                <thead style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                    <tr>
+                                        <th>STT</th>
+                                        <th>MSNV</th>
+                                        <th>Họ tên</th>
+                                        <th>Điện thoại</th>
+                                        <th>Nhóm</th>
+                                        <th>Loại</th>
+                                        <th>Xét nghiệm</th>
+                                        <th>Kết quả</th>
+                                        <th>Ngày xét nghiệm</th>
+                                        <th>Cách ly</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of hR_CovidService.listDataTransfer; let i = index;">
+                                        <td style="width:20px;">{{i +1 }}</td>
+                                        <td>{{item.EmployeeCode}}</td>
+                                        <td>{{item.FullName}}</td>
+                                        <td>{{item.Phone}}</td>
+                                        <td>{{item.CodeManage}}</td>
+                                        <td>{{item.CovidTypeName}}</td>
+                                        <td>{{item.CovidTestName}}</td>
+                                        <td>{{item.CovidResultName}}</td>
+                                        <td>{{item.CovidTestDate | date: 'dd/MM/yyyy'}}</td>
+                                        <td>{{item.CovidLocalName}}</td>
+                                        <td><a title="View" (click)="onAdd(item.ID)"
+                                                class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                                    class="material-icons">info</i></a></td>
+                                    </tr>
+                                </tbody>
+                                <tfoot style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                    <tr>
+                                        <th>STT</th>
+                                        <th>MSNV</th>
+                                        <th>Họ tên</th>
+                                        <th>Điện thoại</th>
+                                        <th>Nhóm</th>
+                                        <th>Loại</th>
+                                        <th>Xét nghiệm</th>
+                                        <th>Kết quả</th>
+                                        <th>Ngày xét nghiệm</th>
+                                        <th>Cách ly</th>
+                                        <th></th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+                <div id="DetailView">
+                    <form autocomplete="off" class="row" #form="ngForm" (submit)="onSubmit(form)">
+                        <input name="ID" [(ngModel)]="hR_CovidService.formData.ID" type="hidden">
+                        <div class="row">
+                            <!-- <div class="col s12 m12 l12">
+                                <div class="col s6 m6 l10">
+                                </div>
+                                <div class="col s6 m6 l2">
+                                    <button title="Lưu thay đổi" type="submit" class="mb-6 btn-floating waves-effect waves-light cyan"><i
+                                        class="material-icons">save</i></button>&nbsp;&nbsp;&nbsp;
+                                </div>
+                            </div> -->
+                            <div class="col s12 m12 l6">
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="FullName">Họ tên</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Họ tên" name="FullName"
+                                            [(ngModel)]="hR_EmployeeService.formData.FullName" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="Phone">Điện thoại</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Điện thoại" name="Phone"
+                                            [(ngModel)]="hR_EmployeeService.formData.Phone" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="EmployeeCode">MSNV</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="MSNV" name="EmployeeCode"
+                                            [(ngModel)]="hR_EmployeeService.formData.Code" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="AttendanceCard">Thẻ chấm công</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Thẻ chấm công" name="AttendanceCard"
+                                            [(ngModel)]="hR_EmployeeService.formData.AttendanceCard" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="AddressContact">Liên hệ</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Liên hệ" name="AddressContact"
+                                            [(ngModel)]="hR_EmployeeService.formData.AddressContact" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="AddressContactProvinceID">Tỉnh</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <mat-select class="browser-default"
+                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding-bottom: 34px;"
+                                            name="CovidResultID"
+                                            [(ngModel)]="hR_EmployeeService.formData.AddressContactProvinceID">
+                                            <input (keyup)="onFilterProvince($event)">
+                                            <mat-option *ngFor="let item of hR_ProvinceService.list" [value]="item.ID">
+                                                {{item.Name}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="AddressContactDistrictID">Huyện</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <mat-select class="browser-default"
+                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding-bottom: 34px;"
+                                            name="AddressContactDistrictID"
+                                            [(ngModel)]="hR_EmployeeService.formData.AddressContactDistrictID">
+                                            <mat-option *ngFor="let item of hR_DistrictService.list" [value]="item.ID">
+                                                {{item.Name}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="AddressContactWardID">Xã</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <mat-select class="browser-default"
+                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding-bottom: 34px;"
+                                            name="AddressContactWardID"
+                                            [(ngModel)]="hR_EmployeeService.formData.AddressContactWardID">
+                                            <mat-option *ngFor="let item of hR_WardService.list" [value]="item.ID">
+                                                {{item.Name}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m12 l6">
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="Gender">Giới tính (0/1)</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Giới tính (0/1)" name="Gender"
+                                            [(ngModel)]="hR_EmployeeService.formData.Gender" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="IDCard">CMND/CCCD</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="CMND/CCCD" name="IDCard"
+                                            [(ngModel)]="hR_EmployeeService.formData.IDCard" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <mat-label>Ngày cấp</mat-label>
+                                        <mat-datepicker-toggle matSuffix [for]="IDCardDate">
+                                        </mat-datepicker-toggle>
+                                        <mat-datepicker #IDCardDate></mat-datepicker>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input [matDatepicker]="IDCardDate" name="IDCardDate"
+                                            [(ngModel)]="hR_EmployeeService.formData.IDCardDate">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="IDCardIssuedID">Nơi cấp</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <mat-select class="browser-default"
+                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding-bottom: 34px;"
+                                            name="IDCardIssuedID"
+                                            [(ngModel)]="hR_EmployeeService.formData.IDCardIssuedID">
+                                            <input (keyup)="onFilterProvince($event)">
+                                            <mat-option *ngFor="let item of hR_ProvinceService.list" [value]="item.ID">
+                                                {{item.Name}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <mat-label>Ngày sinh</mat-label>
+                                        <mat-datepicker-toggle matSuffix [for]="BirthDate">
+                                        </mat-datepicker-toggle>
+                                        <mat-datepicker #BirthDate></mat-datepicker>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input [matDatepicker]="BirthDate" name="BirthDate"
+                                            [(ngModel)]="hR_EmployeeService.formData.BirthDate">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="BirthPlaceID">Nơi sinh</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <mat-select class="browser-default"
+                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding-bottom: 34px;"
+                                            name="BirthPlaceID" [(ngModel)]="hR_EmployeeService.formData.BirthPlaceID">
+                                            <input (keyup)="onFilterProvince($event)">
+                                            <mat-option *ngFor="let item of hR_ProvinceService.list" [value]="item.ID">
+                                                {{item.Name}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="BirthNativePlace">Nguyên quán</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Full name" name="BirthNativePlace"
+                                            [(ngModel)]="hR_EmployeeService.formData.BirthNativePlace" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="Address">Thường trú</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Thường trú" name="Address"
+                                            [(ngModel)]="hR_EmployeeService.formData.Address" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-loading *ngIf="isShowLoading"></app-loading>

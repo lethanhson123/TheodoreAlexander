@@ -1,0 +1,62 @@
+﻿.block_menu_desktop_item {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: #faf8f8;
+    top: 40px;
+    padding: 30px 70px;
+    z-index: 7;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.09);
+    background: linear-gradient(#f8f8f8, #e8e8e8);
+}
+
+@media (max-width: 1920px) and (min-width: 1650px) {
+    .block_menu_desktop_item {
+        padding: 30px 200px;
+    }
+}
+
+@media (max-width: 1399px) and (min-width: 1200px) {
+    .block_menu_desktop_item {
+        height: 450px;
+        overflow-y: auto;
+    }
+}
+
+.block_menu_desktop_item ul {
+    padding: 0px 10px 20px 10px;
+    line-height: 1.5rem;
+}
+
+    .block_menu_desktop_item ul li {
+        padding: 5px 0;
+    }
+
+        .block_menu_desktop_item ul li h1 a {
+            font-size: 16px;
+            color: #000;
+        }
+
+        .block_menu_desktop_item ul li a {
+            font-size: 14px;
+            color: #000;
+        }
+
+@media (max-width: 1440px) {
+    .block_menu_desktop_item ul li a {
+        font-size: 13px;
+    }
+}
+
+.block_menu_desktop_item ul li a:hover {
+    color: #eea501;
+}
+
+.block_menu_desktop_item h1 {
+    text-transform: uppercase;
+    font-family: "HurmeGeometricSans1-Regular";
+    line-height: 1rem;
+    margin: 10px 0;
+}

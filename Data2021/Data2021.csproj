@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\TA-Web-2020-API\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\TA-Web-2020-API\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FF57A142-D95A-4DF9-A76D-3C5876CE365A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Data2021</RootNamespace>
+    <AssemblyName>Data2021</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DebugSymbols>true</DebugSymbols>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\TA-Web-2020-API\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\TA-Web-2020-API\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataTransfer\StoreDataTransfer.cs" />
+    <Compile Include="DataTransfer\Designer_TausDataTransfer.cs" />
+    <Compile Include="DataTransfer\ItemMenuLeftDataTransfer.cs" />
+    <Compile Include="DataTransfer\ItemDataTransfer001.cs" />
+    <Compile Include="DataTransfer\ItemDataTransfer.cs" />
+    <Compile Include="Models\Instagram.cs" />
+    <Compile Include="Models\Banner.cs" />
+    <Compile Include="Models\BannerDetail.cs" />
+    <Compile Include="Models\BaseModel.cs" />
+    <Compile Include="Models\BaseModelERP.cs" />
+    <Compile Include="Models\Dealer_Taus.cs" />
+    <Compile Include="Models\Brand.cs" />
+    <Compile Include="Models\Collection.cs" />
+    <Compile Include="Models\Designer.cs" />
+    <Compile Include="Models\Item_Fabric.cs" />
+    <Compile Include="Models\MarketingResource.cs" />
+    <Compile Include="Models\MarketingResourceCategory.cs" />
+    <Compile Include="Models\MarketingResourceDetail.cs" />
+    <Compile Include="Models\ShoppingCart_Item.cs" />
+    <Compile Include="Models\ShoppingCart.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\LifeStyle.cs" />
+    <Compile Include="Models\RoomAndUsage.cs" />
+    <Compile Include="Models\Shape.cs" />
+    <Compile Include="Models\Store.cs" />
+    <Compile Include="Models\Style.cs" />
+    <Compile Include="Models\TheodoreAlexander_NewContext .cs" />
+    <Compile Include="Models\Type.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Implement\BannerRepository.cs" />
+    <Compile Include="Repositories\Implement\BannerDetailRepository.cs" />
+    <Compile Include="Repositories\Implement\Dealer_TausRepository.cs" />
+    <Compile Include="Repositories\Implement\Item_FabricRepository.cs" />
+    <Compile Include="Repositories\Implement\UserRepository.cs" />
+    <Compile Include="Repositories\Implement\StoreRepository.cs" />
+    <Compile Include="Repositories\Implement\MarketingResourceCategoryRepository.cs" />
+    <Compile Include="Repositories\Implement\MarketingResourceDetailRepository.cs" />
+    <Compile Include="Repositories\Implement\MarketingResourceRepository.cs" />
+    <Compile Include="Repositories\Implement\DesignerRepository.cs" />
+    <Compile Include="Repositories\Implement\RepositoryERP.cs" />
+    <Compile Include="Repositories\Implement\ShoppingCart_ItemRepository.cs" />
+    <Compile Include="Repositories\Implement\ShoppingCartRepository.cs" />
+    <Compile Include="Repositories\Implement\StyleRepository.cs" />
+    <Compile Include="Repositories\Implement\ShapeRepository.cs" />
+    <Compile Include="Repositories\Implement\RoomAndUsageRepository.cs" />
+    <Compile Include="Repositories\Implement\LifeStyleRepository.cs" />
+    <Compile Include="Repositories\Implement\CollectionRepository.cs" />
+    <Compile Include="Repositories\Implement\ItemRepository.cs" />
+    <Compile Include="Repositories\Implement\Repository.cs" />
+    <Compile Include="Repositories\Implement\BrandRepository.cs" />
+    <Compile Include="Repositories\Implement\TypeRepository.cs" />
+    <Compile Include="Repositories\Interface\IBannerRepository.cs" />
+    <Compile Include="Repositories\Interface\IBannerDetailRepository.cs" />
+    <Compile Include="Repositories\Interface\IDealer_TausRepository.cs" />
+    <Compile Include="Repositories\Interface\IItem_FabricRepository.cs" />
+    <Compile Include="Repositories\Interface\IUserRepository.cs" />
+    <Compile Include="Repositories\Interface\IStoreRepository.cs" />
+    <Compile Include="Repositories\Interface\IMarketingResourceCategoryRepository.cs" />
+    <Compile Include="Repositories\Interface\IMarketingResourceDetailRepository.cs" />
+    <Compile Include="Repositories\Interface\IMarketingResourceRepository.cs" />
+    <Compile Include="Repositories\Interface\IDesignerRepository.cs" />
+    <Compile Include="Repositories\Interface\IRepositoryERP.cs" />
+    <Compile Include="Repositories\Interface\IShoppingCart_ItemRepository.cs" />
+    <Compile Include="Repositories\Interface\IShoppingCartRepository.cs" />
+    <Compile Include="Repositories\Interface\IStyleRepository.cs" />
+    <Compile Include="Repositories\Interface\IShapeRepository.cs" />
+    <Compile Include="Repositories\Interface\IRoomAndUsageRepository.cs" />
+    <Compile Include="Repositories\Interface\ILifeStyleRepository.cs" />
+    <Compile Include="Repositories\Interface\ICollectionRepository.cs" />
+    <Compile Include="Repositories\Interface\IItemRepository.cs" />
+    <Compile Include="Repositories\Interface\IRepository.cs" />
+    <Compile Include="Repositories\Interface\IBrandRepository.cs" />
+    <Compile Include="Repositories\Interface\ITypeRepository.cs" />
+    <Compile Include="ViewModel\ShoppingCartDataViewModel.cs" />
+    <Compile Include="ViewModel\ShoppingCart_ItemDataViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Helpers2021\Helpers2021.csproj">
+      <Project>{e7ef1775-ee9e-460c-8739-e17847fcaf49}</Project>
+      <Name>Helpers2021</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\TA-Web-2020-API\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\TA-Web-2020-API\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\TA-Web-2020-API\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\TA-Web-2020-API\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\TA-Web-2020-API\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\TA-Web-2020-API\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

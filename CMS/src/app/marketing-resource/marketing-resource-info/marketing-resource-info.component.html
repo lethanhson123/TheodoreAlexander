@@ -1,0 +1,199 @@
+<div class="row">
+    <div class="col s12">
+        <div id="input-fields" class="card card-tabs">
+            <form autocomplete="off" class="row" #form="ngForm" (submit)="onSubmit(form)">
+                <div class="card-content">
+                    <div class="card-title">
+                        <div class="row">
+                            <div class="col s6 m6 l10">
+                                <div class="col s4 m4 l2">
+                                    <a title="List item" href="javascript:window.open('','_self').close();"
+                                        style="padding-top: 3px;"
+                                        class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                            class="material-icons">arrow_back</i></a>&nbsp;&nbsp;&nbsp;
+                                    <button title="Save" type="submit" style="padding-top: 3px;"
+                                        class="mb-6 btn-floating waves-effect waves-light cyan"><i
+                                            class="material-icons">save</i></button>
+                                </div>
+                                <div class="col s6 m6 l10">
+                                    <h3 class="card-title">Marketing Resource:
+                                        <b>{{marketingResourceService.formData.Name}}</b></h3>
+                                </div>
+                            </div>
+                            <div class="col s6 m6 l2">
+                                <ul class="tabs">
+                                    <li class="tab col s12 p-0"><a class="active p-0" href="#ItemInfo">Info</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ItemInfo">
+                        <input name="ID" [(ngModel)]="marketingResourceService.formData.ID" type="hidden">
+                        <div class="row">
+                            <div class="col s12 m12 l6">                                
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="Name">Name</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Name" name="Name"
+                                            [(ngModel)]="marketingResourceService.formData.Name" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="URL">URL</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="URL" name="URL"
+                                            [(ngModel)]="marketingResourceService.formData.URL" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="SortOrder">Sort</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Sort" name="SortOrder"
+                                            [(ngModel)]="marketingResourceService.formData.SortOrder" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m12 l6">
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="ParentID">Category</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <mat-select class="browser-default"
+                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                            name="ParentID" [(ngModel)]="marketingResourceService.formData.ParentID">
+                                            <mat-option *ngFor="let item of marketingResourceCategoryService.list"
+                                                [value]="item.ID">
+                                                {{item.Name}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </div>
+                                </div>
+                                <div class="col s12 m12 l4">
+                                    <div class="input-field">
+                                        <p>
+                                            <label>
+                                                <input type="checkbox" class="filled-in" name="Active"
+                                                    [(ngModel)]="marketingResourceService.formData.Active" />
+                                                <span>Active</span>
+                                            </label>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col s12 m12 l4">
+                                    <div class="input-field">
+                                        <p>
+                                            <label>
+                                                <input type="checkbox" class="filled-in" name="IsUSShow"
+                                                    [(ngModel)]="marketingResourceService.formData.IsUSShow" />
+                                                <span>US</span>
+                                            </label>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col s12 m12 l4">
+                                    <div class="input-field">
+                                        <p>
+                                            <label>
+                                                <input type="checkbox" class="filled-in" name="IsInternationalShow"
+                                                    [(ngModel)]="marketingResourceService.formData.IsInternationalShow" />
+                                                <span>International</span>
+                                            </label>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col s12 m12 l4">
+                                    <div class="input-field">
+                                        <p>
+                                            <label>
+                                                <input type="checkbox" class="filled-in" name="IsDealerShow"
+                                                    [(ngModel)]="marketingResourceService.formData.IsDealerShow" />
+                                                <span>Dealer</span>
+                                            </label>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col s12 m12 l4">
+                                    <div class="input-field">
+                                        <p>
+                                            <label>
+                                                <input type="checkbox" class="filled-in" name="IsDesignerShow"
+                                                    [(ngModel)]="marketingResourceService.formData.IsDesignerShow" />
+                                                <span>Designer</span>
+                                            </label>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="input-fields" class="card card-tabs">
+            <div class="card-content">
+                <div id="ItemInfo">
+                    <div class="row">
+                        <div class="col s12 m12 l12">
+                            <div class="col s6 m6 l10">
+                                <h3 class="card-title"><b><span *ngIf="marketingResourceDetailService.list">({{marketingResourceDetailService.list.length}} items)</span></b></h3>                                
+                            </div>
+                            <div class="col s6 m6 l2">
+                                <a title="Add" (click)="onAdd(0)"
+                                    class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                        class="material-icons">add</i></a>&nbsp;&nbsp;&nbsp;
+                            </div>
+                            <div class="KhungOverflow">
+                                <table class="responsive-table">
+                                    <thead style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                        <tr>
+                                            <th>URL</th>
+                                            <th>Name</th>                                                                                        
+                                            <th>Sort</th>                                                                                                  
+                                            <th>Active</th>  
+                                            <th>US</th>   
+                                            <th>International</th>     
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let item of marketingResourceDetailService.list; let i = index;">                                           
+                                            <td>
+                                                <a href="{{item.URL}}" target="_blank" title="{{item.URL}}">
+                                                    <img title="{{item.URL}}" alt="{{item.URL}}" src="{{item.URLThumbnail}}">
+                                                </a>
+                                            </td>
+                                            <td><b>{{item.Name}}</b></td>
+                                            <td>{{item.SortOrder}}</td>
+                                            <td>{{item.Active}}</td>
+                                            <td>{{item.IsUSShow}}</td>
+                                            <td>{{item.IsInternationalShow}}</td>
+                                            <td><a title="View" (click)="onAdd(item.ID)"
+                                                    class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                                        class="material-icons">info</i></a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-loading *ngIf="isShowLoading"></app-loading>

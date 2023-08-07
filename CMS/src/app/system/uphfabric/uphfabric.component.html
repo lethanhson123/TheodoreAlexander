@@ -1,0 +1,117 @@
+<div class="row">
+    <div class="col s12">
+        <div class="container">
+            <div class="section section-data-tables">
+                <div class="row">
+                    <div class="col s12 m12 l12">
+                        <div class="card card card-default scrollspy">
+                            <div class="card-content">
+                                <div class="row">
+                                    <div class="col s10 m10 l10">
+                                        <h3 class="card-title"><b>UPH Fabric <span *ngIf="uPHFabricService.list">({{uPHFabricService.list.length}} items)</span></b></h3>
+                                    </div>
+                                </div>
+                                <div class="row">                                   
+                                    <div class="col s12 m12 l4">
+                                        <input matInput [(ngModel)]="searchString"
+                                            placeholder="Search by Name"
+                                            autocomplete="off">
+                                    </div>          
+                                    <div class="col s4 m4 l2">
+                                        <div class="input-field">
+                                            <p>
+                                                <label>
+                                                    <input type="checkbox" class="filled-in" name="isFabric"
+                                                        [(ngModel)]="isFabric" />
+                                                    <span>Fabric</span>
+                                                </label>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                    <div class="col s4 m4 l2">
+                                        <div class="input-field">
+                                            <p>
+                                                <label>
+                                                    <input type="checkbox" class="filled-in" name="isLeather"
+                                                        [(ngModel)]="isLeather" />
+                                                    <span>Leather</span>
+                                                </label>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                    <div class="col s4 m4 l2">
+                                        <div class="input-field">
+                                            <p>
+                                                <label>
+                                                    <input type="checkbox" class="filled-in" name="isTrims"
+                                                        [(ngModel)]="isTrims" />
+                                                    <span>Trims</span>
+                                                </label>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                    <div class="col s12 m12 l2">  
+                                        <button title="Search" (click)="onSearch()"
+                                        class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                            class="material-icons">search</i></button>&nbsp;&nbsp;&nbsp; <button
+                                        title="Download excel" (click)="onDownloadExcelFile()"
+                                        class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                            class="material-icons">get_app</i></button>                                     
+                                    </div>                         
+                                    <div class="KhungOverflow">
+                                        <table class="responsive-table">
+                                            <thead
+                                                style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                                <tr>
+                                                    <th>No</th>                                                    
+                                                    <th>Category</th>  
+                                                    <th>Fabric/Leather/Trim code</th>                                                    
+                                                    <th>Name</th>         
+                                                    <th>Color</th>                                                                                                     
+                                                    <th>ColorCode</th>    
+                                                    <th>enable</th>
+                                                    <th>IsEnabledOnWeb</th>                                                                                                        
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr
+                                                    *ngFor="let item of uPHFabricService.list; let i = index;">
+                                                    <td style="width:20px;">{{i +1 }}</td>                                                     
+                                                    <td><b>{{item.Category}}</b></td>
+                                                    <td>{{item.Fabric}}</td>
+                                                    <td>{{item.Name}}</td>
+                                                    <td>{{item.Color}}</td>
+                                                    <td>{{item.ColorCode}}</td>                                                                                                                                                      
+                                                    <td>{{item.enable}}</td>  
+                                                    <td>{{item.IsEnabledOnWeb}}</td>  
+                                                </tr>
+                                            </tbody>
+                                            <tfoot
+                                                style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                                <tr>
+                                                    <th>No</th>                                                    
+                                                    <th>Category</th>  
+                                                    <th>Fabric/Leather/Trim code</th>    
+                                                    <th>Name</th>                                                         
+                                                    <th>Color</th>                                                                                                     
+                                                    <th>ColorCode</th>    
+                                                    <th>enable</th>
+                                                    <th>IsEnabledOnWeb</th> 
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-loading *ngIf="isShowLoading"></app-loading>

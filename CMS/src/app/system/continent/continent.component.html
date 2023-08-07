@@ -1,0 +1,57 @@
+<div class="row">
+    <div class="col s12">
+        <div class="container">
+            <div class="section section-data-tables">
+                <div class="row">
+                    <div class="col s12 m12 l12">
+                        <div class="card card card-default scrollspy">
+                            <div class="card-content">
+                                <div class="row">
+                                    <div class="col s10 m10 l10">
+                                        <h3 class="card-title"><b>Continent <span *ngIf="continentService.list">({{continentService.list.length}} items)</span></b></h3>
+                                    </div>
+                                </div>
+                                <div class="row">                                          
+                                    <div class="KhungOverflow">
+                                        <table class="responsive-table">
+                                            <thead
+                                                style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                                <tr>
+                                                    <th>No</th>                                                    
+                                                    <th>Name</th>  
+                                                    <th>Code</th>                                                                                                        
+                                                    <th></th>    
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr
+                                                    *ngFor="let item of continentService.list; let i = index;">
+                                                    <td style="width:20px;">{{i +1 }}</td>                                                                                                         
+                                                    <td><input name="Name" type="text" [(ngModel)]="item.Name"></td>     
+                                                    <td><input name="Code" type="text" [(ngModel)]="item.Code"></td>                                                           
+                                                    <td>                                                       
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot
+                                                style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                                <tr>
+                                                    <th>No</th>                                                    
+                                                    <th>Name</th>  
+                                                    <th>Code</th>                                                                                                        
+                                                    <th></th> 
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-loading *ngIf="isShowLoading"></app-loading>

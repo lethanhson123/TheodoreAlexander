@@ -1,0 +1,200 @@
+﻿.block_menu {
+    position: relative;
+}
+
+    .block_menu .block_item_first_top .block_menu_item_content {
+        display: none;
+    }
+
+    .block_menu .block_item_first_top.show .block_menu_item_content {
+        display: block;
+    }
+/******block_top_header******/
+.row {
+    margin: 0;
+}
+
+.block_top_header {
+    background-color: #f7f7f7;
+    font-family: "HurmeGeometricSans1-Light";
+    padding: 5px 0;
+}
+/******block_social******/
+ul.block_social li {
+    margin: 0 20px 0 0;
+}
+
+    ul.block_social li a {
+        color: #707070;
+        font-size: 15px;
+    }
+/******block_cart******/
+.block_cart {
+    position: relative;
+    border-right: 1px solid #c6c6c6;
+    margin: 1px 20px 0 0;
+    padding: 1px 20px 0 0;
+    text-transform: uppercase;
+    height: 20px;
+    cursor: pointer;
+}
+
+    .block_cart i {
+        font-size: 15px;
+    }
+
+    .block_cart span.number {
+        background: #eea501;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        display: block;
+        position: absolute;
+        text-align: center;
+        top: -3px;
+        left: 10px;
+        color: #fff;
+    }
+
+    .block_cart span:last-child {
+        margin: 0 0 0 15px;
+    }
+
+.block_wishlist {
+    margin: 0 20px 0 0;
+    padding: 0 20px 0 0;
+    cursor: pointer;
+}
+
+    .block_wishlist i {
+        font-size: 15px;
+    }
+
+    .block_wishlist span {
+        text-transform: uppercase;
+        margin: 0 0 0 10px;
+    }
+/******block_account******/
+.block_account {
+    margin: -12px 17px 0 0;
+    cursor: pointer;
+}
+
+    .block_account i.icon-user {
+        margin: 10px 0 0 0;
+        font-size: 13px;
+    }
+
+    .block_account span {
+        margin: 0 0 0 10px;
+        font-family: "UTMBeautifulCaps";
+        font-size: 25px;
+    }
+
+        .block_account span i {
+            font-family: "Didot-HTF-M96-Medium";
+            font-size: 20px;
+        }
+/******block_login******/
+.block_flex_center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: -webkit-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.block_login a {
+    color: #000;
+    text-transform: uppercase;
+}
+
+.block_login i {
+    padding: 0 5px;
+}
+
+    .block_login i.icon-circle {
+        font-size: 3px;
+        color: #636363;
+    }
+/******block_register******/
+.block_register a {
+    color: #000;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.block_register i {
+    padding: 0 5px;
+    font-size: 10px;
+}
+/******block_menu******/
+.block_menu {
+    font-family: "HurmeGeometricSans1-Light";
+    border-top: 1px solid #a6a6a6;
+    background-color: white;
+    box-shadow: 0px 7px 5px -5px #e4e4e4;
+}
+.block_menu ul {
+    padding: 0px 160px;
+    max-width: 1920px;
+    margin: 1px auto;
+}
+@media (min-width: 1200px) and (max-width: 1440px) {
+    .block_menu ul {
+        padding: 0 50px;
+    }
+}
+
+.block_menu ul li.block_item_first_top {
+    padding: 10px 35px;
+}
+
+    .block_menu ul li.block_item_first_top a.block_item_first {
+        font-size: 15px;
+        text-transform: uppercase;
+        color: #000;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        display: -webkit-flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+@media (max-width: 1440px) {
+    .block_menu ul li.block_item_first_top a.block_item_first {
+        font-size: 14px;
+    }
+}
+
+.block_menu ul li.block_item_first_top a.block_item_first i {
+    font-size: 6px;
+    margin: -3px 0 0 5px;
+}
+
+.close-mainMeenu {
+    position: absolute;
+    top: 25px;
+    z-index: 8;
+    right: 30px;
+    border: none;
+}
+
+    .close-mainMeenu a {
+        outline: none;
+        border: none;
+        background: transparent;
+    }
+
+        .close-mainMeenu a i {
+            font-size: 20px;
+            color: #000;
+        }
+
+.menu-active-xl {
+    border-bottom: 1px solid #000;
+}

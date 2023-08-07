@@ -1,0 +1,1325 @@
+<div class="row">
+    <div class="col s12">
+        <div id="input-fields" class="card card-tabs">
+            <form autocomplete="off" class="row" #form="ngForm" (submit)="onSubmit(form)">
+                <div class="card-content">
+                    <div class="card-title">
+                        <div class="row">
+                            <div class="col s6 m6 l10">
+                                <div class="col s6 m6 l4">
+                                    <a title="List item" href="javascript:window.open('','_self').close();"
+                                        style="padding-top: 3px;"
+                                        class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                            class="material-icons">arrow_back</i></a>&nbsp;&nbsp;&nbsp;
+                                    <a target="_blank" title="Website"
+                                            href="{{website}}{{productDetail}}/{{itemService.formData.URLCode}}.html" style="padding-top: 3px;"
+                                            class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                                class="material-icons">public</i></a>&nbsp;&nbsp;&nbsp;
+                                    <button title="Save" type="submit" style="padding-top: 3px;"
+                                        class="mb-6 btn-floating waves-effect waves-light cyan"><i
+                                            class="material-icons">save</i></button>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <h3 class="card-title">Item: <b>{{itemService.formData.ProductName}} ({{itemService.formData.SKU}})</b></h3>
+                                </div>
+                            </div>
+                            <div class="col s6 m6 l2">
+                                <ul class="tabs">
+                                    <li class="tab col s12 p-0"><a class="active p-0" href="#ItemInfo">Info</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ItemInfo">
+                        <input name="ID" [(ngModel)]="itemService.formData.ID" type="hidden">                        
+                        <input name="IsDownloadImageSirv" [(ngModel)]="itemService.formData.IsDownloadImageSirv" type="hidden">
+                        <input name="IsActive" [(ngModel)]="itemService.formData.IsActive" type="hidden">
+                        <div class="row">
+                            <div class="col s12 m12 l4">
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="SKU">SKU</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input disabled placeholder="SKU" name="SKU" [(ngModel)]="itemService.formData.SKU"
+                                            type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="ProductName">Product name</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Product Name" name="ProductName"
+                                            [(ngModel)]="itemService.formData.ProductName" type="text">
+                                    </div>
+                                </div>                                
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="ParentCode">Parent Code</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="ParentCode" name="ParentCode" [(ngModel)]="itemService.formData.ParentCode"
+                                            type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="DefaultCode">Default Code</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="DefaultCode" name="DefaultCode" [(ngModel)]="itemService.formData.DefaultCode"
+                                            type="text">
+                                    </div>
+                                </div>      
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="Story">Story</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Story" name="Story"
+                                            [(ngModel)]="itemService.formData.Story" type="text">
+                                    </div>
+                                </div>                          
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="VariationDescription">Variation</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Variation" name="VariationDescription"
+                                            [(ngModel)]="itemService.formData.VariationDescription" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="ExtendedDescription">Extended</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Extended" name="ExtendedDescription"
+                                            [(ngModel)]="itemService.formData.ExtendedDescription" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="AdditionalFeatures">Additional Features</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="AdditionalFeatures" name="AdditionalFeatures"
+                                            [(ngModel)]="itemService.formData.AdditionalFeatures" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="IntroductiKeywordsonDate">Keywords</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Keywords" name="Keywords"
+                                            [(ngModel)]="itemService.formData.Keywords" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="IntroductionDate">Introduction Date</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="IntroductionDate" name="IntroductionDate"
+                                            [(ngModel)]="itemService.formData.IntroductionDate" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="Shipping">Shipping</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Shipping" name="Shipping"
+                                            [(ngModel)]="itemService.formData.Shipping" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="ImageSirv">Image Sirv</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Image Sirv" name="ImageSirv"
+                                            [(ngModel)]="itemService.formData.ImageSirv" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="Image">Image</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Image" name="Image" [(ngModel)]="itemService.formData.Image"
+                                            type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="URLCode">URL Code</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="URL Code" name="URLCode"
+                                            [(ngModel)]="itemService.formData.URLCode" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="Description">Description</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Description" name="Description"
+                                            [(ngModel)]="itemService.formData.Description" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="METAKeyword">META Keyword</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="META Keyword" name="METAKeyword"
+                                            [(ngModel)]="itemService.formData.METAKeyword" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="METADescription">META Description</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="META Description" name="METADescription"
+                                            [(ngModel)]="itemService.formData.METADescription" type="text">
+                                    </div>
+                                </div>                          
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="SketchImage">Sketch Image</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Sketch Image" name="SketchImage"
+                                            [(ngModel)]="itemService.formData.SketchImage" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="SeatingPlanImage">Seating Plan Image</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Seating Plan Image" name="SeatingPlanImage"
+                                            [(ngModel)]="itemService.formData.SeatingPlanImage" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="SeatingPlanPdf">Seating Plan PDF</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Seating Plan PDF" name="SeatingPlanPdf"
+                                            [(ngModel)]="itemService.formData.SeatingPlanPdf" type="text">
+                                    </div>
+                                </div>                         
+                            </div>
+                            <div class="col s12 m12 l4">
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="QuantityMultiplier">Quantity Multiplier</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Quantity Multiplier" name="QuantityMultiplier"
+                                            [(ngModel)]="itemService.formData.QuantityMultiplier" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="CBM">CBM</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="CBM" name="CBM"
+                                            [(ngModel)]="itemService.formData.CBM" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="Depth">Depth</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Depth" name="Depth"
+                                            [(ngModel)]="itemService.formData.Depth" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="Width">Width</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Width" name="Width"
+                                            [(ngModel)]="itemService.formData.Width" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="Height">Height</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Height" name="Height"
+                                            [(ngModel)]="itemService.formData.Height" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="ChairSeatHeight">ChairSeatHeight</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="ChairSeatHeight" name="ChairSeatHeight"
+                                            [(ngModel)]="itemService.formData.ChairSeatHeight" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="ChairArmHeight">ChairArmHeight</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="ChairArmHeight" name="ChairArmHeight"
+                                            [(ngModel)]="itemService.formData.ChairArmHeight" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="ChairInsideSeatDepth">ChairInsideSeatDepth</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="ChairInsideSeatDepth" name="ChairInsideSeatDepth"
+                                            [(ngModel)]="itemService.formData.ChairInsideSeatDepth" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="ChairInsideSeatWidth">ChairInsideSeatWidth</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="ChairInsideSeatWidth" name="ChairInsideSeatWidth"
+                                            [(ngModel)]="itemService.formData.ChairInsideSeatWidth" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="TableClearance">TableClearance</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="TableClearance" name="TableClearance"
+                                            [(ngModel)]="itemService.formData.TableClearance" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="TableClosedDepth">TableClosedDepth</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="TableClosedDepth" name="TableClosedDepth"
+                                            [(ngModel)]="itemService.formData.TableClosedDepth" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="TableClosedWidth">TableClosedWidth</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="TableClosedWidth" name="TableClosedWidth"
+                                            [(ngModel)]="itemService.formData.TableClosedWidth" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="TableClosedHeight">TableClosedHeight</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="TableClosedHeight" name="TableClosedHeight"
+                                            [(ngModel)]="itemService.formData.TableClosedHeight" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="TableLeavesCount">TableLeavesCount</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="TableLeavesCount" name="TableLeavesCount"
+                                            [(ngModel)]="itemService.formData.TableLeavesCount" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="TableLeavesWidth">TableLeavesWidth</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="TableLeavesWidth" name="TableLeavesWidth"
+                                            [(ngModel)]="itemService.formData.TableLeavesWidth" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="TablesSeatsCountClosed">TablesSeatsCountClosed</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="TablesSeatsCountClosed" name="TablesSeatsCountClosed"
+                                            [(ngModel)]="itemService.formData.TablesSeatsCountClosed" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="TablesSeatsCountOpen">TablesSeatsCountOpen</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="TablesSeatsCountOpen" name="TablesSeatsCountOpen"
+                                            [(ngModel)]="itemService.formData.TablesSeatsCountOpen" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="CMSideAndFrontRailApronClearance">Side and Front Rail Apron clearance (cm)</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Side and Front Rail Apron clearance (cm)" name="CMSideAndFrontRailApronClearance"
+                                            [(ngModel)]="itemService.formData.CMSideAndFrontRailApronClearance" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="CMSlatToTopOfSideRailClearance">Slat to Top of Side Rail Clearance (cm)</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Slat to Top of Side Rail Clearance (cm)" name="CMSlatToTopOfSideRailClearance"
+                                            [(ngModel)]="itemService.formData.CMSlatToTopOfSideRailClearance" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="ImagCMSlatToTopOfFootRailClearanceeCount">Slat to Top of Foot Rail Clearance (cm)</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Slat to Top of Foot Rail Clearance (cm)" name="CMSlatToTopOfFootRailClearance"
+                                            [(ngModel)]="itemService.formData.CMSlatToTopOfFootRailClearance" type="text">
+                                    </div>
+                                </div>
+                                
+                                 
+                                
+                            </div>
+                            <div class="col s12 m12 l4">
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="DateCreated">Date Created</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Date Created" name="DateCreated"
+                                            [(ngModel)]="itemService.formData.DateCreated" type="text">
+                                    </div>
+                                </div>    
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="ImageCount">Image Count</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Image Count" name="ImageCount"
+                                            [(ngModel)]="itemService.formData.ImageCount" type="text">
+                                    </div>
+                                </div>    
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="Type_ID">Room</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <mat-select class="browser-default"
+                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                            name="RoomAndUsage_ID" [(ngModel)]="itemService.formData.RoomAndUsage_ID">
+                                            <mat-option *ngFor="let item of roomAndUsageService.list" [value]="item.ID">
+                                                {{item.Name}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="Type_ID">Type</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <mat-select class="browser-default"
+                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                            name="Type_ID" [(ngModel)]="itemService.formData.Type_ID">
+                                            <mat-option *ngFor="let item of typeService.list" [value]="item.ID">
+                                                {{item.Name}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="Brand_ID">Brand</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <mat-select class="browser-default"
+                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                            name="Brand_ID" [(ngModel)]="itemService.formData.Brand_ID">
+                                            <mat-option *ngFor="let item of brandService.list" [value]="item.ID">
+                                                {{item.Name}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="Collection_ID">Collection</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <mat-select class="browser-default"
+                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                            name="Collection_ID" [(ngModel)]="itemService.formData.Collection_ID">
+                                            <mat-option *ngFor="let item of collectionService.list" [value]="item.ID">
+                                                {{item.Name}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="LifeStyle_ID">Life style</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <mat-select class="browser-default"
+                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                            name="LifeStyle_ID" [(ngModel)]="itemService.formData.LifeStyle_ID">
+                                            <mat-option *ngFor="let item of lifeStyleService.list" [value]="item.ID">
+                                                {{item.Name}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="Style_ID">Style</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <mat-select class="browser-default"
+                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                            name="Style_ID" [(ngModel)]="itemService.formData.Style_ID">
+                                            <mat-option *ngFor="let item of styleService.list" [value]="item.ID">
+                                                {{item.Name}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="PrimaryMaterial_ID">Primary Material</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <mat-select class="browser-default"
+                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                            name="PrimaryMaterial_ID" [(ngModel)]="itemService.formData.PrimaryMaterial_ID">
+                                            <mat-option *ngFor="let item of materialService.list" [value]="item.ID">
+                                                {{item.Name}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="SecondaryMaterial_ID">Secondary Material</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <mat-select class="browser-default"
+                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                            name="SecondaryMaterial_ID" [(ngModel)]="itemService.formData.SecondaryMaterial_ID">
+                                            <mat-option *ngFor="let item of materialService.list" [value]="item.ID">
+                                                {{item.Name}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="TertiaryMaterial_ID">Tertiary Material</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <mat-select class="browser-default"
+                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                            name="TertiaryMaterial_ID" [(ngModel)]="itemService.formData.TertiaryMaterial_ID">
+                                            <mat-option *ngFor="let item of materialService.list" [value]="item.ID">
+                                                {{item.Name}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="OptionGroup_ID">Option Group</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <mat-select class="browser-default"
+                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                            name="OptionGroup_ID" [(ngModel)]="itemService.formData.OptionGroup_ID">
+                                            <mat-option *ngFor="let item of optionGroupService.list" [value]="item.ID">
+                                                {{item.Name}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="OptionGroup2_ID">Option Group 2</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <mat-select class="browser-default"
+                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                            name="OptionGroup2_ID" [(ngModel)]="itemService.formData.OptionGroup2_ID">
+                                            <mat-option *ngFor="let item of optionGroupService.list" [value]="item.ID">
+                                                {{item.Name}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="OptionGroup3_ID">Option Group 3</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <mat-select class="browser-default"
+                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                            name="OptionGroup3_ID" [(ngModel)]="itemService.formData.OptionGroup3_ID">
+                                            <mat-option *ngFor="let item of optionGroupService.list" [value]="item.ID">
+                                                {{item.Name}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </div>
+                                </div>
+                                <div class="col s12 m12 l6">
+                                    <div class="input-field">
+                                        <p>
+                                            <label>
+                                                <input type="checkbox" class="filled-in" name="HasOtherSizes"
+                                                    [(ngModel)]="itemService.formData.HasOtherSizes" />
+                                                <span>HasOtherSizes</span>
+                                            </label>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col s12 m12 l6">
+                                    <div class="input-field">
+                                        <p>
+                                            <label>
+                                                <input type="checkbox" class="filled-in" name="IsBestSeller"
+                                                    [(ngModel)]="itemService.formData.IsBestSeller" />
+                                                <span>Best Seller</span>
+                                            </label>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col s12 m12 l6">
+                                    <div class="input-field">
+                                        <p>
+                                            <label>
+                                                <input type="checkbox" class="filled-in" name="IsUpholsteredBack_WoodBack"
+                                                    [(ngModel)]="itemService.formData.IsUpholsteredBack_WoodBack" />
+                                                <span>UpholsteredBack_WoodBack</span>
+                                            </label>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col s12 m12 l6">
+                                    <div class="input-field">
+                                        <p>
+                                            <label>
+                                                <input type="checkbox" class="filled-in" name="Extending"
+                                                    [(ngModel)]="itemService.formData.Extending" />
+                                                <span>Extending</span>
+                                            </label>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col s12 m12 l6">
+                                    <div class="input-field">
+                                        <p>
+                                            <label>
+                                                <input type="checkbox" class="filled-in" name="Nail"
+                                                    [(ngModel)]="itemService.formData.Nail" />
+                                                <span>Nail</span>
+                                            </label>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col s12 m12 l6">
+                                    <div class="input-field">
+                                        <p>
+                                            <label>
+                                                <input type="checkbox" class="filled-in" name="UPHFinish"
+                                                    [(ngModel)]="itemService.formData.UPHFinish" />
+                                                <span>UPHFinish</span>
+                                            </label>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col s12 m12 l6">
+                                    <div class="input-field">
+                                        <p>
+                                            <label>
+                                                <input type="checkbox" class="filled-in" name="IsNew"
+                                                    [(ngModel)]="itemService.formData.IsNew" />
+                                                <span>New</span>
+                                            </label>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col s12 m12 l6">
+                                    <div class="input-field">
+                                        <p>
+                                            <label>
+                                                <input type="checkbox" class="filled-in" name="IsStocked" disabled
+                                                    [(ngModel)]="itemService.formData.IsStocked" />
+                                                <span>Stocked</span>
+                                            </label>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col s12 m12 l6">
+                                    <div class="input-field">
+                                        <p>
+                                            <label>
+                                                <input type="checkbox" class="filled-in" name="IsCFPItem" disabled
+                                                    [(ngModel)]="itemService.formData.IsCFPItem" />
+                                                <span>CFPItem</span>
+                                            </label>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col s12 m12 l6">
+                                    <div class="input-field">
+                                        <p>
+                                            <label>
+                                                <input type="checkbox" class="filled-in" name="IsAXHCFPItem" disabled
+                                                    [(ngModel)]="itemService.formData.IsAXHCFPItem" />
+                                                <span>AXHCFPItem</span>
+                                            </label>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col s12 m12 l6">
+                                    <div class="input-field">
+                                        <p>
+                                            <label>
+                                                <input type="checkbox" class="filled-in" name="InStockProgram" disabled
+                                                    [(ngModel)]="itemService.formData.InStockProgram" />
+                                                <span>StockProgram</span>
+                                            </label>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col s12 m12 l6">
+                                    <div class="input-field">
+                                        <!-- <p>
+                                            <label>
+                                                <input type="checkbox" class="filled-in" name="IsActive"
+                                                    [(ngModel)]="itemService.formData.IsActive" />
+                                                <span>IsActive</span>
+                                            </label>
+                                        </p> -->
+                                    </div>
+                                </div>
+                                <div class="col s12 m12 l12">
+                                    <a target="_blank" href="{{itemService.formData.ImageSirv}}"
+                                        title="{{itemService.formData.ImageSirv}}">
+                                        <img class="responsive-img" width="70%"
+                                            title="{{itemService.formData.ImageSirv}}"
+                                            alt="{{itemService.formData.ImageSirv}}"
+                                            [src]="itemService.formData.ImageSirv"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="input-fields" class="card card-tabs">            
+            <div class="card-content">                 
+                <div id="ItemInfo">                        
+                        <div class="row">
+                            <div class="col s12 m12 l4">        
+                                <div class="KhungOverflow">
+                                    <table class="responsive-table">
+                                        <thead
+                                            style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                            <tr>                                               
+                                                <th>Region</th>
+                                                <th>Active</th>                                                
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of item_StatusService.list; let i = index;">                                                
+                                                <td>{{item.Region}}</td>                                                
+                                                <td>
+                                                    <label>
+                                                        <input type="checkbox" [(ngModel)]="item.IsActive" />
+                                                        <span></span>
+                                                    </label>
+                                                </td>                                         
+                                                <td><button title="Save" class="mb-6 btn-floating waves-effect waves-light cyan" (click)="onItem_StatusSave(item)"><i
+                                                        class="material-icons">save</i></button></td>
+                                            </tr>
+                                        </tbody>                                        
+                                    </table>
+                                </div>                        
+                            </div>
+                            <div class="col s12 m12 l4">   
+                                <div class="KhungOverflow">
+                                    <table class="responsive-table">
+                                        <thead
+                                            style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                            <tr>                                               
+                                                <th>Region</th>
+                                                <th>Price</th>                                                
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of item_PriceService.list; let i = index;">                                                
+                                                <td>{{item.Region}}</td>                                                
+                                                <td><input name="Price" type="text" [(ngModel)]="item.Price" style="width: 100px;"></td>                                     
+                                                <td><button title="Save" class="mb-6 btn-floating waves-effect waves-light cyan" (click)="onItem_PriceSave(item)"><i
+                                                        class="material-icons">save</i></button></td>
+                                            </tr>
+                                        </tbody>                                        
+                                    </table>
+                                </div>                      
+                            </div>
+                            <div class="col s12 m12 l4">     
+                                <div class="KhungOverflow">
+                                    <table class="responsive-table">
+                                        <thead
+                                            style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                            <tr>                                               
+                                                <th>Fabric/Leather/Trim code</th>      
+                                                <th></th>                                              
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of item_FabricService.list; let i = index;">                                                
+                                                <td>{{item.FabricCode}}</td>     
+                                                <td><a title="Delete" (click)="onItem_FabricDelete(item)"
+                                                    class="mb-6 btn-floating waves-effect waves-light red accent-2"><i
+                                                        class="material-icons">delete_outline</i></a></td>                                                
+                                            </tr>
+                                            <tr>                                                
+                                                <td><input name="fabricCode" type="text" [(ngModel)]="fabricCode"></td>     
+                                                <td><button title="Save" class="mb-6 btn-floating waves-effect waves-light cyan" (click)="onItem_FabricInsert()"><i
+                                                    class="material-icons">save</i></button></td>                                      
+                                            </tr>
+                                        </tbody>                                        
+                                    </table>
+                                </div>                                       
+                            </div>
+                        </div>                        
+                        <hr/>
+                        <div class="row">
+                            <div class="col s12 m12 l4">     
+                                <div class="KhungOverflow">
+                                    <table class="responsive-table">
+                                        <thead
+                                            style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                            <tr>                                               
+                                                <th>2Dfeature</th>     
+                                                <th></th>                                             
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of item_2DfeatureService.list; let i = index;">                                                
+                                                <td>{{item.FeatureName}}</td>    
+                                                <td><a title="Delete" (click)="onItem_2DfeatureDelete(item)"
+                                                    class="mb-6 btn-floating waves-effect waves-light red accent-2"><i
+                                                        class="material-icons">delete_outline</i></a></td>                                                      
+                                            </tr>
+                                            <tr>                                                
+                                                <td><mat-select class="browser-default"
+                                                    style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                                    name="feature_ID2D" [(ngModel)]="feature_ID2D">
+                                                    <mat-option *ngFor="let item of feature2DService.list" [value]="item.ID">
+                                                        {{item.Name}}
+                                                    </mat-option>
+                                                </mat-select></td>     
+                                                <td><button title="Save" class="mb-6 btn-floating waves-effect waves-light cyan" (click)="onItem_2DfeatureInsert()"><i
+                                                    class="material-icons">save</i></button></td>                                      
+                                            </tr>
+                                        </tbody>                                        
+                                    </table>
+                                </div>                                       
+                            </div>
+                            <div class="col s12 m12 l4">     
+                                <div class="KhungOverflow">
+                                    <table class="responsive-table">
+                                        <thead
+                                            style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                            <tr>                                               
+                                                <th>3Dfeature</th>  
+                                                <th></th>                                                  
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of item_3DfeatureService.list; let i = index;">                                                
+                                                <td>{{item.FeatureName}}</td>   
+                                                <td><a title="Delete" (click)="onItem_3DfeatureDelete(item)"
+                                                    class="mb-6 btn-floating waves-effect waves-light red accent-2"><i
+                                                        class="material-icons">delete_outline</i></a></td>                                                        
+                                            </tr>
+                                            <tr>                                                
+                                                <td><mat-select class="browser-default"
+                                                    style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                                    name="feature_ID3D" [(ngModel)]="feature_ID3D">
+                                                    <mat-option *ngFor="let item of feature3DService.list" [value]="item.ID">
+                                                        {{item.Name}}
+                                                    </mat-option>
+                                                </mat-select></td>     
+                                                <td><button title="Save" class="mb-6 btn-floating waves-effect waves-light cyan" (click)="onItem_3DfeatureInsert()"><i
+                                                    class="material-icons">save</i></button></td>                                      
+                                            </tr>
+                                        </tbody>                                        
+                                    </table>
+                                </div>                                       
+                            </div>
+                            <div class="col s12 m12 l4">     
+                                <div class="KhungOverflow">
+                                    <table class="responsive-table">
+                                        <thead
+                                            style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                            <tr>                                               
+                                                <th>Process And Technique</th>   
+                                                <th></th>                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of item_ProcessAndTechniqueService.list; let i = index;">                                                
+                                                <td>{{item.ProcessAndTechniqueName}}</td>   
+                                                <td><a title="Delete" (click)="onItem_ProcessAndTechniqueDelete(item)"
+                                                    class="mb-6 btn-floating waves-effect waves-light red accent-2"><i
+                                                        class="material-icons">delete_outline</i></a></td>                                                          
+                                            </tr>
+                                            <tr>                                                
+                                                <td><mat-select class="browser-default"
+                                                    style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                                    name="processAndTechnique_ID" [(ngModel)]="processAndTechnique_ID">
+                                                    <mat-option *ngFor="let item of processAndTechniqueService.list" [value]="item.ID">
+                                                        {{item.Name}}
+                                                    </mat-option>
+                                                </mat-select></td>     
+                                                <td><button title="Save" class="mb-6 btn-floating waves-effect waves-light cyan" (click)="onItem_ProcessAndTechniqueInsert()"><i
+                                                    class="material-icons">save</i></button></td>                                      
+                                            </tr>
+                                        </tbody>                                        
+                                    </table>
+                                </div>                                       
+                            </div>
+                        </div>
+                        <hr/>
+                        <div class="row">
+                            <div class="col s12 m12 l4">     
+                                <div class="KhungOverflow">
+                                    <table class="responsive-table">
+                                        <thead
+                                            style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                            <tr>                                               
+                                                <th>Century</th>   
+                                                <th></th>                                                  
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of item_CenturyService.list; let i = index;">                                                
+                                                <td>{{item.CenturyName}}</td>    
+                                                <td><a title="Delete" (click)="onItem_CenturyDelete(item)"
+                                                    class="mb-6 btn-floating waves-effect waves-light red accent-2"><i
+                                                        class="material-icons">delete_outline</i></a></td>                                                           
+                                            </tr>
+                                            <tr>                                                
+                                                <td><mat-select class="browser-default"
+                                                    style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                                    name="century_ID" [(ngModel)]="century_ID">
+                                                    <mat-option *ngFor="let item of centuryService.list" [value]="item.ID">
+                                                        {{item.Name}}
+                                                    </mat-option>
+                                                </mat-select></td>     
+                                                <td><button title="Save" class="mb-6 btn-floating waves-effect waves-light cyan" (click)="onItem_CenturyInsert()"><i
+                                                    class="material-icons">save</i></button></td>                                      
+                                            </tr>
+                                        </tbody>                                        
+                                    </table>
+                                </div>                                       
+                            </div>
+                            <div class="col s12 m12 l4">     
+                                <div class="KhungOverflow">
+                                    <table class="responsive-table">
+                                        <thead
+                                            style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                            <tr>                                               
+                                                <th>Geography</th>    
+                                                <th></th>                                                  
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of item_GeographyService.list; let i = index;">                                                
+                                                <td>{{item.GeographyName}}</td>    
+                                                <td><a title="Delete" (click)="onItem_GeographyDelete(item)"
+                                                    class="mb-6 btn-floating waves-effect waves-light red accent-2"><i
+                                                        class="material-icons">delete_outline</i></a></td>                                                           
+                                            </tr>
+                                            <tr>                                                
+                                                <td><mat-select class="browser-default"
+                                                    style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                                    name="geography_ID" [(ngModel)]="geography_ID">
+                                                    <mat-option *ngFor="let item of geographyService.list" [value]="item.ID">
+                                                        {{item.Name}}
+                                                    </mat-option>
+                                                </mat-select></td>     
+                                                <td><button title="Save" class="mb-6 btn-floating waves-effect waves-light cyan" (click)="onItem_GeographyInsert()"><i
+                                                    class="material-icons">save</i></button></td>                                      
+                                            </tr>
+                                        </tbody>                                        
+                                    </table>
+                                </div>                                       
+                            </div>
+                            <div class="col s12 m12 l4">     
+                                <div class="KhungOverflow">
+                                    <table class="responsive-table">
+                                        <thead
+                                            style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                            <tr>                                               
+                                                <th>Historical Style</th> 
+                                                <th></th>                                                    
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of item_HistoricalStyleService.list; let i = index;">                                                
+                                                <td>{{item.HistoricalStyleName}}</td>     
+                                                <td><a title="Delete" (click)="onItem_HistoricalStyleDelete(item)"
+                                                    class="mb-6 btn-floating waves-effect waves-light red accent-2"><i
+                                                        class="material-icons">delete_outline</i></a></td>                                                 
+                                            </tr>
+                                            <tr>                                                
+                                                <td><mat-select class="browser-default"
+                                                    style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                                    name="historicalStyle_ID" [(ngModel)]="historicalStyle_ID">
+                                                    <mat-option *ngFor="let item of historicalStyleService.list" [value]="item.ID">
+                                                        {{item.Name}}
+                                                    </mat-option>
+                                                </mat-select></td>     
+                                                <td><button title="Save" class="mb-6 btn-floating waves-effect waves-light cyan" (click)="onItem_HistoricalStyleInsert()"><i
+                                                    class="material-icons">save</i></button></td>                                      
+                                            </tr>
+                                        </tbody>                                        
+                                    </table>
+                                </div>                                       
+                            </div>
+                            
+                        </div>
+                        <hr/>
+                        <div class="row">
+                            <div class="col s12 m12 l4">     
+                                <div class="KhungOverflow">
+                                    <table class="responsive-table">
+                                        <thead
+                                            style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                            <tr>                                               
+                                                <th>Shape</th>    
+                                                <th></th>                                              
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of item_ShapeService.list; let i = index;">                                                
+                                                <td>{{item.ShapeName}}</td>   
+                                                <td><a title="Delete" (click)="onItem_ShapeDelete(item)"
+                                                    class="mb-6 btn-floating waves-effect waves-light red accent-2"><i
+                                                        class="material-icons">delete_outline</i></a></td>                                                          
+                                            </tr>
+                                            <tr>                                                
+                                                <td><mat-select class="browser-default"
+                                                    style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                                    name="shape_ID" [(ngModel)]="shape_ID">
+                                                    <mat-option *ngFor="let item of shapeService.list" [value]="item.ID">
+                                                        {{item.Name}}
+                                                    </mat-option>
+                                                </mat-select></td>     
+                                                <td><button title="Save" class="mb-6 btn-floating waves-effect waves-light cyan" (click)="onItem_ShapeInsert()"><i
+                                                    class="material-icons">save</i></button></td>                                      
+                                            </tr>
+                                        </tbody>                                        
+                                    </table>
+                                </div>                                       
+                            </div>
+                            
+                            <div class="col s12 m12 l4">     
+                                <div class="KhungOverflow">
+                                    <table class="responsive-table">
+                                        <thead
+                                            style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                            <tr>                                               
+                                                <th>Care</th>  
+                                                <th></th>                                               
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of item_CareService.list; let i = index;">                                                
+                                                <td>{{item.CareName}}</td>    
+                                                <td><a title="Delete" (click)="onItem_CareDelete(item)"
+                                                    class="mb-6 btn-floating waves-effect waves-light red accent-2"><i
+                                                        class="material-icons">delete_outline</i></a></td>                                                                               
+                                            </tr>
+                                            <tr>                                                
+                                                <td><mat-select class="browser-default"
+                                                    style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                                    name="care_ID" [(ngModel)]="care_ID">
+                                                    <mat-option *ngFor="let item of careService.list" [value]="item.ID">
+                                                        {{item.Name}}
+                                                    </mat-option>
+                                                </mat-select></td>     
+                                                <td><button title="Save" class="mb-6 btn-floating waves-effect waves-light cyan" (click)="onItem_CareInsert()"><i
+                                                    class="material-icons">save</i></button></td>                                      
+                                            </tr>
+                                        </tbody>                                        
+                                    </table>
+                                </div>                                       
+                            </div>
+                            <div class="col s12 m12 l4">     
+                                <div class="KhungOverflow">
+                                    <table class="responsive-table">
+                                        <thead
+                                            style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                            <tr>                                               
+                                                <th>Colour And Finish</th>  
+                                                <th></th>                                               
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of item_ColourAndFinishService.list; let i = index;">                                                
+                                                <td>{{item.ColourAndFinishName}}</td>    
+                                                <td><a title="Delete" (click)="onItem_ColourAndFinishDelete(item)"
+                                                    class="mb-6 btn-floating waves-effect waves-light red accent-2"><i
+                                                        class="material-icons">delete_outline</i></a></td>                                                                               
+                                            </tr>
+                                            <tr>                                                
+                                                <td><mat-select class="browser-default"
+                                                    style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                                    name="colourAndFinish_ID" [(ngModel)]="colourAndFinish_ID">
+                                                    <mat-option *ngFor="let item of colourAndFinishService.list" [value]="item.ID">
+                                                        {{item.Name}}
+                                                    </mat-option>
+                                                </mat-select></td>     
+                                                <td><button title="Save" class="mb-6 btn-floating waves-effect waves-light cyan" (click)="onItem_ColourAndFinishInsert()"><i
+                                                    class="material-icons">save</i></button></td>                                      
+                                            </tr>
+                                        </tbody>                                        
+                                    </table>
+                                </div>                                       
+                            </div>
+                            
+                        </div>
+                        <hr/>
+                        <div class="row">
+                            <div class="col s12 m12 l4">     
+                                <div class="KhungOverflow">
+                                    <table class="responsive-table">
+                                        <thead
+                                            style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                            <tr>                                               
+                                                <th>Related item</th>                                               
+                                                <th>SKU</th>            
+                                                <th></th>     
+                                                <th></th>                                         
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of relatedItemService.list; let i = index;">                                                
+                                                <td>{{item.Item02Name}}</td>                                                    
+                                                <td>{{item.Item02SKU}}</td>     
+                                                <td><a title="Delete" (click)="onRelatedItemDelete(item)"
+                                                    class="mb-6 btn-floating waves-effect waves-light red accent-2"><i
+                                                        class="material-icons">delete_outline</i></a></td>
+                                                <td><a target="_blank" title="Website"
+                                                    href="{{website}}{{productDetail}}/{{item.Item02URLCode}}.html"
+                                                    class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                                        class="material-icons">public</i></a></td>                                               
+                                            </tr>
+                                            <tr>                                                
+                                                <td></td>                                                    
+                                                <td><input name="relatedItemSKU" type="text" [(ngModel)]="relatedItemSKU"></td>     
+                                                <td><button title="Save" class="mb-6 btn-floating waves-effect waves-light cyan" (click)="onRelatedItemInsert()"><i
+                                                    class="material-icons">save</i></button></td>
+                                                <td></td>                                               
+                                            </tr>
+                                        </tbody>                                                                               
+                                    </table>
+                                </div>                                       
+                            </div>
+                            <div class="col s12 m12 l4">     
+                                <div class="KhungOverflow">
+                                    <table class="responsive-table">
+                                        <thead
+                                            style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                            <tr>                                               
+                                                <th>Special Group SKU</th>                                                                                                           
+                                                <th></th>     
+                                                <th></th>                                         
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of relatedSkuForSpecialGroupService.list; let i = index;">                                                
+                                                <td>{{item.SKU}}</td>                                                                                                       
+                                                <td><a title="Delete" (click)="onRelatedSkuForSpecialGroupDelete(item)"
+                                                    class="mb-6 btn-floating waves-effect waves-light red accent-2"><i
+                                                        class="material-icons">delete_outline</i></a></td>                                                
+                                            <tr>                                                                           
+                                                <td><input name="relatedSkuForSpecialGroupSKU" type="text" [(ngModel)]="relatedSkuForSpecialGroupSKU"></td>     
+                                                <td><button title="Save" class="mb-6 btn-floating waves-effect waves-light cyan" (click)="onRelatedSkuForSpecialGroupInsert()"><i
+                                                    class="material-icons">save</i></button></td>
+                                                <td></td>                                               
+                                            </tr>
+                                        </tbody>                                                                               
+                                    </table>
+                                </div>                                       
+                            </div>
+                            <div class="col s12 m12 l4">     
+                                <div class="KhungOverflow">
+                                    <table class="responsive-table">
+                                        <thead
+                                            style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                            <tr>                                               
+                                                <th>Size Availability SKU</th>                                                                                               
+                                                <th></th>                                                                        
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of sKUListingForSizeAvailabilityService.list; let i = index;">                                                
+                                                <td>{{item.SKU}}</td>                                                                                                     
+                                                <td><a title="Delete" (click)="onSKUListingForSizeAvailabilityDelete(item)"
+                                                    class="mb-6 btn-floating waves-effect waves-light red accent-2"><i
+                                                        class="material-icons">delete_outline</i></a></td>                                                                                      
+                                            </tr>
+                                            <tr>                                                                                 
+                                                <td><input name="sKUListingForSizeAvailabilitySKU" type="text" [(ngModel)]="sKUListingForSizeAvailabilitySKU"></td>     
+                                                <td><button title="Save" class="mb-6 btn-floating waves-effect waves-light cyan" (click)="onSKUListingForSizeAvailabilityInsert()"><i
+                                                    class="material-icons">save</i></button></td>
+                                                <td></td>                                               
+                                            </tr>
+                                        </tbody>                                                                               
+                                    </table>
+                                </div>                                       
+                            </div>
+                            
+                        </div>
+                </div>
+            </div>            
+        </div>
+    </div>
+</div>
+<app-loading *ngIf="isShowLoading"></app-loading>

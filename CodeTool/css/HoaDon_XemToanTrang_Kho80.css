@@ -1,0 +1,87 @@
+﻿input[type="checkbox"]
+{
+	width: 18px;
+	height: 18px;
+}
+span
+{
+	font-size: 14px;
+}
+#PhieuTiepNhanBanGiaoHoSoHaiQuan_XemToanTrang
+{
+	width: 302px;
+	border-color: #1176bc;
+	border-width: 1px;
+	border-style: solid;
+	font-weight:bold;
+}
+#PhieuTiepNhanBanGiaoHoSoHaiQuan_XemToanTrang .Content
+{
+}
+.Header
+{
+	border-bottom-color: #1176bc;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+.MaSoHoaDon
+{
+	width: 250px;
+	border-right-color: #1176bc;
+	border-right-width: 1px;
+	border-right-style: solid;
+	font-size:20px;
+}
+.ThongTinCongTy
+{
+	padding: 2px;
+	line-height:16px;
+	font-size:14px;
+}
+.HoaDonThongTin
+{
+	padding: 5px;
+}
+.HoaDonThongTin .Title
+{
+	font-size: 16px;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+}
+.TongCong
+{
+	text-align: right;
+}
+.BangChu
+{
+	font-style: italic;
+}
+.Footer
+{
+	padding: 5px;
+	border-top-color: #1176bc;
+	border-top-width: 1px;
+	border-top-style: solid;
+}
+.NhanVienBanHang
+{
+	text-align: center;
+	width: 200px;
+	height: 100px;
+	margin-left: 600px;
+}
+table.GridViewStyle
+{
+	border-color: #1176bc;
+	border-style: solid;
+	border-width: 1px;
+}
+.Footer .BangChu1
+{
+	font-size:16px;
+}
+.Footer .BangChu
+{
+	font-size:12px;
+}

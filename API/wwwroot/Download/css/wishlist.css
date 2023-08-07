@@ -1,0 +1,124 @@
+﻿:host {
+    width: 100%;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+}
+
+.wrap_wishlist_popup {
+    padding: 20px 20px 20px 20px;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.title_name_wishlist {
+    font-size: 20px;
+    color: #000;
+    font-family: "HurmeGeometricSans1-Regular";
+    text-transform: uppercase;
+    padding: 0 0 10px 0;
+}
+
+.sub_title_name_wishlist {
+    font-size: 15px;
+    color: #000;
+    font-family: "HurmeGeometricSans1-Regular";
+    text-transform: uppercase;
+    padding: 0 0 5px 0;
+}
+
+.wishlist_popup_input_name {
+    flex-grow: 1;
+}
+
+    .wishlist_popup_input_name input[type=text] {
+        padding: 15px 0 15px 15px;
+        border: 1px solid #000;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+.btn_add_wishlist_popup {
+    padding: 16px 40px;
+    background-color: #000;
+    color: #fff;
+    border: none transparent;
+    font-size: 15px;
+    text-transform: uppercase;
+    width: 160px;
+}
+
+.field_add_new_wishlist_popup {
+    display: flex;
+}
+
+.wishlist_popup_button_close {
+    width: 100% !important;
+    z-index: 999;
+    display: block;
+    text-align: right;
+    font-size: 20px;
+    right: 20px;
+}
+
+    .wishlist_popup_button_close button {
+        border: #000;
+        background: #fff;
+    }
+
+input.input_txt_placeholder {
+    font-size: 15px;
+    color: #636363;
+    font-family: "HurmeGeometricSans1-Light";
+}
+
+.main_name_wishlist_popup {
+    font-size: 15px;
+    color: #000;
+    font-family: "HurmeGeometricSans1-Regular";
+    padding: 22px 0 22px 0;
+    width: 75%;
+}
+
+.list_wishlist_popup {    
+}
+
+    .list_wishlist_popup ul li:hover {
+        background-color: #f9f9f9;
+    }
+
+.selected_wishlist_popup {    
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    margin: 20px 0 0 0;
+}
+    /* Hide the browser's default radio button */
+    .selected_wishlist_popup input {       
+        opacity: 0;
+        cursor: pointer;
+    }
+/* Create a custom radio button */
+.checkmark {    
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+    border: 1px solid #dcdcdc;
+}
+
+.checkmark-added {    
+    background-color: #ffe4c4;    
+}
+/* On mouse-over, add a grey background color */
+.selected_wishlist_popup:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+::ng-deep .mat-dialog-container {
+    background: #fff;
+}

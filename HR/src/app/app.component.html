@@ -1,0 +1,83 @@
+<div class="vertical-layout page-header-light vertical-menu-collapsible vertical-menu-nav-dark 2-columns mat-typography"
+    data-open="click" data-menu="vertical-menu-nav-dark" data-col="2-column">
+    <header class="page-topbar" id="header">
+        <div class="navbar navbar-fixed">
+            <nav class="navbar-main navbar-color nav-collapsible sideNav-lock navbar-light">
+                <div class="nav-wrapper">
+                    <div class="header-search-wrapper hide-on-med-and-down">
+                    </div>
+                    <ul class="navbar-list right">
+                        <li class="hide-on-med-and-down"><a
+                                class="waves-effect waves-block waves-light toggle-fullscreen"
+                                href="javascript:void(0);"><i class="material-icons">settings_overscan</i></a></li>
+                    </ul>
+                    <ul class="dropdown-content" id="translation-dropdown">
+                    </ul>
+
+                    <ul class="dropdown-content" id="notifications-dropdown">
+                    </ul>
+                    <ul class="dropdown-content" id="profile-dropdown">
+                    </ul>
+                </div>
+                <nav class="display-none search-sm">
+                    <div class="nav-wrapper">
+                        <div class="input-field">
+                        </div>
+                    </div>
+                </nav>
+            </nav>
+        </div>
+    </header>
+    <aside class="sidenav-main nav-expanded nav-lock nav-collapsible sidenav-dark sidenav-active-rounded">
+        <div class="brand-sidebar">
+            <h1 class="logo-wrapper"><a class="brand-logo darken-1" href="{{domainURL}}" style="color:#ff6600;"><span
+                        class="logo-text hide-on-med-and-down" style="color:#ff6600;">Theodore Alexander</span></a><a
+                    class="navbar-toggler" href="#"><i class="material-icons">radio_button_checked</i></a></h1>
+        </div>
+        <ul class="sidenav sidenav-collapsible leftside-navigation collapsible sidenav-fixed menu-shadow" id="slide-out"
+            data-menu="menu-navigation" data-collapsible="accordion">
+            <!-- <li class="navigation-header">
+                <a class="navigation-header-text">COVID</a><i
+                    class="navigation-header-icon material-icons">more_horiz</i>
+            </li>
+            <li class='bold'><a class='waves-effect waves-cyan ' title='Covid' routerLink="hr-covid"><i
+                        class='material-icons'>add_to_queue</i><span class='menu-title' data-i18n=''>COVID</span></a>
+            </li>
+            <li class='bold'><a class='waves-effect waves-cyan ' title='F0' routerLink="hr-covid-f0"><i
+                        class='material-icons'>add_to_queue</i><span class='menu-title' data-i18n=''>F0</span></a>
+            </li>
+            <li class='bold'><a class='waves-effect waves-cyan ' title='F1' routerLink="hr-covid-f1"><i
+                        class='material-icons'>add_to_queue</i><span class='menu-title' data-i18n=''>F1</span></a>
+            </li>
+            <li class='bold'><a class='waves-effect waves-cyan ' title='F2' routerLink="hr-covid-f2"><i
+                        class='material-icons'>add_to_queue</i><span class='menu-title' data-i18n=''>F2</span></a>
+            </li> -->
+            <li class="navigation-header">
+                <a class="navigation-header-text">Employee</a><i
+                    class="navigation-header-icon material-icons">more_horiz</i>
+            </li>
+            <li class='bold'><a class='waves-effect waves-cyan ' title='List' routerLink="hr-employee"><i
+                        class='material-icons'>account_box</i><span class='menu-title' data-i18n=''>List</span></a>
+            </li>
+            <li class='bold'><a class='waves-effect waves-cyan ' title='Upload' routerLink="hr-employee-upload"><i
+                        class='material-icons'>account_box</i><span class='menu-title' data-i18n=''>Upload</span></a>
+            </li>           
+            <li class="navigation-header">
+                <a class="navigation-header-text">Recruitment</a><i
+                    class="navigation-header-icon material-icons">more_horiz</i>
+            </li>
+            <li class='bold'><a class='waves-effect waves-cyan ' title='Candidate' routerLink="hr-recruitment-career"><i
+                        class='material-icons'>border_inner</i><span class='menu-title' data-i18n=''>Candidate</span></a>
+            </li>
+            <li class='bold'><a class='waves-effect waves-cyan ' title='Recommender'
+                    routerLink="hr-recruitment-introduce"><i class='material-icons'>border_inner</i><span
+                        class='menu-title' data-i18n=''>Recommender</span></a></li>
+        </ul>
+        <div class="navigation-background"></div><a
+            class="sidenav-trigger btn-sidenav-toggle btn-floating btn-medium waves-effect waves-light hide-on-large-only"
+            href="#" data-target="slide-out"><i class="material-icons">menu</i></a>
+    </aside>
+    <div id="main">
+        <router-outlet></router-outlet>
+    </div>
+</div>

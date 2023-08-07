@@ -1,0 +1,356 @@
+<nz-modal [(nzVisible)]="isVisible01Popup" (nzOnCancel)="onCancel01Popup()" nzCancelText="Close" [nzOkText]="null">
+    <ng-container *nzModalTitle>
+        <div class="successfully-apply">
+            <span>Job Description for <br /> Industrial Engineering position </span>
+        </div>
+    </ng-container>
+    <ng-container *nzModalContent>
+        <div class="content-apply">
+            <label class="content-job-description">
+                - Bachelor Degree in Industrial Engineering or equivalent course. <br />
+                - At least 5 years working experience in a furniture manufacturing firm. <br />
+                - Knowledgeable in CAD and able to read and understand full-size drawing is a must. <br />
+                - Good communication and presentation skill. <br />
+                - Good computer understanding with knowledge of Office tools, Database systems.<br />
+                - Analytical and Problem Solving skills. <br />
+                - Strong oral and written English skills. <br />
+                - Able to manage projects effectively and independently. <br />
+                - Able to work in a team as team leader or team member. <br />
+                - Able to effectively communicate with all levels of employees. <br />
+                - Perform risk analysis for new products and identify Critical To Quality (CTQ) parameters for new
+                development. <br />
+                - Knowledgeable in Lean manufacturing is an advantage. <br />
+                - Knowledgeable in furniture processes includes time and motion study. <br />
+
+            </label>
+        </div>
+    </ng-container>
+</nz-modal>
+
+<nz-modal [(nzVisible)]="isVisible02Popup" (nzOnCancel)="onCancel02Popup()" nzCancelText="Đóng" [nzOkText]="null">
+    <ng-container *nzModalTitle>
+        <div class="successfully-apply">
+            <span>Job Description for Workers</span>
+        </div>
+    </ng-container>
+    <ng-container *nzModalContent>
+        <div class="content-apply">
+            <label class="content-job-description" style="font-size:20px;">
+                - Unskilled Worker. <br />
+                - Sprayer Paint / Color Finishing. <br />
+                - Upholstery worker. <br />
+                - Sanding Worker. <br />
+                - Fitting Worker <br />
+                
+            </label>
+        </div>
+    </ng-container>
+</nz-modal>
+<div class="ta-career-page">
+    <div class="wrap-ta-career">
+        <div class="main-section1">
+            <div class="bg-top-career"></div>
+            <div class="container-career1">
+                <div class="row align-items-center top-reverse top-recruitment">
+                    <div class="left-top-career">
+                        <img
+                            src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/pic-banner-top.png">
+                    </div>
+                    <div class="right-top-career">
+                        <div class="language-ta">
+                            <div class="icon-vn"><a routerLink="/tuyen-dung" title="Việt Nam"><img
+                                        src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/icon-vn.png"></a>
+                            </div>
+                            <div class="icon-en"><a routerLink="/career" title="English"><img title="English"
+                                        alt="English"
+                                        src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/icon-us.png"></a>
+                            </div>
+                        </div>
+
+                        <div class="logo">
+                            <div class="title-logo-slogan">
+                                <div class="title-company">
+                                    FURNITURE COMPANY
+                                </div>
+                                <div class="logo-ta-career">
+                                    <img
+                                        src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/logo.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="txt-recruitment">
+                            RECRUITMENT
+                        </div>
+                        <div class="list_career">
+                            <div class="list-career-top">
+                                <a class="item-job" title="Workers" routerLink="/description/EN001">
+                                    <div style="cursor: pointer;" class="number-recruitment">
+                                        <img src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/arrow-title.svg">
+                                    </div>
+                                    <div style="cursor: pointer;" (click)="isVisible02Popup = true" class="title-recruitment">Workers</div>
+                                </a>
+                            </div>
+                            <div class="list-career-top">
+                                <a class="item-job" title="Industrial Engineer" routerLink="/description/EN002">
+                                    <div style="cursor: pointer;" class="number-recruitment">
+                                        <img src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/arrow-title.svg">
+                                    </div>
+                                    <div style="cursor: pointer;" class="title-recruitment">Industrial Engineer</div>
+                                </a>
+                               
+                            </div>
+                            <div class="list-career-top">
+                                <a class="item-job" title="ERP Developer" routerLink="/description/EN003">
+                                    <div style="cursor: pointer;" (click)="isVisible01Popup = true" class="number-recruitment">
+                                        <img src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/arrow-title.svg">
+                                    </div>
+                                    <div style="cursor: pointer;" class="title-recruitment">ERP Developer</div>
+                                </a>
+                               
+                            </div>
+                           
+                            <div class="list-career-top">
+                                <a class="item-job" title="Infrastructure Engineer" routerLink="/description/EN005">
+                                    <div style="cursor: pointer;" class="number-recruitment">
+                                        <img src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/arrow-title.svg">
+                                    </div>
+                                    <div style="cursor: pointer;" class="title-recruitment">Infrastructure Engineer</div>
+                                </a>
+                            </div>
+                            <div class="list-career-top">
+                                <a class="item-job" title="Planning and order processing" routerLink="/description/EN006">
+                                    <div style="cursor: pointer;" class="number-recruitment">
+                                        <img src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/arrow-title.svg">
+                                    </div>
+                                    <div style="cursor: pointer;"  class="title-recruitment">Planning and order processing</div>
+                                </a>
+                            </div>
+                            <div class="list-career-top">
+                                <a class="item-job" title="Product Engineer" routerLink="/description/EN007">
+                                    <div style="cursor: pointer;"  class="number-recruitment">
+                                        <img src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/arrow-title.svg">
+                                    </div>
+                                    <div style="cursor: pointer;" class="title-recruitment">Product Engineer</div>
+                                </a>
+                               
+                            </div>
+                            <div class="list-career-top">
+                                <a class="item-job" title="QC / QA" routerLink="/description/EN008">
+                                    <div style="cursor: pointer;"  class="number-recruitment">
+                                        <img src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/arrow-title.svg">
+                                    </div>
+                                    <div style="cursor: pointer;" class="title-recruitment">QC / QA</div>
+                                </a>
+                                
+                            </div>
+                            <div class="list-career-top">
+                                <a class="item-job" title="Sub-con Manager" routerLink="/description/EN009">
+                                    <div style="cursor: pointer;" class="number-recruitment">
+                                        <img src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/arrow-title.svg">
+                                    </div>
+                                    <div style="cursor: pointer;" class="title-recruitment">Sub-con Manager</div>
+                                </a>
+                                
+                            </div>
+                           
+
+                            <div style="display: flex; padding-top: 20px;">
+                                <div class="btn-register-career">                                
+                                    <a routerLink="/recruitment" title="Register now">
+                                        <span class="txt-register-now">Register now</span>
+                                    </a>
+                                </div>
+                                <div class="btn-register-introduce">
+                                    <a routerLink="/recommend" title="Be a recruiter">
+                                        <span class="txt-register-now">Be a recruiter</span>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-section2">
+            <div class="container-career2">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-xl-6 col-md-12 ">
+                        <div class="bg-general-requirement">
+                            <div class="title-general-recruitment">
+                                <span>GENERAL REQUIREMENTS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-md-12">
+                        <div class="right-block2">
+                            <div class="right-content-requirement">
+                                <div class="txt-requirement">
+                                    <i><img src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/checked.svg"></i>
+                                    <span>Priority candidates have experience in fine furniture</span>
+                                </div>
+                                <div class="txt-requirement">
+                                    <i><img
+                                            src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/checked.svg"></i>
+                                    <span>Can do overtime</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-section3">
+            <div class="container-career3">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-xl-6 col-md-12 ">
+                        <div class="left-block3">
+                            <div class="box-bg-pic">
+                                <img
+                                    src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/pic-3.jpg">
+                            </div>
+                            <div class="box-bg-pic1">
+                                <img
+                                    src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/pic-3-1.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-md-12">
+                        <div class="right_box">
+                            <div class="title_welfare">
+                                <span>WELFARE REGIME:</span>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="item">
+                                        <span>
+                                            <img
+                                                src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/icon-1.svg">
+                                        </span>
+                                        <p> High salary, good welfare mode, full of all kinds
+                                            Insurance according to law and insurance 24/24</p>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="item">
+                                        <span>
+                                            <img
+                                                src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/icon-2.svg">
+                                        </span>
+                                        <p>Working time: 7 hours 30 minutes / day</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="item">
+                                        <span>
+                                            <img
+                                                src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/icon-3.svg">
+                                        </span>
+                                        <p>Commitment to do overtime Minimum 50 hours / month</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="item">
+                                        <span>
+                                            <img
+                                                src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/icon-4.svg">
+                                        </span>
+                                        <p>Non-experience will be trained</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-section4">
+            <div class="container-career4">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-xl-6 col-md-12 ">
+                        <div class="left-address-block4">
+                            <div class="title-company-block4">
+                                <span>Theodore Alexander HCM</span>
+                            </div>
+                            <div class="txt-lienhe">
+                                (Contact office hours, from Monday to Friday)
+                            </div>
+                            <div class="box-address">
+                                <div class="item-address">
+                                    <div><img
+                                            src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/icon-location.svg">
+                                    </div>
+                                    <span>Address:</span>
+                                </div>
+                                <p>* Factory TA1: Lot 50 - 57, Road No. 1, Linh Trung 2 Export Processing Zone, Binh
+                                    Chieu Ward, Thu Duc, Ho Chi Minh City <br>
+                                    <strong><a href="tel:02837292122">(028) 37292 122</a>, Ext: 2021 or 2031</strong>
+                                </p>
+                                <p>* Factory TA2: Road DT743, KP. Binh Phuoc A, Binh Chuan Ward, Thuan An, Binh Duong
+                                    <br>
+                                    <strong><a href="tel:02743740772">(0274) 3740 772</a>, Ext: 111 or 102</strong>
+                                </p>
+                                <p>* Factory TA3: Lot 55 - 57, Road 2, Linh Trung 1 EPZ, Linh Trung Ward, Thu Duc, City.
+                                    Ho Chi Minh City <br>
+                                    <strong><a href="tel:02837245467">(028) 37245 467</a>, Ext: 1036</strong>
+                                </p>
+                            </div>
+                            <div class="box-address">
+                                <div class="item-address">
+                                    <div><img
+                                            src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/icon-email.svg">
+                                    </div>
+                                    <span>Email:</span>
+                                </div>
+                                <p><a
+                                        href="mailto:hr.recruit@theodorealexander.com">hr.recruit@theodorealexander.com</a>
+                                </p>
+                            </div>
+                            <div class="box-address">
+                                <div class="item-address">
+                                    <div><img
+                                            src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/icon-dienthoai.svg">
+                                    </div>
+                                    <span>Hotline:</span>
+                                </div>
+                                <p><a style="color: red; font-weight: 600; font-size: 20px !important;"
+                                        href="tel:0869 965 199"> 0869 965 199</a> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-md-12">
+                        <div class="right-address">
+                            <img
+                                src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/pic-4.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-section5">
+            <div class="container-career4">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-12" style="text-align: center;">
+                        © 2021 - Theodore Alexander
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav_right">
+            <div class="button-floating-introduce">
+                <a routerLink="/recommend" title="Be a recruiter">
+                    <span>Be a recruiter</span>
+                </a>
+            </div>
+            <div class="button-floating">
+                <a routerLink="/recruitment" title="Register now">
+                    <span>Register now</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

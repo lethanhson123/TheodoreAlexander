@@ -1,0 +1,441 @@
+.mg-cus {
+    margin-top: 5px;
+}
+
+.mg-cus-bot {
+    margin-bottom: 15px;
+}
+
+.dropdown-cus, .txt-cus {
+    width: auto;
+    display: inline-block;
+}
+
+.button-cus {
+    width: auto;
+}
+
+.mgt-mgb {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.mg-top-3 {
+    margin-top: -3px;
+}
+
+.center {
+    text-align: center;
+}
+
+.logo {
+    float: left;
+    margin-left: 20px;
+    margin-top: 3px;
+}
+
+.img-thumbnail {
+    padding: 4px;
+    line-height: 1.428571429;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    display: inline-block;
+    width: 100% \9;
+    max-width: 100%;
+    height: auto;
+}
+
+table {
+    border: 0;
+    margin: 0px;
+    padding: 0px;
+}
+/*Page view*/
+.PageName {
+    font-weight: bold;
+    margin: 7px 0px 5px 0px;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.TableView {
+    border: 1px solid #EDEDED;
+}
+
+    .TableView .trHeader {
+        font-weight: bold;
+        text-align: center;
+        background: white;
+        color: #333;
+        font-size: 14px;
+    }
+
+        .TableView .trHeader td {
+            padding: 2px 0;
+            line-height: 15px;
+            height: 40px;
+        }
+
+    .TableView .trOdd {
+        background: #f9f9f9;
+        color: #333;
+        font-size: 14px;
+    }
+    /*dong le*/
+    .TableView .trEven {
+        background: white;
+        color: #333;
+        font-size: 14px;
+    }
+    /*dong chan*/
+    .TableView .trOdd:hover {
+        background: #f9f9f9;
+    }
+    /*dong le*/
+    .TableView .trEven:hover {
+        background: #f9f9f9;
+    }
+    /*dong chan*/
+    .TableView .trOdd td {
+        padding: 4px;
+    }
+    /*dong le*/
+    .TableView .trEven td {
+        padding: 4px;
+    }
+    /*dong chan*/
+
+    .TableView .tdCenter {
+        text-align: center;
+        width: 30px;
+    }
+
+    .TableView .tdLeft {
+        text-align: left;
+    }
+
+    .TableView .Function {
+        text-align: center;
+        width: 120px;
+        height: 20px;
+    }
+
+        .TableView .Function input {
+            border: 0;
+            margin: 0;
+            padding: 3px 0 0 0;
+        }
+
+    .TableView .Paging {
+        line-height: 20px;
+    }
+
+    .TableView .Text {
+        padding: 0 4px;
+        min-width: 140px;
+    }
+
+    .TableView .Multiline {
+        padding: 0 4px;
+    }
+
+    .TableView .Center {
+        text-align: center;
+    }
+
+    .TableView .TextShort {
+        width: 100px;
+        text-align: center;
+    }
+
+    .TableView .CheckBox {
+        width: 140px;
+        text-align: center;
+    }
+
+    .TableView .CheckBoxsmall {
+        width: 80px;
+        text-align: center;
+    }
+
+    .TableView .Activehead {
+        width: 110px;
+        text-align: center;
+    }
+
+    .TableView .Date {
+        width: 80px;
+        text-align: center;
+    }
+
+    .TableView .Image {
+        width: 150px;
+        text-align: center;
+    }
+
+    .TableView .Time {
+        width: 75px;
+        text-align: center;
+    }
+
+    .TableView .DateTime {
+        width: 165px;
+        text-align: center;
+    }
+
+    .TableView .DateTimesmal {
+        width: 110px;
+        text-align: center;
+    }
+
+    .TableView .Number {
+        width: 80px;
+        text-align: center;
+    }
+
+    .TableView .NumberM {
+        width: 80px;
+        text-align: right;
+    }
+
+    .TableView .MoneyVND,
+    .TableView .MoneyUSD {
+        width: 90px;
+        text-align: right;
+    }
+
+    .TableView .Moneysmall {
+        width: 90px;
+        text-align: center;
+    }
+
+.paging {
+    line-height: 60px;
+}
+
+.paging a {
+    background: #eee;
+    color: white;
+    font-weight: 300;
+    line-height: 38px;
+    margin-right: 10px;
+    font-weight: 700;
+    padding: 10px 15px;
+}
+
+    .paging a:hover {
+        background-color: #000;
+        color: white;
+        text-decoration: none
+    }
+
+.paging span {
+    background: #fff;
+    border: 1px solid #eee;
+    color: #000;
+    font-weight: 300;
+    line-height: 38px;
+    margin-right: 10px;
+    font-weight: 700;
+    padding: 10px 15px;
+}
+
+tr.paging {
+    background: none !important;
+}
+
+    tr.paging tr {
+        background: none !important;
+    }
+
+    tr.paging td {
+        border: none;
+    }
+
+.Control {
+    margin: 0;
+    padding: 0;
+    border: 1px solid #99BBE8;
+    background: #D0DEF0;
+    height: 26px;
+    line-height: 26px;
+}
+
+    .Control a:link,
+    .Control a:visited {
+        color: #000000;
+        font-weight: normal;
+        text-decoration: none;
+    }
+
+    .Control a:hover {
+        color: #000000;
+        font-weight: normal;
+        text-decoration: none;
+    }
+
+    .Control li {
+        display: inline;
+        list-style: none;
+        padding: 0 10px 0 4px;
+        background: url(images/control_li_split.gif) right no-repeat;
+    }
+
+    .Control .vadd {
+        background: url(images/page_add.png) center left no-repeat;
+        padding-left: 20px;
+    }
+
+    .Control .vedit {
+        background: url(images/edit.png) center left no-repeat;
+        padding-left: 20px;
+    }
+
+    .Control .vdelete {
+        background: url(images/delete.png) center left no-repeat;
+        padding-left: 20px;
+    }
+
+    .Control .vrefresh {
+        background: url(images/refresh.png) center left no-repeat;
+        padding-left: 20px;
+    }
+
+    .Control .vback {
+        background: url(images/uplevel.png) center left no-repeat;
+        padding-left: 20px;
+    }
+
+    .Control .uupdate {
+        background: url(images/page_save.png) center left no-repeat;
+        padding-left: 20px;
+    }
+
+    .Control .uback {
+        background: url(images/back.png) center left no-repeat;
+        padding-left: 20px;
+    }
+
+.sortasc {
+    background: url(images/asc.gif) left no-repeat;
+    padding: 0px 0px 0px 9px;
+    color: #2276f2;
+}
+
+.sortdesc {
+    background: url(images/desc.gif) left no-repeat;
+    padding: 0px 0px 0px 9px;
+    color: #2276f2;
+}
+/*Page view*/
+.TableUpdate {
+    width: 100%;
+    border: 1px solid #EDEDED;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+    .TableUpdate tr {
+        line-height: 20px;
+        background: #FFFFFF;
+    }
+
+    .TableUpdate th {
+        width: 180px;
+        padding: 2px 5px;
+        text-align: left;
+    }
+
+    .TableUpdate td {
+        padding: 2px 2px;
+    }
+
+    .TableUpdate .text {
+        width: 400px;
+    }
+
+    .TableUpdate .multiline {
+        width: 98%;
+    }
+
+    .TableUpdate .image {
+        width: 150px;
+    }
+
+    .TableUpdate .number {
+        width: 140px;
+    }
+
+    .TableUpdate .datetime {
+        width: 150px;
+    }
+
+    .TableUpdate .date {
+        width: 100px;
+    }
+
+    .TableUpdate .time {
+        width: 90px;
+    }
+/*.TableUpdate #Link		{ display:block; }
+.TableUpdate #Content	{ display:none; }*/
+
+a.delete {
+    background: url(/App_Themes/admin/images/delete.png) center no-repeat;
+    padding: 8px 15px 8px 15px;
+    color: #0033ff;
+    font-family: Arial;
+    font-weight: normal;
+    text-align: center;
+}
+
+a.edit {
+    background: url(/App_Themes/admin/images/next.png) center no-repeat;
+    padding: 8px 15px 8px 15px;
+    color: #0033ff;
+    font-family: Arial;
+    font-weight: normal;
+    text-align: center;
+}
+
+.panel-default > .panel-heading {
+    font-size: 20px;
+}
+
+.page span a:hover {
+    text-decoration: none;
+}
+
+.GridPager a, .GridPager span {
+    display: block;
+    height: 15px;
+    width: 15px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.GridPager a {
+    background: #eee;
+    color: white;
+    font-weight: 300;
+    line-height: 38px;
+    margin-right: 10px;
+    font-weight: 700;
+    padding: 10px 15px;
+}
+
+.GridPager span {
+    background: #fff;
+    border: 1px solid #eee;
+    color: #000;
+    font-weight: 300;
+    line-height: 38px;
+    margin-right: 10px;
+    font-weight: 700;
+    padding: 10px 15px;
+}

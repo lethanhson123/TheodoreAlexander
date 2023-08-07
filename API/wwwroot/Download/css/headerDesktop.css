@@ -1,0 +1,264 @@
+﻿/******block_top_header******/
+.header {
+    background-color: #f7f7f7;
+}
+
+    .header .head-main {
+        max-width: 1920px;
+        margin: 0 auto;
+        padding: 0 50px;
+        height: 35px;
+    }
+
+    .header .social {
+        display: flex;
+        align-items: center;
+    }
+
+        .header .social .icon {
+            color: #707070;
+            font-size: 15px;
+            padding: 0 10px;
+            height: 22px;
+        }
+
+    .header .user {
+        display: flex;
+        justify-content: flex-end;
+        height: 33px;
+    }
+
+        .header .user .cart {
+            display: flex;
+            align-items: center;
+            position: relative;
+            border-right: 1px solid #dedede;
+            margin: 1px 20px 0 0;
+            padding: 1px 20px 0 0;
+            text-transform: uppercase;
+            cursor: pointer;
+            color: #4b4b4b;
+            font-size: 12px;
+            outline: none;
+        }
+
+            .header .user .cart span.number {
+                background: #eea501;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                display: block;
+                position: absolute;
+                text-align: center;
+                top: 5px;
+                left: 12px;
+                color: #fff;
+            }
+
+            .header .user .cart span:last-child {
+                margin: 0 0 0 15px;
+            }
+
+            .header .user .cart i {
+                font-size: 17px;
+            }
+
+        .header .user .message {
+            display: flex;
+            align-items: center;
+        }
+
+        .header .user .login {
+            display: flex;
+            align-items: center;
+        }
+
+            .header .user .login a {
+                color: #000;
+                text-transform: uppercase;
+                cursor: pointer;
+                font-size: 12px;
+            }
+
+            .header .user .login i {
+                padding: 0 5px;
+            }
+
+                .header .user .login i.icon-circle {
+                    font-size: 3px;
+                    color: #636363;
+                }
+
+            .header .user .login span {
+                margin: 0 0 0 10px;
+                font-family: "UTMBeautifulCaps" !important;
+                font-size: 25px;
+            }
+
+                .header .user .login span i {
+                    font-family: "Didot-HTF-M96-Medium" !important;
+                    font-size: 15px;
+                }
+
+        .header .user .welcome {
+            font-size: 12px;
+            cursor: pointer;
+            text-transform: uppercase;
+            justify-content: center;
+            align-items: center;
+            display: inline-flex;
+            color: #4b4b4b;
+            height: 100%;
+        }
+
+            .header .user .welcome:hover .menu {
+                display: flex;
+                z-index: 9999;
+            }
+
+            .header .user .welcome .name {
+                text-transform: uppercase;
+                margin-left: 5px;
+                color: #000 !important;
+                font-weight: bold;
+                font-family: "HurmeGeometricSans1-Regular";
+            }
+
+            .header .user .welcome .icon-user.icon-user {
+                font-size: 13px;
+                margin-right: 6px;
+                margin-top: -3px;
+            }
+
+            .header .user .welcome .menu {
+                position: absolute;
+                flex-flow: column;
+                width: 240px;
+                z-index: 1;
+                background-color: #fff;
+                display: none;
+                font-size: larger;
+                padding: 20px;
+                box-shadow: 0px 0px 5px 2px rgba(171, 171, 171, 1);
+                top: 30px;
+                text-transform: none;
+                font-size: 15px;
+            }
+
+                .header .user .welcome .menu::after, .header .user .welcome .menu::before {
+                    bottom: 100%;
+                    left: 50%;
+                    border: solid transparent;
+                    content: " ";
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    pointer-events: none;
+                }
+
+                .header .user .welcome .menu::after {
+                    border-color: rgba(255, 255, 255, 0);
+                    border-bottom-color: #fff;
+                    border-width: 10px;
+                    margin-left: -10px;
+                }
+
+                .header .user .welcome .menu::before {
+                    border-color: rgba(166, 158, 158, 0);
+                    border-bottom-color: #a69e9e;
+                    border-width: 11px;
+                    margin-left: -11px;
+                }
+
+                .header .user .welcome .menu a {
+                    padding: 10px;
+                }
+
+                    .header .user .welcome .menu a:hover {
+                        color: #eea501;
+                    }
+
+                    .header .user .welcome .menu a i {
+                        padding-right: 5px;
+                    }
+
+                .header .user .welcome .menu i {
+                    margin-right: 6px;
+                }
+
+        .header .user .mode {
+            display: flex;
+            align-items: center;
+            margin-left: 15px;
+            padding-left: 20px;
+            border-left: 1px solid #dedede;
+        }
+
+        /*Toogle*/
+.toogle-top-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toogle-top-header span{
+    display: flex;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 14px;
+    margin-bottom: 0;
+  }
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .toogle-ta {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  .toogle-ta:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: -8px;
+    right: 0px;
+    bottom: 4px;
+    top: -4px;
+    background-color: rgba(0, 0, 0, 0.38);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .toogle-ta {
+    background-color: rgba(0, 0, 0, 0.38);
+  }
+  
+  input:focus + .toogle-ta {
+    box-shadow: 0 0 1px #ccc;
+  }
+  
+  input:checked + .toogle-ta:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    background-color: #000;
+  }
+  .toogle-ta.round {
+    border-radius: 34px;
+  }
+  
+  .toogle-ta.round:before {
+    border-radius: 50%;
+  }
+  

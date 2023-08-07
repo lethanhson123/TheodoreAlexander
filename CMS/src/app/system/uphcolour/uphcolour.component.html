@@ -1,0 +1,70 @@
+<div class="row">
+    <div class="col s12">
+        <div class="container">
+            <div class="section section-data-tables">
+                <div class="row">
+                    <div class="col s12 m12 l12">
+                        <div class="card card card-default scrollspy">
+                            <div class="card-content">
+                                <div class="row">
+                                    <div class="col s10 m10 l10">
+                                        <h3 class="card-title"><b>UPH Colour <span *ngIf="uPHColourService.list">({{uPHColourService.list.length}} items)</span></b></h3>
+                                    </div>
+                                </div>
+                                <div class="row">                                          
+                                    <div class="KhungOverflow">
+                                        <table class="responsive-table">
+                                            <thead
+                                                style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                                <tr>
+                                                    <th>No</th>                                                    
+                                                    <th>Colour</th>  
+                                                    <th>Code</th>                                                    
+                                                    <th>Code Hex</th>                                                                                                                                                         
+                                                    <th>enable</th>                                                             
+                                                    <th></th>    
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr
+                                                    *ngFor="let item of uPHColourService.list; let i = index;">
+                                                    <td style="width:20px;">{{i +1 }}</td>                                                                                                         
+                                                    <td><input name="colour" type="text" [(ngModel)]="item.colour"></td>     
+                                                    <td><input name="code" type="text" [(ngModel)]="item.code"></td>     
+                                                    <td><input name="Code Hex" type="text" [(ngModel)]="item.CodeHex"></td>                                                                                                                                                                                                  
+                                                    <td>
+                                                        <label>
+                                                            <input type="checkbox" [(ngModel)]="item.enable" />
+                                                            <span></span>
+                                                        </label>
+                                                    </td>    
+                                                    <td>
+                                                        <button title="Save" class="mb-6 btn-floating waves-effect waves-light cyan" (click)="onUPHColourSave(item)"><i
+                                                        class="material-icons">save</i></button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot
+                                                style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                                <tr>
+                                                    <th>No</th>                                                    
+                                                    <th>Colour</th>  
+                                                    <th>Code</th>                                                    
+                                                    <th>Code Hex</th>                                                                                                                                                         
+                                                    <th>enable</th>     
+                                                    <th></th>    
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-loading *ngIf="isShowLoading"></app-loading>

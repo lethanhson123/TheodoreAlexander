@@ -1,0 +1,71 @@
+<div class="row">
+    <div class="col s12">
+        <div id="input-fields" class="card card-tabs">
+            <form autocomplete="off" class="row" #form="ngForm" (submit)="onSubmit(form)">
+                <div class="card-content">
+                    <div class="card-title">
+                        <div class="row">
+                            <div class="col s6 m6 l10">
+                                <div class="col s4 m4 l2">
+                                    <button title="Save" type="submit" style="padding-top: 3px;"
+                                        class="mb-6 btn-floating waves-effect waves-light cyan"><i
+                                            class="material-icons">save</i></button>
+                                </div>
+                                <div class="col s6 m6 l10">
+                                    <h3 class="card-title">Email: <b>{{system_MembershipService.formData.Email}}</b></h3>
+                                </div>
+                            </div>
+                            <div class="col s6 m6 l2">
+                                <ul class="tabs">
+                                    <li class="tab col s12 p-0"><a class="active p-0" href="#Info">Change password</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="Info">
+                        <input name="ID" [(ngModel)]="system_MembershipService.formData.ID" type="hidden">
+                        <div class="row">
+                            <div class="col s12 m12 l12">
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="Email">Email</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Email" name="Email"
+                                            [(ngModel)]="system_MembershipService.formData.Email" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="Password">Password</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Password" name="Password"
+                                            [(ngModel)]="system_MembershipService.formData.Password" type="password">
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="DisplayName">Display</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Display" name="DisplayName"
+                                            [(ngModel)]="system_MembershipService.formData.DisplayName" type="text">
+                                    </div>
+                                </div>
+                            </div>                          
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<app-loading *ngIf="isShowLoading"></app-loading>

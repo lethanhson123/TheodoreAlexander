@@ -1,0 +1,126 @@
+<div class="row">
+    <div class="col s12">
+        <div class="container">
+            <div class="section section-data-tables">
+                <div class="row">
+                    <div class="col s12 m12 l12">
+                        <div class="card card card-default scrollspy">
+                            <div class="card-content">
+                                <div class="row">
+                                    <div class="col s10 m10 l10">
+                                        <h3 class="card-title"><b>Thông tin: {{hR_Recruitment_IntroduceService.formData.FullName}}
+                                                </b></h3>
+                                    </div>
+                                </div>  
+                                <div class="row">
+                                    <div class="col s6 m6 l2">
+                                        <div class="input-field">                                            
+                                            <label for="FullName">Họ tên</label>
+                                        </div>
+                                    </div>
+                                    <div class="col s6 m6 l4">
+                                        <div class="input-field">
+                                            <input placeholder="Full name" name="FullName"
+                                                [(ngModel)]="hR_Recruitment_IntroduceService.formData.FullName" type="text">                                            
+                                        </div>
+                                    </div>
+                                    <div class="col s6 m6 l2">
+                                        <div class="input-field">                                            
+                                            <label for="Phone">Điện thoại</label>
+                                        </div>
+                                    </div>
+                                    <div class="col s6 m6 l4">
+                                        <div class="input-field">
+                                            <input placeholder="Phone" name="Phone"
+                                                [(ngModel)]="hR_Recruitment_IntroduceService.formData.Phone" type="text">                                            
+                                        </div>
+                                    </div>
+                                    <div class="col s6 m6 l2">
+                                        <div class="input-field">                                            
+                                            <label for="BankID">Tài khoản ngân hàng</label>
+                                        </div>
+                                    </div>
+                                    <div class="col s6 m6 l4">
+                                        <div class="input-field">
+                                            <input placeholder="Bank account" name="BankID"
+                                                [(ngModel)]="hR_Recruitment_IntroduceService.formData.BankID" type="text">                                            
+                                        </div>
+                                    </div>
+                                    <div class="col s6 m6 l2">
+                                        <div class="input-field">                                           
+                                            <label for="BankName">Ngân hàng</label>
+                                        </div>
+                                    </div>
+                                    <div class="col s6 m6 l4">
+                                        <div class="input-field">
+                                            <input placeholder="Bank name" name="BankName"
+                                                [(ngModel)]="hR_Recruitment_IntroduceService.formData.BankName" type="text">                                            
+                                        </div>
+                                    </div>
+                                </div>                                                                                          
+                                <div class="row">
+                                    
+                                        <div class="col s8 m8 l8">
+                                            <input matInput [(ngModel)]="searchString" placeholder="Search..."
+                                                autocomplete="off" (keyup)="onSearch()">
+                                        </div>
+                                        <div class="col s4 m4 l4">
+                                            <button title="Download excel" (click)="onDownloadExcelFile()"
+                                                class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                                    class="material-icons">get_app</i></button>&nbsp;&nbsp;&nbsp;
+                                            <button title="In biểu mẫu" (click)="onPrint()"
+                                                class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                                    class="material-icons">print</i></button>
+                                        </div>
+                                    
+                                    <table class="responsive-table">
+                                        <thead style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Date register</th>
+                                                <th>Full name</th>
+                                                <th>Phone</th>
+                                                <th>Experience</th>
+                                                <th>Job function</th>                                                
+                                                <th>Source</th>
+                                                <th>Recommender</th>
+                                                <th>Phone</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of hR_Recruitment_CareerService.list; let i = index;">
+                                                <td style="width:20px;">{{i +1 }}</td>
+                                                <td>{{item.DateUpdated | date: 'dd/MM/yyyy HH:mm:ss'}}</td>
+                                                <td>{{item.FullName}}</td>
+                                                <td>{{item.Phone}}</td>
+                                                <td>{{item.Experience}}</td>
+                                                <td>{{item.JobFunction}}</td>
+                                                <td>{{item.MediaSource}}</td>
+                                                <td>{{item.RecommendFullName}}</td>
+                                                <td>{{item.RecommendPhone}}</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Date send</th>
+                                                <th>Full name</th>
+                                                <th>Phone</th>
+                                                <th>Experience</th>
+                                                <th>Job function</th>                                                
+                                                <th>Source</th>
+                                                <th>Recommender</th>
+                                                <th>Phone</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-loading *ngIf="isShowLoading"></app-loading>

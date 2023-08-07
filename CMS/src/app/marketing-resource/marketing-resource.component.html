@@ -1,0 +1,91 @@
+<div class="row">
+    <div class="col s12">
+        <div class="container">
+            <div class="section section-data-tables">
+                <div class="row">
+                    <div class="col s12 m12 l12">
+                        <div class="card card card-default scrollspy">
+                            <div class="card-content">
+                                <div class="row">
+                                    <div class="col s10 m10 l10">
+                                        <h3 class="card-title"><b>Marketing Resource <span *ngIf="marketingResourceService.list">({{marketingResourceService.list.length}} items)</span></b></h3>
+                                    </div>
+                                </div>
+                                <div class="row">                                   
+                                    <div class="col s6 m6 l4"> 
+                                        <mat-select class="browser-default"
+                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                            name="parentID" [(ngModel)]="parentID">                                            
+                                            <mat-option *ngFor="let item of marketingResourceCategoryService.list" [value]="item.ID">
+                                                {{item.Name}}
+                                            </mat-option>
+                                        </mat-select>                                      
+                                    </div>          
+                                    <div class="col s6 m6 l2">
+                                        <button title="Search" (click)="onSearch()"
+                                            class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                                class="material-icons">search</i></button>&nbsp;&nbsp;&nbsp;
+                                        <a title="Add" target="_blank" routerLink="/MarketingResourceInfo/0"
+                                            class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                                class="material-icons">add</i></a>&nbsp;&nbsp;&nbsp;
+                                    </div>                         
+                                    <div class="KhungOverflow">
+                                        <table class="responsive-table">
+                                            <thead
+                                                style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                                <tr>
+                                                    <th>No</th>                                                                                                    
+                                                    <th>Name</th>     
+                                                    <th>Sort</th>                                                                                                  
+                                                    <th>Active</th>  
+                                                    <th>US</th>   
+                                                    <th>International</th>     
+                                                    <th>Dealer</th>     
+                                                    <th>Designer</th>     
+                                                    <th>View detail</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr
+                                                    *ngFor="let item of marketingResourceService.list; let i = index;">
+                                                    <td style="width:20px;">{{i +1 }}</td>                                                                                       
+                                                    <td><b>{{item.Name}}</b></td> 
+                                                    <td>{{item.SortOrder}}</td>                                                     
+                                                    <td>{{item.Active}}</td>  
+                                                    <td>{{item.IsUSShow}}</td>  
+                                                    <td>{{item.IsInternationalShow}}</td>  
+                                                    <td>{{item.IsDealerShow}}</td>  
+                                                    <td>{{item.IsDesignerShow}}</td>  
+                                                    <td><a target="_blank" title="View detail"
+                                                        routerLink="/MarketingResourceInfo/{{item.ID}}"
+                                                        class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                                            class="material-icons">info</i></a></td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot
+                                                style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                                <tr>
+                                                    <th>No</th>                                                                                                    
+                                                    <th>Name</th>    
+                                                    <th>Sort</th>                                                                                                
+                                                    <th>Active</th>   
+                                                    <th>US</th>   
+                                                    <th>International</th>    
+                                                    <th>Dealer</th>     
+                                                    <th>Designer</th>     
+                                                    <th>View detail</th>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-loading *ngIf="isShowLoading"></app-loading>

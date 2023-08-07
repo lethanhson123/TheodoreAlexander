@@ -1,0 +1,20 @@
+
+export const environment = {
+  production: false,  
+  APIURL: "http://api2.theodorealexander.com/",
+  DomainName: "http://career.theodorealexander.com/",
+  Images: "images",  
+  Download: "Download",  
+  EmployeeExcelFileName: "Employee.xlsx",  
+  ProvinceExcelFileName: "Province.xlsx",  
+  LoadingFile: "loading.gif",
+  DialogConfigWidth: "80%",
+  InitializationString: "",  
+  InitializationNumber: 0, 
+  UploadSuccess: "Upload thành công.",
+  UploadNotSuccess: "Upload chưa thành công.", 
+  SaveSuccess: "Lưu thay đổi thành công.",
+  SaveNotSuccess: "Lưu thay đổi chưa thành công.", 
+};
+
+

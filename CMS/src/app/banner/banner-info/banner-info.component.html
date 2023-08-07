@@ -1,0 +1,154 @@
+<div class="row">
+    <div class="col s12">
+        <div id="input-fields" class="card card-tabs">
+            <form autocomplete="off" class="row" #form="ngForm" (submit)="onSubmit(form)">
+                <div class="card-content">
+                    <div class="card-title">
+                        <div class="row">
+                            <div class="col s6 m6 l10">
+                                <div class="col s4 m4 l2">
+                                    <a title="List" href="javascript:window.open('','_self').close();"
+                                        style="padding-top: 3px;"
+                                        class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                            class="material-icons">arrow_back</i></a>&nbsp;&nbsp;&nbsp;
+                                    <button title="Save" type="submit" style="padding-top: 3px;"
+                                        class="mb-6 btn-floating waves-effect waves-light cyan"><i
+                                            class="material-icons">save</i></button>
+                                </div>
+                                <div class="col s6 m6 l10">
+                                    <h3 class="card-title">Banner:
+                                        <b>{{bannerService.formData.Name}}</b></h3>
+                                </div>
+                            </div>
+                            <div class="col s6 m6 l2">
+                                <ul class="tabs">
+                                    <li class="tab col s12 p-0"><a class="active p-0" href="#ItemInfo">Info</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ItemInfo">
+                        <input name="ID" [(ngModel)]="bannerService.formData.ID" type="hidden">
+                        <div class="row">
+                            <div class="col s12 m12 l6">                                
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="Name">Name</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Name" name="Name"
+                                            [(ngModel)]="bannerService.formData.Name" type="text">
+                                    </div>
+                                </div>    
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="SortOrder">Sort</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Sort" name="SortOrder"
+                                            [(ngModel)]="bannerService.formData.SortOrder" type="text">
+                                    </div>
+                                </div>                            
+                            </div>
+                            <div class="col s12 m12 l6">            
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="Timer">Timer (milliseconds)</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Timer" name="Timer"
+                                            [(ngModel)]="bannerService.formData.Timer" type="text">
+                                    </div>
+                                </div>
+                                <div class="col s12 m12 l4">
+                                    <div class="input-field">
+                                        <p>
+                                            <label>
+                                                <input type="checkbox" class="filled-in" name="Active"
+                                                    [(ngModel)]="bannerService.formData.Active" />
+                                                <span>Active</span>
+                                            </label>
+                                        </p>
+                                    </div>
+                                </div>     
+                            </div>                                                  
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>     
+        <div id="input-fields" class="card card-tabs">
+            <div class="card-content">
+                <div id="ItemInfo">
+                    <div class="row">
+                        <div class="col s12 m12 l12">
+                            <div class="col s6 m6 l10">
+                                <h3 class="card-title"><b><span *ngIf="bannerDetailService.list">({{bannerDetailService.list.length}} items)</span></b></h3>                                
+                            </div>
+                            <div class="col s6 m6 l2">
+                                <a title="Add" (click)="onAdd(0)"
+                                    class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                        class="material-icons">add</i></a>&nbsp;&nbsp;&nbsp;
+                            </div>
+                            <div class="KhungOverflow">
+                                <table class="responsive-table">
+                                    <thead style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                        <tr>
+                                            <th>Desktop</th>
+                                            <th>Mobile</th>                                            
+                                            <th>Logo</th>
+                                            <th>Information</th>      
+                                            <th>Active</th>                                                 
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let item of bannerDetailService.list; let i = index;">                                           
+                                            <td><a target="_blank" style="border-color: #000000; border-style: solid; border-width: 1px;" *ngIf="item.URLImageDesktop" title="{{item.URLImageDesktop}}" href="{{item.URLImageDesktop}}"><img width="50px" height="50px" title="{{item.URLImageDesktop}}" alt="{{item.URLImageDesktop}}" src="{{item.URLImageDesktop}}"></a></td>
+                                            <td><a target="_blank" style="border-color: #000000; border-style: solid; border-width: 1px;" *ngIf="item.URLImageMobile" title="{{item.URLImageMobile}}" href="{{item.URLImageMobile}}"><img width="50px" height="50px" title="{{item.URLImageMobile}}" alt="{{item.URLImageMobile}}" src="{{item.URLImageMobile}}"></a></td>
+                                            <td><a target="_blank" style="border-color: #000000; border-style: solid; border-width: 1px;" *ngIf="item.URLImageName" title="{{item.URLImageName}}" href="{{item.URLImageName}}"><img width="50px" height="50px" title="{{item.URLImageName}}" alt="{{item.URLImageName}}" src="{{item.URLImageName}}"></a></td>                                           
+                                            <td>
+                                                Name: <b>{{item.Name}}</b>
+                                                <br/>
+                                                <br/>
+                                                Description: <b>{{item.Description}}</b>  
+                                                <br/>
+                                                <br/>
+                                                Quick Title: <b>{{item.QuickTitle}}</b>
+                                                <br/>
+                                                <br/>
+                                                URL: <b>{{item.URL}}</b>                                                                                   
+                                            </td>
+                                            <td>
+                                                Sort: <b>{{item.SortOrder}}</b>
+                                                <br/>
+                                                <br/>
+                                                Active: <b>{{item.Active}}</b>
+                                                <br/>
+                                                <br/>
+                                                US: <b>{{item.IsUSShow}}</b>
+                                                <br/>
+                                                <br/>
+                                                International: <b>{{item.IsInternationalShow}}</b>                                                
+                                            </td>
+                                            <td><a title="View" (click)="onAdd(item.ID)"
+                                                    class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                                        class="material-icons">info</i></a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </div>
+</div>
+<app-loading *ngIf="isShowLoading"></app-loading>

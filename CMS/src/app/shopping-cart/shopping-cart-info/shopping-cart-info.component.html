@@ -1,0 +1,263 @@
+<div class="row">
+    <div class="col s12">
+        <div id="input-fields" class="card card-tabs">
+            <div class="card-content">
+                <div class="card-title">
+                    <div class="row">
+                        <div class="col s6 m6 l10">
+                            <div class="col s4 m4 l2">
+                                <a title="List item" href="javascript:window.open('','_self').close();"
+                                    style="padding-top: 3px;"
+                                    class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                        class="material-icons">arrow_back</i></a>&nbsp;&nbsp;&nbsp;
+                                        <a title="Send mail" (click)="onSendMail()"
+                                        style="padding-top: 3px;"
+                                        class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                            class="material-icons">contact_mail</i></a>
+                            </div>
+                            <div class="col s6 m6 l10">
+                                <h3 class="card-title">Shopping cart: <b>{{shoppingCartService.formData.Code}}</b></h3>
+                            </div>
+                        </div>
+                        <div class="col s6 m6 l2">
+                            <ul class="tabs">
+                                <li class="tab col s12 p-0"><a class="active p-0" href="#ItemInfo">Info</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="ItemInfo">
+                    <div class="row">
+                        <div class="col s12 m12 l4">
+                            <div class="col s6 m6 l4">
+                                <div class="input-field">
+                                    <label for="Code">Code</label>
+                                </div>
+                            </div>
+                            <div class="col s6 m6 l8">
+                                <div class="input-field">
+                                    <input placeholder="Code" name="Code"
+                                        [(ngModel)]="shoppingCartService.formData.Code" type="text">
+                                </div>
+                            </div>
+                            <div class="col s6 m6 l4">
+                                <div class="input-field">
+                                    <label for="DateOrderCreated">Date Created</label>
+                                </div>
+                            </div>
+                            <div class="col s6 m6 l8">
+                                <div class="input-field">
+                                    <input placeholder="Date Created" name="DateOrderCreated"
+                                        [(ngModel)]="shoppingCartService.formData.DateOrderCreated" type="text">
+                                </div>
+                            </div> 
+                            <div class="col s6 m6 l4">
+                                <div class="input-field">
+                                    <label for="ItemCount">Item Count</label>
+                                </div>
+                            </div>
+                            <div class="col s6 m6 l8">
+                                <div class="input-field">
+                                    <input placeholder="Item Count" name="ItemCount"
+                                        [(ngModel)]="shoppingCartService.formData.ItemCount" type="text">
+                                </div>
+                            </div>
+                            <div class="col s6 m6 l4">
+                                <div class="input-field">
+                                    <label for="Total">Total</label>
+                                </div>
+                            </div>
+                            <div class="col s6 m6 l8">
+                                <div class="input-field">
+                                    <input placeholder="Total" name="Total"
+                                        [(ngModel)]="shoppingCartService.formData.Total" type="text">
+                                </div>
+                            </div>
+                            <div class="col s6 m6 l4">
+                                <div class="input-field">
+                                    <label for="Volume">Volume</label>
+                                </div>
+                            </div>
+                            <div class="col s6 m6 l8">
+                                <div class="input-field">
+                                    <input placeholder="Volume" name="Volume"
+                                        [(ngModel)]="shoppingCartService.formData.Volume" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m12 l4">
+                           
+                            <div class="col s6 m6 l4">
+                                <div class="input-field">
+                                    <label for="FirstName">FirstName</label>
+                                </div>
+                            </div>
+                            <div class="col s6 m6 l8">
+                                <div class="input-field">
+                                    <input placeholder="FirstName" name="FirstName"
+                                        [(ngModel)]="shoppingCartService.formData.FirstName" type="text">
+                                </div>
+                            </div>
+                            <div class="col s6 m6 l4">
+                                <div class="input-field">
+                                    <label for="LastName">LastName</label>
+                                </div>
+                            </div>
+                            <div class="col s6 m6 l8">
+                                <div class="input-field">
+                                    <input placeholder="LastName" name="LastName"
+                                        [(ngModel)]="shoppingCartService.formData.LastName" type="text">
+                                </div>
+                            </div>
+                            <div class="col s6 m6 l4">
+                                <div class="input-field">
+                                    <label for="UserTypeName">User Type</label>
+                                </div>
+                            </div>
+                            <div class="col s6 m6 l8">
+                                <div class="input-field">
+                                    <input placeholder="User Type" name="UserTypeName"
+                                        [(ngModel)]="shoppingCartService.formData.UserTypeName" type="text">
+                                </div>
+                            </div>
+                            <div class="col s6 m6 l4">
+                                <div class="input-field">
+                                    <label for="Email">Email</label>
+                                </div>
+                            </div>
+                            <div class="col s6 m6 l8">
+                                <div class="input-field">
+                                    <input placeholder="Email" name="Email"
+                                        [(ngModel)]="shoppingCartService.formData.Email" type="text">
+                                </div>
+                            </div>
+                            <div class="col s6 m6 l4">
+                                <div class="input-field">
+                                    <label for="Phone">Phone</label>
+                                </div>
+                            </div>
+                            <div class="col s6 m6 l8">
+                                <div class="input-field">
+                                    <input placeholder="Phone" name="Phone"
+                                        [(ngModel)]="shoppingCartService.formData.Phone" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m12 l4">   
+                                           
+                            <div class="col s6 m6 l4">
+                                <div class="input-field">
+                                    <label for="ShippingDate">Shipping Date</label>
+                                </div>
+                            </div>
+                            <div class="col s6 m6 l8">
+                                <div class="input-field">
+                                    <input placeholder="Shipping Date" name="ShippingDate"
+                                        [(ngModel)]="shoppingCartService.formData.ShippingDate" type="text">
+                                </div>
+                            </div>         
+                            <div class="col s6 m6 l4">
+                                <div class="input-field">
+                                    <label for="BillingAddressString">Billing Address</label>
+                                </div>
+                            </div>
+                            <div class="col s6 m6 l8">
+                                <div class="input-field">
+                                    <input placeholder="Billing Address" name="BillingAddressString"
+                                        [(ngModel)]="shoppingCartService.formData.BillingAddressString" type="text">
+                                </div>
+                            </div>         
+                            <div class="col s6 m6 l4">
+                                <div class="input-field">
+                                    <label for="ShippingAddressString">Shipping Address</label>
+                                </div>
+                            </div>
+                            <div class="col s6 m6 l8">
+                                <div class="input-field">
+                                    <input placeholder="Shipping Address" name="ShippingAddressString"
+                                        [(ngModel)]="shoppingCartService.formData.ShippingAddressString" type="text">
+                                </div>
+                            </div>         
+                            <div class="col s6 m6 l4">
+                                <div class="input-field">
+                                    <label for="SpecialInstruction">Special Instruction</label>
+                                </div>
+                            </div>
+                            <div class="col s6 m6 l8">
+                                <div class="input-field">
+                                    <input placeholder="Special Instruction" name="SpecialInstruction"
+                                        [(ngModel)]="shoppingCartService.formData.SpecialInstruction" type="text">
+                                </div>
+                            </div>                  
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="KhungOverflow">
+                            <table class="responsive-table">
+                                <thead style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Date</th>
+                                        <th>Image</th>
+                                        <th>SKU</th>
+                                        <th>ProductName</th>
+                                        <th>Volume</th>
+                                        <th>Designer Price</th>   
+                                        <th>Dealer Price</th>                                                                             
+                                        <th>Quantity</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of shoppingCart_ItemService.list; let i = index;">
+                                        <td style="width:20px;">{{i +1 }}</td>
+                                        <td>{{item.DateAdded}}</td>
+                                        <td><a target="_blank"
+                                                href="{{item.ImageURL}}"
+                                                title="{{item.ImageURL}}">
+                                                <img class="responsive-img" width="100px" height="100px"
+                                                    title="{{item.ImageURL}}" alt="{{item.ImageURL}}"
+                                                    src="{{item.ImageURL}}?w=100&h=100"></a></td>
+                                        <td>
+                                            <a target="_blank"
+                                                href="{{item.URL}}"
+                                                title="{{item.URL}}">
+                                                <b>{{item.SKU}}</b></a>
+                                        </td>
+                                        <td>
+                                            <a target="_blank"
+                                                href="{{item.URL}}"
+                                                title="{{item.URL}}">
+                                                <b>{{item.ProductName}}</b></a>
+                                        </td>
+                                        <td>{{item.Volume}}</td>
+                                        <td>{{item.DesignerPrice}}</td>     
+                                        <td>{{item.DealerPrice}}</td>                                             
+                                        <td>{{item.Quantity}}</td>
+                                        <td>{{item.ItemTotal}}</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Date</th>
+                                        <th>Image</th>
+                                        <th>SKU</th>
+                                        <th>ProductName</th>
+                                        <th>Volume</th>
+                                        <th>Designer Price</th>   
+                                        <th>Dealer Price</th>                                                               
+                                        <th>Quantity</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-loading *ngIf="isShowLoading"></app-loading>

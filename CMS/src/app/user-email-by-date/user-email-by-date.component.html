@@ -1,0 +1,216 @@
+<div class="row">
+    <div class="col s12">
+        <div class="container">
+            <div class="section section-data-tables">
+                <div class="row">
+                    <div class="col s12 m12 l12">
+                        <div class="card card card-default scrollspy">
+                            <div class="card-content">
+                                <div class="row">
+                                    <div class="col s8 m8 l8">
+                                        <h3 class="card-title"><b>User by date <span *ngIf="userService.listUserDataTransfer">({{userService.listUserDataTransfer.length}} items)</span></b></h3>                                        
+                                    </div>
+                                    <div class="col s4 m4 l4" style="text-align: right;">                                        
+                                        
+                                    </div>
+                                </div>
+                                <div class="row">                                   
+                                    <div class="col s4 m4 l1">
+                                        <mat-select class="browser-default"
+                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                            name="dateBeginYear" [(ngModel)]="dateBeginYear">
+                                            <mat-option *ngFor="let i of [2020, 2021, 2022, 2023, 2024, 2025]"
+                                                [value]="i">
+                                                {{i}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </div>                                    
+                                    <div class="col s4 m4 l1">
+                                        <mat-select class="browser-default"
+                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                            name="dateBeginMonth" [(ngModel)]="dateBeginMonth">
+                                            <mat-option *ngFor="let i of [1, 2, 3, 4, 5, 6,7,8,9,10,11,12]" [value]="i">
+                                                {{i}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </div>                                   
+                                    <div class="col s4 m4 l1">
+                                        <mat-select class="browser-default"
+                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                            name="dateBeginDay" [(ngModel)]="dateBeginDay">
+                                            <mat-option
+                                                *ngFor="let i of [1, 2, 3, 4, 5, 6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]"
+                                                [value]="i">
+                                                {{i}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </div>                                   
+                                    <div class="col s4 m4 l1">
+                                        <mat-select class="browser-default"
+                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                            name="dateEndYear" [(ngModel)]="dateEndYear">
+                                            <mat-option *ngFor="let i of [2020, 2021, 2022, 2023, 2024, 2025]"
+                                                [value]="i">
+                                                {{i}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </div>                                   
+                                    <div class="col s4 m4 l1">
+                                        <mat-select class="browser-default"
+                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                            name="dateEndMonth" [(ngModel)]="dateEndMonth">
+                                            <mat-option *ngFor="let i of [1, 2, 3, 4, 5, 6,7,8,9,10,11,12]" [value]="i">
+                                                {{i}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </div>                                  
+                                    <div class="col s4 m4 l1">
+                                        <mat-select class="browser-default"
+                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                            name="dateEndDay" [(ngModel)]="dateEndDay">
+                                            <mat-option
+                                                *ngFor="let i of [1, 2, 3, 4, 5, 6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]"
+                                                [value]="i">
+                                                {{i}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </div>
+                                    <div class="col s4 m4 l1">
+                                        <div class="input-field">
+                                            <p>
+                                                <label>
+                                                    <input type="checkbox" class="filled-in" name="isQuotation"
+                                                        [(ngModel)]="isQuotation" />
+                                                    <span>Quotation</span>
+                                                </label>
+                                            </p>
+
+                                        </div>
+                                    </div>                                  
+                                    <div class="col s4 m4 l1">
+                                        <div class="input-field">
+                                            <p>
+                                                <label>
+                                                    <input type="checkbox" class="filled-in" name="isRegister"
+                                                        [(ngModel)]="isRegister" />
+                                                    <span>Register</span>
+                                                </label>
+                                            </p>
+
+                                        </div>
+                                    </div>                                   
+                                    <div class="col s4 m4 l1">
+                                        <div class="input-field">
+                                            <p>
+                                                <label>
+                                                    <input type="checkbox" class="filled-in" name="isSubcribed"
+                                                        [(ngModel)]="isSubcribed" />
+                                                    <span>Subcribed</span>
+                                                </label>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                    <div class="col s4 m4 l2">
+                                        <button title="Search" (click)="onSearch()"
+                                            class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                                class="material-icons">search</i></button>&nbsp;&nbsp;&nbsp; <button
+                                            title="Download excel" (click)="onDownloadExcelFile()"
+                                            class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                                class="material-icons">get_app</i></button>
+                                    </div>
+                                </div>                               
+                                <div class="row">   
+                                    <div class="col s4 m4 l2" style="padding-top: 20px;">
+                                        <b>Sync with EMMA</b>
+                                    </div>     
+                                    <div class="col s4 m4 l1">
+                                        <div class="input-field">
+                                            <p>
+                                                <label>
+                                                    <input type="checkbox" class="filled-in" name="isQuoteUS"
+                                                        [(ngModel)]="isQuoteUS" />
+                                                    <span>Quote US</span>
+                                                </label>
+                                            </p>
+
+                                        </div>
+                                    </div>        
+                                    <div class="col s4 m4 l1">
+                                        <div class="input-field">
+                                            <p>
+                                                <label>
+                                                    <input type="checkbox" class="filled-in" name="isUserUS"
+                                                        [(ngModel)]="isUserUS" />
+                                                    <span>User US</span>
+                                                </label>
+                                            </p>
+
+                                        </div>
+                                    </div>        
+                                    <div class="col s4 m4 l2">
+                                        <div class="input-field">
+                                            <p>
+                                                <label>
+                                                    <input type="checkbox" class="filled-in" name="isSubscriberUS"
+                                                        [(ngModel)]="isSubscriberUS" />
+                                                    <span>Subscriber US</span>
+                                                </label>
+                                            </p>
+
+                                        </div>
+                                    </div>  
+                                    <div class="col s4 m4 l2">
+                                        <button title="Sync with EMMA" (click)="onSyncEMMA()"
+                                            class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                                class="material-icons">sync</i></button>
+                                    </div>                                                      
+                                </div>
+                                <div class="KhungOverflow">
+                                    <table class="responsive-table">
+                                        <thead style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Provider</th>
+                                                <th>Date</th>
+                                                <th>Email</th>
+                                                <th>First name</th>
+                                                <th>Last name</th>
+                                                <th>Country</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr
+                                                *ngFor="let item of userService.listUserDataTransfer; let i = index;">
+                                                <td style="width:20px;">{{i +1 }}</td>
+                                                <td>{{item.Provider}}</td>
+                                                <td>{{item.DateCreated | date: 'yyyy-MM-dd'}}</td>
+                                                <td>{{item.Email}}</td>
+                                                <td>{{item.Firstname}}</td>
+                                                <td>{{item.Lastname}}</td>
+                                                <td>{{item.CountryName}}</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Provider</th>
+                                                <th>Date</th>
+                                                <th>Email</th>
+                                                <th>First name</th>
+                                                <th>Last name</th>
+                                                <th>Country</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-loading *ngIf="isShowLoading"></app-loading>

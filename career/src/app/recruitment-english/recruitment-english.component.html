@@ -1,0 +1,157 @@
+<nz-modal [(nzVisible)]="isVisibleThankPopup" (nzOnCancel)="onOpenApply(false)" nzCancelText="Đóng" (nzOnOk)="null"
+    [nzOkText]="null">
+    <ng-container *nzModalTitle>
+        <div class="successfully-apply">
+            <span>Successfully apply</span>
+        </div>
+    </ng-container>
+    <ng-container *nzModalContent>
+        <div class="content-apply">
+            <label>Thank you for applying for the job <b>{{hR_Recruitment_CareerService.formData.JobFunction}}</b><span
+                    *ngIf="hR_Recruitment_CareerService.formData.Experience"> with experience
+                    <b>{{hR_Recruitment_CareerService.formData.Experience}}</b></span></label>
+            <label>The Human Resources Department will contact you the information below:</label>
+            <div style="font-weight: 500;">Full name: <b>{{hR_Recruitment_CareerService.formData.FullName}}</b></div>
+            <div style="font-weight: 500;">Phone: <b>{{hR_Recruitment_CareerService.formData.Phone}}</b></div>
+            <div style="font-weight: 500;" *ngIf="hR_Recruitment_CareerService.formData.Email">Email:
+                <b>{{hR_Recruitment_CareerService.formData.Email}}</b>
+            </div>
+        </div>
+    </ng-container>
+</nz-modal>
+
+<div class="ta-career-page">
+    <div class="wrap-ta-career">
+        <div class="main-section1">
+            <div class="container-career1">
+                <div class="align-items-center top-reverse top-recruitment">
+                    <div class="ta-popup-career">
+                        <form autocomplete="off" #form="ngForm" (submit)="onSubmit()">
+                            <div class="title-dkut-career">
+                                <a routerLink="/career"><i class="bi-backspace"></i></a>
+                                <span>Register to apply</span>
+                            </div>
+                            <input name="ID" [(ngModel)]="hR_Recruitment_CareerService.formData.ID" type="hidden">
+                            <div class="ta-name-career" style="padding: 30px;">
+                                <div style="margin-bottom:10px">
+                                    <label class="lable-input-career"> Full name (*) <b
+                                            style="color: red;">{{fullNameError}}</b></label>
+                                    <input cdkFocusInitial placeholder="Full name (*)"
+                                        [(ngModel)]="hR_Recruitment_CareerService.formData.FullName" name="FullName"
+                                        nz-input nzSize="large" (ngModelChange)="onCheckSubmit()">
+                                </div>
+                                <div style="margin-bottom:10px">
+                                    <label class="lable-input-career"> Phone (*) <b
+                                            style="color: red;">{{phoneError}}</b></label>
+                                    <input placeholder="Phone (*)"
+                                        [(ngModel)]="hR_Recruitment_CareerService.formData.Phone" name="Phone" nz-input
+                                        nzSize="large" (ngModelChange)="onCheckSubmit()">
+                                </div>
+                                <div style="margin-bottom:10px">
+                                    <label class="lable-input-career"> Address</label>
+                                    <input placeholder="Address" [(ngModel)]="hR_Recruitment_CareerService.formData.Address"
+                                        name="Address" nz-input nzSize="large">
+                                </div>
+                                <div style="margin-bottom:10px">
+                                    <label class="lable-input-career"> Email</label>
+                                    <input placeholder="Email" [(ngModel)]="hR_Recruitment_CareerService.formData.Email"
+                                        name="Email" nz-input nzSize="large">
+                                </div>
+                                <div style="margin-bottom:10px"> 
+                                    <label class="lable-input-career">Job functions</label>
+                                    <input placeholder="Job functions"
+                                        [(ngModel)]="hR_Recruitment_CareerService.formData.JobFunction"
+                                        name="JobFunction" nz-input nzSize="large" [nzAutocomplete]="auto"
+                                        style="position: relative;" />
+                                    <nz-autocomplete #auto>
+                                        <nz-auto-option nzValue="Unskilled worker"> ERP Developer</nz-auto-option>
+                                        <nz-auto-option nzValue="Unskilled worker"> Industrial Engineer</nz-auto-option>
+                                        <nz-auto-option nzValue="Unskilled worker"> Infrastructure Engineer</nz-auto-option>
+                                        <nz-auto-option nzValue="Unskilled worker"> Planning and Order Processing</nz-auto-option>
+                                        <nz-auto-option nzValue="Unskilled worker"> Product Engineer</nz-auto-option>
+                                        <nz-auto-option nzValue="Unskilled worker"> QC / QA</nz-auto-option>
+                                        <nz-auto-option nzValue="Unskilled worker"> Sub-con Manager</nz-auto-option>
+                                        <nz-auto-option nzValue="Unskilled worker"> ------------------------------</nz-auto-option>
+                                        <nz-auto-option nzValue="Fitting Worker"> Fitting Worker</nz-auto-option>
+                                        <nz-auto-option nzValue="Sanding Worker">Sanding Worker</nz-auto-option>
+                                        <nz-auto-option nzValue="Uphostery worker">Upholstery worker</nz-auto-option>
+                                        <nz-auto-option nzValue="Sprayer Paint / Color Finishing">Sprayer Paint / Color Finishing</nz-auto-option>
+                                        <nz-auto-option nzValue="Unskilled worker"> Unskilled worker</nz-auto-option>
+                                            
+                                    </nz-autocomplete>
+                                </div>
+                                <div style="margin-bottom:10px;">
+                                    <label class="lable-input-career">Experience</label>
+                                    <textarea placeholder="Experience"
+                                        [(ngModel)]="hR_Recruitment_CareerService.formData.Experience" name="Experience"
+                                        nz-input nzSize="large" rows="2"></textarea>
+                                </div>
+                                <div style="margin-bottom:10px">
+                                    <label class="lable-get-info">
+                                        Where did you get the job postings from?
+                                    </label>
+                                    <div class="frm-recruitment-">
+                                        <div style="display:flex; align-items:center;">
+                                            <input type="checkbox"
+                                            [(ngModel)]="hR_Recruitment_CareerService.formData.IsBanner"
+                                            name="IsBanner" style="cursor: pointer;" />
+                                            <span style="padding: 5px;">Banner/Flyer</span>
+                                        </div>
+                                        <div style="display:flex; align-items:center">
+                                            <input type="checkbox"
+                                                    [(ngModel)]="hR_Recruitment_CareerService.formData.IsFacebook"
+                                                    name="IsFacebook" style="cursor: pointer;" />
+                                            <span style="padding: 5px;">Facebook</span>
+                                        </div>
+                                        <div style="display:flex; align-items:center">
+                                            <input type="checkbox"
+                                            [(ngModel)]="hR_Recruitment_CareerService.formData.IsZalo"
+                                            name="IsZalo" style="cursor: pointer;" />
+                                            <span style="padding: 5px;">Zalo</span>
+                                        </div>
+                                        <div style="display:flex; align-items:center">
+                                            <input type="checkbox"
+                                                    [(ngModel)]="hR_Recruitment_CareerService.formData.IsFriend"
+                                                    name="IsFriend" style="cursor: pointer;" />
+                                            <span style="padding: 5px;">Friend</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div *ngIf="hR_Recruitment_CareerService.formData.IsFriend">
+                                    <div>
+                                        <label class="lable-input-career"> Relative's phone</label>
+                                        <input placeholder="Phone"
+                                            [(ngModel)]="hR_Recruitment_CareerService.formData.RecommendPhone"
+                                            name="RecommendPhone" nz-input nzSize="large">
+                                    </div>
+                                    <div>
+                                        <label class="lable-input-career"> Relative's name</label>
+                                        <input placeholder="Friend"
+                                            [(ngModel)]="hR_Recruitment_CareerService.formData.RecommendFullName"
+                                            name="RecommendFullName" nz-input nzSize="large">
+                                    </div>
+                                </div>
+                                <div>
+                                    <button class="submit-btn-career" title="Send" type="submit">Send</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav_right">
+            <div class="button-floating-introduce">
+                <a routerLink="/recommend" title="Be a recruiter">
+                    <span>Be a recruiter</span>
+                </a>
+            </div>
+            <div class="button-floating">
+                <a routerLink="/recruitment" title="Register now">
+                    <span>Register now</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

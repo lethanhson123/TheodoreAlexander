@@ -1,0 +1,62 @@
+<form autocomplete="off" class="row" #form="ngForm" (submit)="onSubmit(form)">
+    <div class="col s6 m6 l9">
+        <h3 class="card-title"><b>Application: {{system_ApplicationService.formData.Name}}</b></h3>
+    </div>
+    <div class="col s6 m6 l3">
+        <button title="Save" type="submit" class="mb-6 btn-floating waves-effect waves-light cyan"><i
+                class="material-icons">save</i></button>&nbsp;&nbsp;&nbsp;
+        <a title="Close" class="mb-6 btn-floating waves-effect waves-light purple lightrn-1" (click)="onClose()">
+            <i class="material-icons">close</i>
+        </a>
+    </div>
+    <input name="ID" [(ngModel)]="system_ApplicationService.formData.ID" type="hidden">
+    <div class="col s12 m12 l12">
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="Name">Name</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <input placeholder="Name" name="Name" [(ngModel)]="system_ApplicationService.formData.Name" type="text">
+            </div>
+        </div>
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="URL">URL</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <input placeholder="URL" name="URL" [(ngModel)]="system_ApplicationService.formData.URL" type="text">
+            </div>
+        </div>
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="URLDefaults">URL Defaults</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <input placeholder="URL Defaults" name="URLDefaults" [(ngModel)]="system_ApplicationService.formData.URLDefaults" type="text">
+            </div>
+        </div>
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="Active">Active</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <p>
+                    <label>
+                        <input type="checkbox" class="filled-in" name="Active"
+                            [(ngModel)]="system_ApplicationService.formData.Active" />
+                        <span>Active</span>
+                    </label>
+                </p>
+
+            </div>
+        </div>
+    </div>   
+</form>

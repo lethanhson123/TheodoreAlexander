@@ -1,0 +1,88 @@
+<div class="row">
+    <div class="col s12">
+        <div class="container">
+            <div class="section section-data-tables">
+                <div class="row">
+                    <div class="col s12 m12 l12">
+                        <div class="card card card-default scrollspy">
+                            <div class="card-content">
+                                <div class="row">
+                                    <div class="col s10 m10 l10">
+                                        <h3 class="card-title"><b>Shopping cart <span *ngIf="shoppingCartService.list">(Order: {{shoppingCartService.list.length}} - Item count: {{itemCount}} - Total: {{total}} - Volume: {{volume}})</span></b></h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s6 m6 l10">
+                                        <input matInput [(ngModel)]="searchString"
+                                            placeholder="Search by Code, email, phone, date created" autocomplete="off"
+                                            (keyup)="onSearch()">
+                                    </div>
+                                    <div class="col s6 m6 l2">
+                                    </div>
+                                    <div class="KhungOverflow">
+                                        <table class="responsive-table">
+                                            <thead
+                                                style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>Date</th>
+                                                    <th>Code</th>
+                                                    <th>Email</th>
+                                                    <th>Phone</th>
+                                                    <th>Item Count</th>
+                                                    <th>Total</th>
+                                                    <th>Volume</th>
+                                                    <th>Active</th>
+                                                    <th>Detail</th>
+                                                    <th>Send mail</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr *ngFor="let item of shoppingCartService.list; let i = index;">
+                                                    <td style="width:20px;">{{ i +1 }}</td>
+                                                    <td>{{item.DateOrderCreated}}</td>
+                                                    <td><b>{{item.Code}}</b></td>
+                                                    <td>{{item.Email}}</td>
+                                                    <td>{{item.Phone}}</td>
+                                                    <td>{{item.ItemCount}}</td>
+                                                    <td>{{item.Total}}</td>
+                                                    <td>{{item.Volume}}</td>
+                                                    <td>{{item.IsActive}}</td>
+                                                    <td><a target="_blank" title="View"
+                                                            routerLink="/cart-info/{{item.ID}}"
+                                                            class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                                                class="material-icons">info</i></a></td>
+                                                    <td><a title="Send mail"
+                                                        (click)="onSendMail(item.ID)"
+                                                            class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                                                class="material-icons">contact_mail</i></a></td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot
+                                                style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>Date</th>
+                                                    <th>Code</th>
+                                                    <th>Email</th>
+                                                    <th>Phone</th>
+                                                    <th>Item Count</th>
+                                                    <th>Total</th>
+                                                    <th>Volume</th>
+                                                    <th>Active</th>
+                                                    <th>Detail</th>
+                                                    <th>Send mail</th>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-loading *ngIf="isShowLoading"></app-loading>

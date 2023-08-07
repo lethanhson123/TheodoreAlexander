@@ -1,0 +1,40 @@
+export class UPHFabric {
+    Fabric?: string;
+    Grade?: number;
+    GradeStudio?: string;
+    Content1?: string;
+    Content2?: string;
+    Content3?: string;
+    Content4?: string;
+    Content5?: string;
+    Content6?: string;
+    Sampled?: string;
+    Color?: string;
+    ColorCode?: string;
+    Pattern?: string;
+    PatternCode?: string;
+    VRepeat?: string;
+    HRepeat?: string;
+    Width?: string;
+    CleaningCode?: string;
+    Application?: string;
+    Durability?: string;
+    enable?: boolean;
+    CreatedDate?: Date;
+    InStock?: boolean;
+    IsEnabledOnWeb?: boolean;
+    IsCutYardage?: boolean;
+    Name?: string;
+    RLC?: boolean;
+    GradeTrim?: string;
+    Category?: string;
+    CategoryTrim?: string;
+    Rubs?: string;
+    QtyOnHand?: number;
+    UM?: string;
+    PFP?: boolean;
+    Image?: string;
+    URLImage?: string;
+    URLSirv?: string;
+}
+

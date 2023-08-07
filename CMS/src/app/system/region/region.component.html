@@ -1,0 +1,84 @@
+<div class="row">
+    <div class="col s12">
+        <div class="container">
+            <div class="section section-data-tables">
+                <div class="row">
+                    <div class="col s12 m12 l12">
+                        <div class="card card card-default scrollspy">
+                            <div class="card-content">
+                                <div class="row">
+                                    <div class="col s10 m10 l10">
+                                        <h3 class="card-title"><b>Region <span *ngIf="regionService.list">({{regionService.list.length}} items)</span></b></h3>
+                                    </div>
+                                </div>
+                                <div class="row">     
+                                    <div class="col s6 m6 l4">
+                                        <mat-select class="browser-default"
+                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                            name="countryID" [(ngModel)]="countryID">                                            
+                                            <mat-option *ngFor="let item of countryService.list" [value]="item.ID">
+                                                {{item.Name}}
+                                            </mat-option>
+                                        </mat-select>      
+                                    </div>  
+                                    <div class="col s6 m6 l6">
+                                        <input matInput [(ngModel)]="searchString"
+                                            placeholder="Search by Name"
+                                            autocomplete="off">
+                                    </div>          
+                                    <div class="col s6 m6 l2">       
+                                        <button title="Search" (click)="onSearch()"
+                                            class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                                class="material-icons">search</i></button>&nbsp;&nbsp;&nbsp;                                
+                                    </div>                                          
+                                    <div class="KhungOverflow">
+                                        <table class="responsive-table">
+                                            <thead
+                                                style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                                <tr>
+                                                    <th>No</th>    
+                                                    <th>Country</th>                                                  
+                                                    <th>Name</th>                                                      
+                                                    <th></th>    
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr
+                                                    *ngFor="let item of regionService.list; let i = index;">
+                                                    <td style="width:20px;">{{i +1 }}</td>     
+                                                    <td>
+                                                        <mat-select class="browser-default"
+                                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                                            name="item.Country_ID" [(ngModel)]="item.Country_ID">                                            
+                                                            <mat-option *ngFor="let country of countryService.list" [value]="country.ID">
+                                                                {{country.Name}}
+                                                            </mat-option>
+                                                        </mat-select>      
+                                                    </td>                                                                                                                                           
+                                                    <td><input name="Name" type="text" [(ngModel)]="item.Name"></td>                                                           
+                                                    <td>                                                       
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot
+                                                style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                                <tr>
+                                                    <th>No</th>   
+                                                    <th>Country</th>                                                                                                                                                       
+                                                    <th>Name</th>                                                                                                        
+                                                    <th></th> 
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-loading *ngIf="isShowLoading"></app-loading>

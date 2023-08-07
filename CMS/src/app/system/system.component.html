@@ -1,0 +1,168 @@
+
+<!-- <div class="row">
+    <div class="col s12">
+        <div class="container">
+            <div class="section section-data-tables">
+                <div class="row">
+                    <div class="col s12 m12 l12">
+                        <div class="card card card-default scrollspy">
+                            <div class="card-content">
+                                <div class="row">
+                                    <div class="col s10 m10 l10">
+                                        <h3 class="card-title"><b>Sitemap: SEO Keyword</b></h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s6 m6 l3">   
+                                        <mat-select class="browser-default"
+                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                            name="sEOKeywordID" [(ngModel)]="sEOKeywordID">                                            
+                                            <mat-option *ngFor="let item of sEOKeywordService.list" [value]="item.ID">
+                                                {{item.Title}}
+                                            </mat-option>
+                                        </mat-select>              
+                                    </div>
+                                    <div class="col s6 m6 l3">  
+                                        <mat-select class="browser-default"
+                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                            name="countryID" [(ngModel)]="countryID">                                            
+                                            <mat-option *ngFor="let item of countryService.list" [value]="item.ID">
+                                                {{item.Name}}
+                                            </mat-option>
+                                        </mat-select>                                                                                 
+                                    </div>
+                                    <div class="col s6 m6 l6">    
+                                        <button title="Sitemap" (click)="onInitializationSiteMapSEOBlogBySEOKeywordIDCountryIDToXML()"
+                                        class="mb-6 btn waves-effect waves-light green darken-1">Sitemap</button>                                                                                                                                         
+                                    </div>                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<div class="row">
+    <div class="col s12">
+        <div class="container">
+            <div class="section section-data-tables">
+                <div class="row">
+                    <div class="col s12 m12 l12">
+                        <div class="card card card-default scrollspy">
+                            <div class="card-content">
+                                <div class="row">
+                                    <div class="col s10 m10 l10">
+                                        <h3 class="card-title"><b>Sitemap</b></h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s4 m4 l4">   
+                                        <button title="Blog" (click)="onDownloadBlogSitemap()"
+                                        class="mb-6 btn waves-effect waves-light green darken-1">Blog</button>                                     
+                                    </div>
+                                    <div class="col s4 m4 l4">                                        
+                                        <button title="List" (click)="onDownloadListSitemap()"
+                                        class="mb-6 btn waves-effect waves-light green darken-1">List</button>                                     
+                                    </div>
+                                    <div class="col s4 m4 l4">                                        
+                                        <button title="Item" (click)="onDownloadItemSitemap()"
+                                        class="mb-6 btn waves-effect waves-light green darken-1">Item</button>                                     
+                                    </div>                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col s12">
+        <div class="container">
+            <div class="section section-data-tables">
+                <div class="row">
+                    <div class="col s12 m12 l12">
+                        <div class="card card card-default scrollspy">
+                            <div class="card-content">
+                                <div class="row">
+                                    <div class="col s10 m10 l10">
+                                        <h3 class="card-title"><b>SEO Blog</b></h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s6 m6 l2">  
+                                        <mat-select class="browser-default"
+                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                            name="sEOKeywordID" [(ngModel)]="sEOKeywordID">                                            
+                                            <mat-option *ngFor="let item of sEOKeywordService.list" [value]="item.ID">
+                                                {{item.Title}}
+                                            </mat-option>
+                                        </mat-select>              
+                                    </div>
+                                    <div class="col s6 m6 l2">  
+                                        <mat-select class="browser-default"
+                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                            name="countryID" [(ngModel)]="countryID">                                            
+                                            <mat-option *ngFor="let item of countryService.list" [value]="item.ID">
+                                                {{item.Name}}
+                                            </mat-option>
+                                        </mat-select>                                                                                 
+                                    </div>
+                                    <div class="col s6 m6 l1">  
+                                        <input type="number" [(ngModel)]="rowBegin" placeholder="Row Begin">                                                                            
+                                    </div>
+                                    <div class="col s6 m6 l1">  
+                                        <input type="number" [(ngModel)]="rowEnd" placeholder="Row End">                                                                            
+                                    </div>
+                                    <div class="col s6 m6 l6">  
+                                        <button title="HTML page" (click)="onInitializationHTMLKeywordPageByKeywordIDAndCountryIDAndRowBeginAndRowEndInLIVE()"
+                                        class="mb-6 btn waves-effect waves-light green darken-1">HTML page</button>&nbsp;&nbsp;&nbsp;     
+                                        <button title="Sitemap" (click)="onInitializationSiteMapSEOBlogBySEOKeywordIDCountryIDToXML()"
+                                        class="mb-6 btn waves-effect waves-light green darken-1">Sitemap</button>&nbsp;&nbsp;&nbsp;    
+                                        <button title="Item" (click)="onInitializationBySEOKeywordIDAndCountryID()"
+                                        class="mb-6 btn waves-effect waves-light cyan">Create Database</button>                                                                                                                                                
+                                    </div>                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col s12">
+        <div class="container">
+            <div class="section section-data-tables">
+                <div class="row">
+                    <div class="col s12 m12 l12">
+                        <div class="card card card-default scrollspy">
+                            <div class="card-content">
+                                <div class="row">
+                                    <div class="col s10 m10 l10">
+                                        <h3 class="card-title"><b>Download</b></h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s4 m4 l4">   
+                                        <input type="text" [(ngModel)]="uRLCodeList" placeholder="uRLCodeList">                                                                               
+                                    </div>                                       
+                                    <div class="col s8 m8 l8">   
+                                        <button title="Image" (click)="onInitializationHTMLKeywordPageInLIVEByURLCodeList()"
+                                        class="mb-6 btn waves-effect waves-light green darken-1">Keyword HTML page</button>&nbsp;&nbsp;&nbsp;                                                                              
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-loading *ngIf="isShowLoading"></app-loading>

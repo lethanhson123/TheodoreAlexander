@@ -1,0 +1,41 @@
+export class SEOBlog {
+    ID?: number;
+    UserCreated?: string;
+    DateCreated?: Date;
+    UserUpdated?: string;
+    DateUpdated?: Date;
+    Active?: boolean;
+    RowVersion?: number;
+    ParentID?: number;
+    CodeManage?: string;
+    Note?: string;
+    Code?: string;
+    Title?: string;
+    HTMLContent?: string;
+    URLCode?: string;
+    Image?: string;
+    Description?: string;
+    METAKeyword?: string;
+    METADescription?: string;
+    URLImage?: string;
+    Keyword?: string;
+    SEOBlogTemplateID?: number;
+    CountryID?: string;
+    RegionID?: string;
+    CityID?: string;
+    KeywordID?: number;
+    DesignerID?: string;
+    CountryName?: string;
+    RegionName?: string;
+    CityName?: string;
+    SEOBlogTemplateContent?: string;
+    DesignerContent?: string;
+    DesignerImage?: string;
+    URLDesignerImage?: string;
+    SEOBlogTemplateImage?: string;
+    URLSEOBlogTemplateImage?: string;
+    Count?: number;
+    RowBegin?: number;
+    RowEnd?: number;
+}
+

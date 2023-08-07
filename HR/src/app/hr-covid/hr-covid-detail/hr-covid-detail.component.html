@@ -1,0 +1,322 @@
+<form autocomplete="off" class="row" #form="ngForm" (submit)="onSubmit(form)">
+    <div class="col s6 m6 l9">
+        <h3 class="card-title"><b>Kết quả xét nghiệm</b></h3>
+    </div>
+    <div class="col s6 m6 l3">
+        <button title="Lưu thay đổi" type="submit" class="mb-6 btn-floating waves-effect waves-light cyan"><i
+                class="material-icons">save</i></button>&nbsp;&nbsp;&nbsp;
+        <a title="Đóng" class="mb-6 btn-floating waves-effect waves-light purple lightrn-1" (click)="onClose()">
+            <i class="material-icons">close</i>
+        </a>
+    </div>
+
+    <input name="ID" [(ngModel)]="hR_CovidService.formData.ID" type="hidden">
+
+    <div class="col s4 m4 l2">
+        <div class="input-field">
+            <label for="Employee">Nhân viên</label>
+        </div>
+    </div>
+    <div class="col s8 m8 l10">
+        <div class="input-field">
+            <mat-select class="browser-default"
+                style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                name="EmployeeID" [(ngModel)]="hR_CovidService.formData.EmployeeID"
+                (selectionChange)="onChangeEmployee()">
+                <input (keyup)="onFilterHR_EmployeeDataTrans($event)">
+                <mat-option *ngFor="let item of hR_EmployeeService.listHR_EmployeeDataTransfer" [value]="item.ID">
+                    {{item.FullName}}
+                </mat-option>
+            </mat-select>
+        </div>
+    </div>
+    <div class="col s12 m12 l6">
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="CodeManage">Chọn nhóm</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <mat-select class="browser-default"
+                    style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding-bottom: 25px;"
+                    name="CodeManage" [(ngModel)]="hR_CovidService.formData.CodeManage">
+                    <mat-option *ngFor="let item of hR_CovidService.listWithCodeManage" [value]="item.CodeManage">
+                        {{item.Note}}
+                    </mat-option>
+                </mat-select>
+            </div>
+        </div>
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="CodeManage">Nhập nhóm</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <input placeholder="Nhóm nhiễm" name="CodeManage" [(ngModel)]="hR_CovidService.formData.CodeManage"
+                    type="text">
+            </div>
+        </div>
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="Symptom">Triệu chứng</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <input placeholder="Triệu chứng" name="Symptom" [(ngModel)]="hR_CovidService.formData.Symptom"
+                    type="text">
+            </div>
+        </div>
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="Note">Hỗ trợ</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <input placeholder="Hỗ trợ" name="Note" [(ngModel)]="hR_CovidService.formData.Note" type="text">
+            </div>
+        </div>
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="CovidTypeID">Loại</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <mat-select class="browser-default"
+                    style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding-bottom: 34px;"
+                    name="CovidTypeID" [(ngModel)]="hR_CovidService.formData.CovidTypeID">
+                    <mat-option *ngFor="let item of hR_CovidTypeService.list" [value]="item.ID">
+                        {{item.Name}}
+                    </mat-option>
+                </mat-select>
+            </div>
+        </div>
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="CovidTestID">Xét nghiệm</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <mat-select class="browser-default"
+                    style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding-bottom: 34px;"
+                    name="CovidTestID" [(ngModel)]="hR_CovidService.formData.CovidTestID">
+                    <mat-option *ngFor="let item of hR_CovidTestService.list" [value]="item.ID">
+                        {{item.Name}}
+                    </mat-option>
+                </mat-select>
+            </div>
+        </div>
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="CovidResultID">Kết quả</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <mat-select class="browser-default"
+                    style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding-bottom: 34px;"
+                    name="CovidResultID" [(ngModel)]="hR_CovidService.formData.CovidResultID">
+                    <mat-option *ngFor="let item of hR_CovidResultService.list" [value]="item.ID">
+                        {{item.Name}}
+                    </mat-option>
+                </mat-select>
+            </div>
+        </div>
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <mat-label>Ngày xét nghiệm</mat-label>
+                <mat-datepicker-toggle matSuffix [for]="CovidTestDate">
+                </mat-datepicker-toggle>
+                <mat-datepicker #CovidTestDate></mat-datepicker>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <input [matDatepicker]="CovidTestDate" name="CovidTestDate"
+                    [(ngModel)]="hR_CovidService.formData.CovidTestDate">
+            </div>
+        </div>
+        <div class="col s12 m12 l12">
+            <div class="input-field">
+                <p>
+                    <label>
+                        <input type="checkbox" class="filled-in" name="IsInjectedVaccine"
+                            [(ngModel)]="hR_CovidService.formData.IsInjectedVaccine" />
+                        <span>Tiêm vacxin</span>
+                    </label>
+                </p>
+
+            </div>
+        </div>        
+        <div class="col s12 m12 l12">
+            <div class="input-field">
+                <p>
+                    <label>
+                        <input type="checkbox" class="filled-in" name="IsMaternityLeave"
+                            [(ngModel)]="hR_CovidService.formData.IsMaternityLeave" />
+                        <span>Nghỉ thai sản</span>
+                    </label>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col s12 m12 l6">
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="CovidLocalID">Cách ly</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <mat-select class="browser-default"
+                    style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding-bottom: 34px;"
+                    name="CovidLocalID" [(ngModel)]="hR_CovidService.formData.CovidLocalID">
+                    <mat-option *ngFor="let item of hR_CovidLocalService.list" [value]="item.ID">
+                        {{item.Name}}
+                    </mat-option>
+                </mat-select>
+            </div>
+        </div>
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="IsolationName">Địa điểm</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <input placeholder="Tên khu cách ly" name="IsolationName"
+                    [(ngModel)]="hR_CovidService.formData.IsolationName" type="text">
+            </div>
+        </div>
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="IsolationArea">Khu vực</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <input placeholder="Khu vực cách ly" name="IsolationArea"
+                    [(ngModel)]="hR_CovidService.formData.IsolationArea" type="text">
+            </div>
+        </div>
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="IsolationFloot">Tầng</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <input placeholder="Tầng cách ly" name="IsolationFloot"
+                    [(ngModel)]="hR_CovidService.formData.IsolationFloot" type="text">
+            </div>
+        </div>
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="IsolationRoom">Phòng</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <input placeholder="Phòng cách ly" name="IsolationRoom"
+                    [(ngModel)]="hR_CovidService.formData.IsolationRoom" type="text">
+            </div>
+        </div>
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="IsolationAddress">Địa chỉ</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <input placeholder="Địa chỉ cách ly" name="IsolationAddress"
+                    [(ngModel)]="hR_CovidService.formData.IsolationAddress" type="text">
+            </div>
+        </div>
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="IsolationProvinceID">Tỉnh/Thành</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <mat-select class="browser-default"
+                    style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding-bottom: 34px;"
+                    name="IsolationProvinceID" [(ngModel)]="hR_CovidService.formData.IsolationProvinceID"
+                    (selectionChange)="onChangeIsolationProvince()">
+                    <input (keyup)="onFilterProvince($event)">
+                    <mat-option *ngFor="let item of hR_ProvinceService.list" [value]="item.ID">
+                        {{item.Name}}
+                    </mat-option>
+                </mat-select>
+            </div>
+        </div>
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="IsolationDistrictID">Quận/Huyện</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <mat-select class="browser-default"
+                    style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding-bottom: 34px;"
+                    name="IsolationDistrictID" [(ngModel)]="hR_CovidService.formData.IsolationDistrictID"
+                    (selectionChange)="onChangeIsolationDistrict()">
+                    <mat-option *ngFor="let item of hR_DistrictService.list" [value]="item.ID">
+                        {{item.Name}}
+                    </mat-option>
+                </mat-select>
+            </div>
+        </div>
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="IsolationWardID">Phường/Xã</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <mat-select class="browser-default"
+                    style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding-bottom: 34px;"
+                    name="IsolationWardID" [(ngModel)]="hR_CovidService.formData.IsolationWardID">
+                    <mat-option *ngFor="let item of hR_WardService.list" [value]="item.ID">
+                        {{item.Name}}
+                    </mat-option>
+                </mat-select>
+            </div>
+        </div>
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <mat-label>Bắt đầu</mat-label>
+                <mat-datepicker-toggle matSuffix [for]="IsolationDateBegin">
+                </mat-datepicker-toggle>
+                <mat-datepicker #IsolationDateBegin></mat-datepicker>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <input [matDatepicker]="IsolationDateBegin" name="IsolationDateBegin"
+                    [(ngModel)]="hR_CovidService.formData.IsolationDateBegin">
+            </div>
+        </div>
+        <div class="col s12 m12 l12">
+            <div class="col s4 m4 l4">
+                <div class="input-field">
+                    <mat-label>Kết thúc</mat-label>
+                    <mat-datepicker-toggle matSuffix [for]="IsolationDateEnd">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #IsolationDateEnd></mat-datepicker>
+                </div>
+            </div>
+            <div class="col s8 m8 l8">
+                <div class="input-field">
+                    <input [matDatepicker]="IsolationDateEnd" name="IsolationDateEnd"
+                        [(ngModel)]="hR_CovidService.formData.IsolationDateEnd">
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

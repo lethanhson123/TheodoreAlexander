@@ -1,0 +1,250 @@
+<div class="vertical-layout page-header-light vertical-menu-collapsible vertical-menu-nav-dark 2-columns mat-typography"
+    data-open="click" data-menu="vertical-menu-nav-dark" data-col="2-column">
+    <header class="page-topbar" id="header">
+        <div class="navbar navbar-fixed">
+            <nav class="navbar-main navbar-color nav-collapsible sideNav-lock navbar-light">
+                <div class="nav-wrapper">
+                    <div class="header-search-wrapper hide-on-med-and-down">
+                    </div>
+                    <ul class="navbar-list right">
+                        <li class="hide-on-med-and-down"><a
+                                class="waves-effect waves-block waves-light toggle-fullscreen"
+                                href="javascript:void(0);"><i class="material-icons">settings_overscan</i></a></li>
+                    </ul>
+                    <ul class="dropdown-content" id="translation-dropdown">
+                    </ul>
+
+                    <ul class="dropdown-content" id="notifications-dropdown">
+                    </ul>
+                    <ul class="dropdown-content" id="profile-dropdown">
+                    </ul>
+                </div>
+                <nav class="display-none search-sm">
+                    <div class="nav-wrapper">
+                        <div class="input-field">
+                        </div>
+                    </div>
+                </nav>
+            </nav>
+        </div>
+    </header>
+    <aside class="sidenav-main nav-expanded nav-lock nav-collapsible sidenav-dark sidenav-active-rounded">
+        <div class="brand-sidebar">
+            <h1 class="logo-wrapper"><a class="brand-logo darken-1" href="{{domainURL}}" style="color:#ff6600;"><span
+                        class="logo-text hide-on-med-and-down" style="color:#ff6600;">Theodore Alexander</span></a><a
+                    class="navbar-toggler" href="#"><i class="material-icons">radio_button_checked</i></a></h1>
+        </div>
+        <ul class="sidenav sidenav-collapsible leftside-navigation collapsible sidenav-fixed menu-shadow" id="slide-out"
+            data-menu="menu-navigation" data-collapsible="accordion">            
+            <li class="bold"><a class="collapsible-header waves-effect waves-cyan "><i class="material-icons">contact_mail</i><span class="menu-title" data-i18n="">User in website</span></a>
+                <div class="collapsible-body">
+                  <ul class="collapsible collapsible-sub" data-collapsible="accordion">
+                    <li>
+                        <a class='collapsible-body' title='List user' routerLink="User"><i class="material-icons">radio_button_unchecked</i><span>List user</span></a>                                             
+                    </li>
+                    <li>
+                        <a class='collapsible-body' title='Dealer, Sale by store' routerLink="UserByStore"><i class='material-icons'>radio_button_unchecked</i><span>Dealer, Sale by store</span></a>
+                    </li>    
+                    <li>
+                        <a class='collapsible-body' title='User by date' routerLink="UserByDate"><i class='material-icons'>radio_button_unchecked</i><span>User by date</span></a>
+                    </li>                  
+                  </ul>
+                </div>
+            </li>
+            <li class="bold"><a class="collapsible-header waves-effect waves-cyan "><i class="material-icons">content_paste</i><span class="menu-title" data-i18n="">Item</span></a>
+                <div class="collapsible-body">
+                  <ul class="collapsible collapsible-sub" data-collapsible="accordion">
+                    <li>
+                        <a class='collapsible-body' title='List item' routerLink="Item"><i class="material-icons">radio_button_unchecked</i><span>List item</span></a>                                             
+                    </li>           
+                    <li>
+                        <a class='collapsible-body' title='List item active' routerLink="ItemActive"><i class="material-icons">radio_button_unchecked</i><span>Item active</span></a>                                             
+                    </li>                                    
+                    <li>
+                        <a class='collapsible-body' title='Insert Or Update' routerLink="ItemInsertOrUpdate"><i class="material-icons">radio_button_unchecked</i><span>Insert Or Update</span></a>                                             
+                    </li>        
+                    <li>
+                        <a class='collapsible-body' title='Bed Infomation' routerLink="ItemBedInfomation"><i class="material-icons">radio_button_unchecked</i><span>Bed Infomation</span></a>                                             
+                    </li>   
+                    <li>
+                        <a class='collapsible-body' title='Is Best Seller' routerLink="IsBestSeller"><i class="material-icons">radio_button_unchecked</i><span>Is Best Seller</span></a>                                             
+                    </li>       
+                    <li>
+                        <a class='collapsible-body' title='Additional Features' routerLink="AdditionalFeatures"><i class="material-icons">radio_button_unchecked</i><span>Additional Features</span></a>                                             
+                    </li>      
+                    <li>
+                        <a class='collapsible-body' title='ProductName And ExtendedDescription' routerLink="ProductNameAndExtendedDescription"><i class="material-icons">radio_button_unchecked</i><span>Name + Description</span></a>                                             
+                    </li>      
+                    <li>
+                        <a class='collapsible-body' title='Initialization' routerLink="ItemInitialization"><i class="material-icons">radio_button_unchecked</i><span>Initialization</span></a>                                             
+                    </li>   
+                     
+                    <!-- <li>
+                        <a class='collapsible-body' title='List item active by Extending' routerLink="ItemActiveExtending"><i class="material-icons">radio_button_unchecked</i><span>Item active by Extending</span></a>                                             
+                    </li>      
+                    <li>
+                        <a class='collapsible-body' title='List item active by IsCFPItem' routerLink="ItemActiveIsCFPItem"><i class="material-icons">radio_button_unchecked</i><span>Item active by IsCFPItem</span></a>                                             
+                    </li>   
+                    <li>
+                        <a class='collapsible-body' title='List item active by IsNew' routerLink="ItemActiveIsNew"><i class="material-icons">radio_button_unchecked</i><span>Item active by IsNew</span></a>                                             
+                    </li>   
+                    <li>
+                        <a class='collapsible-body' title='List item active by IsStocked' routerLink="ItemActiveIsStocked"><i class="material-icons">radio_button_unchecked</i><span>Item active by IsStocked</span></a>                                             
+                    </li>   
+                    <li>
+                        <a class='collapsible-body' title='List item active by IsBestSeller' routerLink="ItemActiveIsBestSeller"><i class="material-icons">radio_button_unchecked</i><span>Item active by IsBestSeller</span></a>                                             
+                    </li> 
+                    <li>
+                        <a class='collapsible-body' title='List item active by room' routerLink="ItemActiveByRoomAndUsage"><i class="material-icons">radio_button_unchecked</i><span>Item active by Room</span></a>                                             
+                    </li>      
+                    <li>
+                        <a class='collapsible-body' title='List item active by type' routerLink="ItemActiveByType"><i class="material-icons">radio_button_unchecked</i><span>Item active by Type</span></a>                                             
+                    </li>     
+                    <li>
+                        <a class='collapsible-body' title='List item active by brand' routerLink="ItemActiveByBrand"><i class="material-icons">radio_button_unchecked</i><span>Item active by Brand</span></a>                                             
+                    </li>     
+                    <li>
+                        <a class='collapsible-body' title='List item active by collection' routerLink="ItemActiveByCollection"><i class="material-icons">radio_button_unchecked</i><span>Item active by Collection</span></a>                                             
+                    </li>     
+                    <li>
+                        <a class='collapsible-body' title='List item active by life style' routerLink="ItemActiveByLifeStyle"><i class="material-icons">radio_button_unchecked</i><span>Item active by LifeStyle</span></a>                                             
+                    </li>     
+                    <li>
+                        <a class='collapsible-body' title='List item active by style' routerLink="ItemActiveByStyle"><i class="material-icons">radio_button_unchecked</i><span>Item active by Style</span></a>                                             
+                    </li>     
+                    <li>
+                        <a class='collapsible-body' title='List item active by shape' routerLink="ItemActiveByShape"><i class="material-icons">radio_button_unchecked</i><span>Item active by Shape</span></a>                                             
+                    </li>   
+                    <li>
+                        <a class='collapsible-body' title='List item active by designer' routerLink="ItemActiveByDesigner"><i class="material-icons">radio_button_unchecked</i><span>Item active by Designer</span></a>                                             
+                    </li>                                    -->
+                  </ul>
+                </div>
+            </li>         
+            <li class="bold"><a class="collapsible-header waves-effect waves-cyan "><i class="material-icons">shopping_cart</i><span class="menu-title" data-i18n="">Shopping cart</span></a>
+                <div class="collapsible-body">
+                  <ul class="collapsible collapsible-sub" data-collapsible="accordion">
+                    <li>
+                        <a class='collapsible-body' title='List' routerLink="cart"><i class="material-icons">radio_button_unchecked</i><span>List</span></a>                                             
+                    </li>                                                       
+                  </ul>
+                </div>
+            </li>         
+            <li class="bold"><a class="collapsible-header waves-effect waves-cyan "><i class="material-icons">book</i><span class="menu-title" data-i18n="">Marketing Resource</span></a>
+                <div class="collapsible-body">
+                  <ul class="collapsible collapsible-sub" data-collapsible="accordion">
+                    <li>
+                        <a class='collapsible-body' title='List' routerLink="MarketingResource"><i class="material-icons">radio_button_unchecked</i><span>List</span></a>                                             
+                    </li>      
+                    <li>
+                        <a class='collapsible-body' title='Category' routerLink="MarketingResourceCategory"><i class="material-icons">radio_button_unchecked</i><span>Category</span></a>                                             
+                    </li>                                                     
+                  </ul>
+                </div>
+            </li>         
+            <li class="bold"><a class="collapsible-header waves-effect waves-cyan "><i class="material-icons">assistant_photo</i><span class="menu-title" data-i18n="">Banner</span></a>
+                <div class="collapsible-body">
+                  <ul class="collapsible collapsible-sub" data-collapsible="accordion">
+                    <li>
+                        <a class='collapsible-body' title='List' routerLink="Banner"><i class="material-icons">radio_button_unchecked</i><span>List</span></a>                                             
+                    </li>                                                                        
+                  </ul>
+                </div>
+            </li>     
+            <li class="bold"><a class="collapsible-header waves-effect waves-cyan "><i class="material-icons">public</i><span class="menu-title" data-i18n="">SEO</span></a>
+                <div class="collapsible-body">
+                  <ul class="collapsible collapsible-sub" data-collapsible="accordion">
+                    <li>
+                        <a class='collapsible-body' title='Initialization' routerLink="SEOBlogInitialization"><i class="material-icons">radio_button_unchecked</i><span>Initialization</span></a>                                             
+                    </li> 
+                    <li>
+                        <a class='collapsible-body' title='Blog' routerLink="SEOBlog"><i class="material-icons">radio_button_unchecked</i><span>Blog</span></a>                                             
+                    </li> 
+                    <li>
+                        <a class='collapsible-body' title='Blog Template' routerLink="SEOBlogTemplate"><i class="material-icons">radio_button_unchecked</i><span>Blog Template</span></a>                                             
+                    </li>   
+                    <li>
+                        <a class='collapsible-body' title='Keyword' routerLink="SEOKeyword"><i class="material-icons">radio_button_unchecked</i><span>Keyword</span></a>                                             
+                    </li>   
+                    <li>
+                        <a class='collapsible-body' title='Ghost Blog' routerLink="GhostBlog"><i class="material-icons">radio_button_unchecked</i><span>Ghost Blog</span></a>                                             
+                    </li>                                                                      
+                  </ul>
+                </div>
+            </li>    
+            <li class="bold"><a class="collapsible-header waves-effect waves-cyan "><i class="material-icons">brightness_5</i><span class="menu-title" data-i18n="">Category</span></a>
+                <div class="collapsible-body">
+                  <ul class="collapsible collapsible-sub" data-collapsible="accordion">
+                    <li>
+                        <a class='collapsible-body' title='UPH Fabric' routerLink="UPHFabric"><i class="material-icons">radio_button_unchecked</i><span>UPH Fabric</span></a>                                             
+                    </li>   
+                    <li>
+                        <a class='collapsible-body' title='UPH Colour' routerLink="UPHColour"><i class="material-icons">radio_button_unchecked</i><span>UPH Colour</span></a>                                             
+                    </li>   
+                    <li>
+                        <a class='collapsible-body' title='Room' routerLink="RoomAndUsage"><i class="material-icons">radio_button_unchecked</i><span>Room</span></a>                                             
+                    </li>     
+                    <li>
+                        <a class='collapsible-body' title='Type' routerLink="Type"><i class="material-icons">radio_button_unchecked</i><span>Type</span></a>                                             
+                    </li>  
+                    <li>
+                        <a class='collapsible-body' title='Brand' routerLink="Brand"><i class="material-icons">radio_button_unchecked</i><span>Brand</span></a>                                             
+                    </li>  
+                    <li>
+                        <a class='collapsible-body' title='Collection' routerLink="Collection"><i class="material-icons">radio_button_unchecked</i><span>Collection</span></a>                                             
+                    </li>  
+                    <li>
+                        <a class='collapsible-body' title='Designer' routerLink="Designer"><i class="material-icons">radio_button_unchecked</i><span>Designer</span></a>                                             
+                    </li>  
+                    <li>
+                        <a class='collapsible-body' title='Shape' routerLink="Shape"><i class="material-icons">radio_button_unchecked</i><span>Shape</span></a>                                             
+                    </li>  
+                    <li>
+                        <a class='collapsible-body' title='Life style' routerLink="LifeStyle"><i class="material-icons">radio_button_unchecked</i><span>Life style</span></a>                                             
+                    </li>     
+                    <li>
+                        <a class='collapsible-body' title='Style' routerLink="Style"><i class="material-icons">radio_button_unchecked</i><span>Style</span></a>                                             
+                    </li>   
+                    <li>
+                        <a class='collapsible-body' title='City' routerLink="City"><i class="material-icons">radio_button_unchecked</i><span>City</span></a>                                             
+                    </li>  
+                    <li>
+                        <a class='collapsible-body' title='Region' routerLink="Region"><i class="material-icons">radio_button_unchecked</i><span>Region</span></a>                                             
+                    </li>  
+                    <li>
+                        <a class='collapsible-body' title='Country' routerLink="Country"><i class="material-icons">radio_button_unchecked</i><span>Country</span></a>                                             
+                    </li>  
+                    <li>
+                        <a class='collapsible-body' title='Continent' routerLink="Continent"><i class="material-icons">radio_button_unchecked</i><span>Continent</span></a>                                             
+                    </li>  
+                    <li>
+                        <a class='collapsible-body' title='Sitemap' routerLink="Sitemap"><i class="material-icons">radio_button_unchecked</i><span>Sitemap</span></a>                                             
+                    </li>                              
+                  </ul>
+                </div>
+            </li>
+            <li class="bold"><a class="collapsible-header waves-effect waves-cyan "><i class="material-icons">security</i><span class="menu-title" data-i18n="">Authentication</span></a>
+                <div class="collapsible-body">
+                  <ul class="collapsible collapsible-sub" data-collapsible="accordion">
+                    <li>
+                        <a class='collapsible-body' title='Membership' routerLink="SystemMembership"><i class="material-icons">radio_button_unchecked</i><span>Membership</span></a>                                             
+                    </li>       
+                    <li>
+                        <a class='collapsible-body' title='Application' routerLink="SystemApplication"><i class="material-icons">radio_button_unchecked</i><span>Application</span></a>                                             
+                    </li>   
+                    <li>
+                        <a class='collapsible-body' title='Authentication Application' routerLink="SystemAuthenticationApplication"><i class="material-icons">radio_button_unchecked</i><span>Authentication Application</span></a>                                             
+                    </li>                     
+                  </ul>
+                </div>
+            </li>    
+            <li class="bold"><a routerLink="SystemMembershipInfomation" class="waves-effect waves-cyan"><i class="material-icons">person</i><span class="menu-title" data-i18n="">Change password</span></a>                
+        </ul>
+        <div class="navigation-background"></div><a
+            class="sidenav-trigger btn-sidenav-toggle btn-floating btn-medium waves-effect waves-light hide-on-large-only"
+            href="#" data-target="slide-out"><i class="material-icons">menu</i></a>
+    </aside>
+    <div id="main">
+        <router-outlet></router-outlet>
+    </div>
+</div>

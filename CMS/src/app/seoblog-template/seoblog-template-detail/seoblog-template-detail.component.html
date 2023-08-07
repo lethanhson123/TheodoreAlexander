@@ -1,0 +1,61 @@
+<form autocomplete="off" class="row" #form="ngForm" (submit)="onSubmit(form)">
+    <div class="col s6 m6 l9">
+        <h3 class="card-title"><b>Blog Template: {{sEOBlogTemplateService.formData.Title}}</b></h3>
+    </div>
+    <div class="col s6 m6 l3">
+        <button title="Save" type="submit" class="mb-6 btn-floating waves-effect waves-light cyan"><i
+                class="material-icons">save</i></button>&nbsp;&nbsp;&nbsp;
+        <a title="Close" class="mb-6 btn-floating waves-effect waves-light purple lightrn-1" (click)="onClose()">
+            <i class="material-icons">close</i>
+        </a>
+    </div>
+    <input name="ID" [(ngModel)]="sEOBlogTemplateService.formData.ID" type="hidden">    
+    <div class="col s6 m6 l6">
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="Title">Title</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <input placeholder="Title" name="Title" [(ngModel)]="sEOBlogTemplateService.formData.Title" type="text">
+            </div>
+        </div> 
+        <div class="col s6 m6 l4">
+            <div class="input-field">
+                <label for="Description">Description</label>
+            </div>
+        </div>
+        <div class="col s6 m6 l8">
+            <div class="input-field">
+                <textarea placeholder="Description" name="Description" class="materialize-textarea"
+                    [(ngModel)]="sEOBlogTemplateService.formData.Description" type="text"></textarea>
+            </div>
+        </div>     
+    </div>    
+    <div class="col s6 m6 l6">
+        <div class="col s12 m12 l12">            
+            <div class="input-field">
+                <p>
+                    <label>
+                        <input type="checkbox" class="filled-in" name="Active"
+                            [(ngModel)]="sEOBlogTemplateService.formData.Active" />
+                        <span>Active</span>
+                    </label>
+                </p>
+            </div>
+        </div> 
+        <div class="col s12 m12 l12">                        
+                <div class="input-field">
+                    <label for="Image">Image</label>
+                </div>
+                <br/>
+                <br/>                
+                <input type="file" accept="image/*" (change)="changeImage($event)">
+                <br/>
+                <br/> 
+                <a target="_blank" style="border-color: #000000; border-style: solid; border-width: 1px;" *ngIf="sEOBlogTemplateService.formData.URLImage" title="{{sEOBlogTemplateService.formData.URLImage}}" href="{{sEOBlogTemplateService.formData.URLImage}}"><img width="200px" height="200px" title="{{sEOBlogTemplateService.formData.URLImage}}" alt="{{sEOBlogTemplateService.formData.URLImage}}" src="{{sEOBlogTemplateService.formData.URLImage}}"></a>
+            
+        </div>
+    </div>
+</form>

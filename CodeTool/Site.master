@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html>
+<%@ Register Src="~/UserControls/Head.ascx" TagName="Head" TagPrefix="uc" %>
+<%@ Register Src="~/UserControls/Header.ascx" TagName="Header" TagPrefix="uc" %>
+
+<html lang="en">
+<head runat="server">
+    <uc:Head ID="Head1" runat="server" Visible="true"></uc:Head>
+    <title></title>
+    <style>
+        .row {
+            margin-bottom: 10px;
+        }
+        </style>
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager ID="ScriptManager" runat="server" />
+        <uc:Header ID="Header1" runat="server" Visible="true"></uc:Header>
+      
+        <div class="container">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="messagealert" id="alert_container">
+        </div>
+       
+    </form>
+</body>
+</html>

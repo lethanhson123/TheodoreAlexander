@@ -1,0 +1,114 @@
+<nz-modal [(nzVisible)]="isVisibleThankPopup" (nzOnCancel)="onOpenApply(false)"
+    nzCancelText="Đóng" (nzOnOk)="null" [nzOkText]="null">
+    <ng-container *nzModalTitle>
+        <div class="successfully-apply">
+            <span>Email sent successfully</span>
+        </div>
+    </ng-container>
+    <ng-container *nzModalContent>
+        <div class="content-apply">
+            <label>Thank you for send us the information</label>
+            <label>Human Resources will contact you using the information below:</label>
+            <div style="font-weight: 500;">Full name: <b>{{hR_Recruitment_IntroduceService.formData.FullName}}</b></div>
+            <div style="font-weight: 500;">Phone: <b>{{hR_Recruitment_IntroduceService.formData.Phone}}</b></div>
+        </div>
+    </ng-container>
+</nz-modal>
+
+
+<div class="ta-career-page">
+    <div class="wrap-ta-career">
+        <div class="main-section1">
+            <div class="container-career1">
+                <div class="align-items-center top-reverse top-recruitment">
+                    <div class="ta-popup-career">
+                        <div class="row wrapp-recommend">
+                            <div class="left-recommend col-lg-6">
+                                <H1>Theodore Alexander HCM Furniture Company recruits collaborators to assist in recruiting 1000 workers.</H1>
+
+                                    <p> (*) Specific work:</p> 
+                                    <span>-   Post recruitment information on social networking sites.</span><br/>
+                                    <span>-   Introduce candidates (relatives, friends or surrounding relationships).</span><br/>
+
+                                     <p>(*) Commission level: 500,000 VND - 1,000,000 VND</p>
+                                     <span>-   Candidates who work for 3 months, you will receive 500,000 VND.</span><br/>
+                                	 <span>-   Candidates who work for 6 months, you will receive an additional 500,000 VND.</span><br/>
+
+                                     <span>(*) Conditions for commission: Referred candidates must have worked at TA for at least 3 months.</span><br/>
+
+                                     <span>(*) How to receive commission: bank transfer or cash.</span><br/>
+
+                                     <span>Cooperate with us, YOU MAKE MONEY – JOB FINDING CANDIDATES.</span><br/>
+                                     <a routerLink="/career"><div class="btn-go-back-home">Back Home</div></a>
+
+                            </div>
+                            <div class="right-recommend col-lg-6">
+                                <form autocomplete="off" #form="ngForm" (submit)="onSubmit()">
+                                    <div class="title-dkut-career">
+                                        <a routerLink="/career"><i class="bi-backspace"></i></a>
+                                        <span>Be a recruiter</span>
+                                    </div>
+                                    <input name="ID" [(ngModel)]="hR_Recruitment_IntroduceService.formData.ID" type="hidden">
+                                    <div class="ta-name-career">
+                                        <div>
+                                            <label class="lable-input-career"> Full name (*) <b style="color: red;">{{fullNameError}}</b></label>
+                                            <input cdkFocusInitial placeholder="Full name (*)"
+                                                [(ngModel)]="hR_Recruitment_IntroduceService.formData.FullName" name="FullName" nz-input
+                                                nzSize="large" (ngModelChange)="onCheckSubmit()">
+                                        </div>
+                                        <div>
+                                            <label class="lable-input-career"> Phone (*) <b style="color: red;">{{phoneError}}</b></label>
+                                            <input placeholder="Phone (*)"
+                                                [(ngModel)]="hR_Recruitment_IntroduceService.formData.Phone" name="Phone" nz-input
+                                                nzSize="large" (ngModelChange)="onCheckSubmit()">
+                                        </div>
+                                        <div>
+                                            <label class="lable-input-career"> Bank account</label>
+                                            <input placeholder="Bank account" [(ngModel)]="hR_Recruitment_IntroduceService.formData.BankID"
+                                                name="BankID" nz-input
+                                                nzSize="large">
+                                        </div>
+                                        <div>
+                                            <label class="lable-input-career"> Bank</label>
+                                            <input placeholder="Bank" [(ngModel)]="hR_Recruitment_IntroduceService.formData.BankName"
+                                                name="BankName" nz-input
+                                                nzSize="large">
+                                        </div>               
+                                        <div *ngIf="hR_Recruitment_IntroduceService.formData.Phone">                                    
+                                            <div>
+                                                <label class="lable-input-career"> Referral link</label>
+                                                <div class="path_input-career">
+                                                  <input #URLRecommender style="width:100%;" value="{{domainName}}/{{hR_Recruitment_IntroduceService.formData.Phone}}" />     
+                                                  <a (click)="copyText(URLRecommender)" class="btn-copy-link"  title="Copy">Copy link</a>
+                                                </div>                                  
+                                            </div>                                    
+                                        </div>            
+                                        <div>    
+                                            <br/>
+                                            <button class="submit-btn-career" title="Send" type="submit">Send</button>                     
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        
+                    </div>
+                   
+                </div>
+            </div>
+           
+        </div>        
+        <div class="nav_right">
+            <div class="button-floating-introduce">
+                <a routerLink="/recommend" title="Be a recruiter">
+                    <span>Be a recruiter</span>
+                </a>
+            </div>
+            <div class="button-floating">
+                <a routerLink="/recruitment" title="Register now">
+                    <span>Register now</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,94 @@
+<div class="row">
+    <div class="col s12">
+        <div class="container">
+            <div class="section section-data-tables">
+                <div class="row">
+                    <div class="col s12 m12 l12">
+                        <div class="card card card-default scrollspy">
+                            <div class="card-content">
+                                <div class="row">
+                                    <div class="col s10 m10 l10">
+                                        <h3 class="card-title"><b>Collection <span *ngIf="collectionService.list">({{collectionService.list.length}} items)</span></b></h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s6 m6 l10">
+                                        <input matInput [(ngModel)]="searchString" placeholder="Search by Name, URLCode"
+                                            autocomplete="off" (keyup)="onSearch()">
+                                    </div>
+                                    <div class="col s6 m6 l2">
+                                        <a title="Add" (click)="onAdd(0)"
+                                            class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                                class="material-icons">add</i></a>&nbsp;&nbsp;&nbsp;
+                                    </div>
+                                    <div class="KhungOverflow">
+                                        <table class="responsive-table">
+                                            <thead
+                                                style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>Image</th>
+                                                    <th>Logo</th>
+                                                    <th>Brand</th>
+                                                    <th>Name</th>
+                                                    <th>Display</th>
+                                                    <th>URLCode</th>
+                                                    <th>Item Count</th>
+                                                    <th>Active</th>
+                                                    <th>Story</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr
+                                                    *ngFor="let item of collectionService.listDataTransfer; let i = index;">
+                                                    <td style="width:20px;">{{i +1 }}</td>
+                                                    <td><a *ngIf="item.Image" target="_blank" href="{{item.ImageURL}}" title="{{item.ImageURL}}">
+                                                        <img class="responsive-img" width="100px" height="100px"
+                                                            title="{{item.ImageURL}}" alt="{{item.ImageURL}}"
+                                                            src="{{item.ImageURL}}?w=100&h=100"></a></td>         
+                                                    <td><a *ngIf="item.ImageName" target="_blank" href="{{item.URLImageName}}" title="{{item.URLImageName}}">
+                                                                <img class="responsive-img" width="100px" height="100px"
+                                                                    title="{{item.URLImageName}}" alt="{{item.URLImageName}}"
+                                                                    src="{{item.URLImageName}}?w=100&h=100"></a></td>      
+                                                    <td>{{item.BrandName}}</td>
+                                                    <td><b>{{item.Name}}</b></td>
+                                                    <td>{{item.DisplayName}}</td>
+                                                    <td>{{item.URLCode}}</td>
+                                                    <td>{{item.ItemCount}}</td>                                                    
+                                                    <td>{{item.IsActive}}</td>
+                                                    <td>{{item.IsStory}}</td>
+                                                    <td><a title="View" (click)="onAdd(item.ID)"
+                                                            class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                                                class="material-icons">info</i></a></td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot
+                                                style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>Image</th>
+                                                    <th>Logo</th>
+                                                    <th>Brand</th>
+                                                    <th>Name</th>
+                                                    <th>Display</th>
+                                                    <th>URLCode</th>
+                                                    <th>Item Count</th>
+                                                    <th>Active</th>
+                                                    <th>Story</th>
+                                                    <th></th>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-loading *ngIf="isShowLoading"></app-loading>

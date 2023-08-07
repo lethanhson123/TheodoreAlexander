@@ -1,0 +1,20 @@
+export const environment = {
+  production: true,
+  DomainURL: "http://hr2.theodorealexander.com/",      
+  APIURL: "http://api2.theodorealexander.com/",
+  Images: "images",  
+  Download: "Download",  
+  EmployeeExcelFileName: "Employee.xlsx",
+  ProvinceExcelFileName: "Province.xlsx",   
+  LoadingFile: "loading.gif",
+  DialogConfigWidth: "80%",
+  InitializationString: "",  
+  InitializationNumber: 0, 
+  UploadSuccess: "Upload success.",
+  UploadNotSuccess: "Upload not success.", 
+  SaveSuccess: "Save success.",
+  SaveNotSuccess: "Save not success.",  
+  SendMailSuccess: "Send mail success.",
+  SendMailNotSuccess: "Send mail not success.", 
+};
+

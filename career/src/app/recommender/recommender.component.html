@@ -1,0 +1,100 @@
+
+<div class="ta-career-page">
+    <div class="wrap-ta-career">
+        <div class="main-section1">
+            <div class="container-career1">
+                <div class="align-items-center top-reverse top-recruitment">
+                    <div class="ta-popup-career">
+                            <div>
+                                <h1 style="font-size: 25px; font-weight: bold; text-align: center; padding-top: 30px; text-transform: uppercase;">Recruitment recommender</h1>
+                            </div>
+                                <div class="pop-recommend-list"> 
+                                    <table align="center">
+                                        <tr>
+                                            <td>Full name:</td>
+                                            <td><b>{{hR_Recruitment_IntroduceService.formData.FullName}}</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Phone:</td>
+                                            <td><b>{{hR_Recruitment_IntroduceService.formData.Phone}}</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bank account:</td>
+                                            <td><b>{{hR_Recruitment_IntroduceService.formData.BankID}}</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bank name:</td>
+                                            <td><b>{{hR_Recruitment_IntroduceService.formData.BankName}}</b></td>
+                                        </tr>
+                                    </table>                
+                                </div>
+                        <div>
+                            <div>
+                                <h1 style="font-size: 25px; font-weight: bold; text-align: center; text-transform: uppercase;">Register list</h1>
+                            </div>
+                        </div>
+                        <div class="table-list-career">
+                            <table class="border-list-career">
+                                <thead style="background-color: #63CCE5; color: #212121;">
+                                    <th>
+                                        No
+                                    </th>
+                                    <th>
+                                        Register date
+                                    </th>
+                                    <th>
+                                        Full name
+                                    </th>
+                                    <th>
+                                        Phone
+                                    </th>
+                                    <!-- <th>
+                                        Email
+                                    </th> -->
+                                    <th>
+                                        Job function
+                                    </th>
+                                    <th>
+                                        Experience
+                                    </th>
+                                    <th>
+                                        Media source
+                                    </th>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of listHR_Recruitment_Career; let i = index">
+                                        <td>
+                                            <b>{{i +1}}</b>
+                                        </td>
+                                        <td>
+                                            {{item.DateUpdated | date: 'dd/MM/yyyy HH:mm:ss'}}
+                                        </td>
+                                        <td>
+                                            {{item.FullName}}
+                                        </td>
+                                        <td>
+                                            {{item.Phone}}
+                                        </td>
+                                        <!-- <td>
+                                            {{item.Email}}
+                                        </td> -->
+                                        <td>
+                                            {{item.JobFunction}}
+                                        </td>
+                                        <td>
+                                            {{item.Experience}}
+                                        </td>
+                                        <td>
+                                            {{item.MediaSource}}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>
+

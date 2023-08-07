@@ -1,0 +1,147 @@
+<form autocomplete="off" class="row" #form="ngForm" (submit)="onSubmit(form)">
+    <div class="col s6 m6 l9">
+        <h3 class="card-title"><b>Life style: {{lifeStyleService.formData.Name}}</b></h3>
+    </div>
+    <div class="col s6 m6 l3">
+        <button title="Save" type="submit" class="mb-6 btn-floating waves-effect waves-light cyan"><i
+                class="material-icons">save</i></button>&nbsp;&nbsp;&nbsp;
+        <a title="Close" class="mb-6 btn-floating waves-effect waves-light purple lightrn-1" (click)="onClose()">
+            <i class="material-icons">close</i>
+        </a>
+    </div>
+    <input name="ID" [(ngModel)]="lifeStyleService.formData.ID" type="hidden">   
+    <div class="col s6 m6 l6">
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="Name">Name</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">      
+                <input placeholder="Name" name="Name" [(ngModel)]="lifeStyleService.formData.Name"
+                type="text">
+            </div>
+        </div>
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="DisplayName">Display</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">      
+                <input placeholder="Display" name="DisplayName" [(ngModel)]="lifeStyleService.formData.DisplayName"
+                type="text">
+            </div>
+        </div>
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="URLCode">URLCode</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">      
+                <input placeholder="URLCode" name="URLCode" [(ngModel)]="lifeStyleService.formData.URLCode"
+                type="text">
+            </div>
+        </div>
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="Description">Description</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">      
+                <input placeholder="Description" name="Description" [(ngModel)]="lifeStyleService.formData.Description"
+                type="text">
+            </div>
+        </div>
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="SortCode">Sort</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">      
+                <input placeholder="Sort" name="SortCode" [(ngModel)]="lifeStyleService.formData.SortCode"
+                type="text">
+            </div>
+        </div>
+        <div class="col s12 m12 l12">
+            <div class="col s6 m6 l4">
+                <div class="input-field">
+                    <p>
+                        <label>
+                            <input type="checkbox" class="filled-in" name="IsActive"
+                                [(ngModel)]="lifeStyleService.formData.IsActive" />
+                            <span>Active</span>
+                        </label>
+                    </p>
+    
+                </div>
+            </div>
+            <div class="col s6 m6 l4">
+                <div class="input-field">
+                    <p>
+                        <label>
+                            <input type="checkbox" class="filled-in" name="IsStory"
+                                [(ngModel)]="lifeStyleService.formData.IsStory" />
+                            <span>Story</span>
+                        </label>
+                    </p>
+    
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div class="col s6 m6 l6">
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="METAKeyword">METAKeyword</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <input placeholder="METAKeyword" name="METAKeyword"
+                    [(ngModel)]="lifeStyleService.formData.METAKeyword" type="text">
+            </div>
+        </div>
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="METADescription">METADescription</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <input placeholder="METADescription" name="METADescription"
+                    [(ngModel)]="lifeStyleService.formData.METADescription" type="text">
+            </div>
+        </div>
+        <div class="col s12 m12 l6">
+            <div class="input-field">
+                <label for="ImageName">Logo</label>
+            </div>
+            <br/>
+            <br/>
+            <input type="file" accept="image/*" (change)="changeImageName($event)">
+            <br/>
+            <br/>
+            <a target="_blank" href="{{lifeStyleService.formData.URLImageName}}" title="{{lifeStyleService.formData.URLImageName}}">
+            <img class="responsive-img" width="70%" title="{{lifeStyleService.formData.URLImageName}}"
+                alt="{{lifeStyleService.formData.URLImageName}}" [src]="lifeStyleService.formData.URLImageName"></a>
+        </div>   
+        <div class="col s12 m12 l6">
+            <div class="input-field">
+                <label for="Image">Image</label>
+            </div>
+            <br/>
+            <br/>
+            <input type="file" accept="image/*" (change)="changeImage($event)">
+            <br/>
+            <br/>
+            <a target="_blank" href="{{lifeStyleService.formData.ImageURL}}"
+            title="{{lifeStyleService.formData.ImageURL}}">
+            <img class="responsive-img" width="70%" title="{{lifeStyleService.formData.ImageURL}}"
+                alt="{{lifeStyleService.formData.ImageURL}}" [src]="lifeStyleService.formData.ImageURL"></a>
+        </div>  
+    </div> 
+</form>

@@ -1,0 +1,340 @@
+<nz-modal [(nzVisible)]="isVisible01Popup" (nzOnCancel)="onCancel01Popup()" nzCancelText="Đóng" [nzOkText]="null">
+    <ng-container *nzModalTitle>
+        <div class="successfully-apply">
+            <span>Mô tả công việc cho vị trí<br /> Kỹ thuật công nghiệp</span>
+        </div>
+    </ng-container>
+    <ng-container *nzModalContent>
+        <div class="content-apply">
+            <label class="content-job-description">
+                - Bằng Cử nhân Kỹ thuật Công nghiệp hoặc khóa học tương đương. <br />
+                - Có ít nhất 5 năm kinh nghiệm làm việc trong công ty sản xuất đồ gỗ. <br />
+                - Có kiến ​​thức về CAD và có thể đọc và hiểu bản vẽ kích thước đầy đủ là điều bắt buộc. <br />
+                - Kỹ năng giao tiếp và thuyết trình tốt. <br />
+                - Hiểu biết máy tính tốt, có kiến ​​thức về các công cụ Office, hệ thống cơ sở dữ liệu. <br>
+                - Kỹ năng phân tích và giải quyết vấn đề. <br />
+                - Kỹ năng nói và viết tiếng Anh tốt. <br />
+                - Có khả năng quản lý dự án hiệu quả và độc lập. <br />
+                - Có khả năng làm việc nhóm với tư cách trưởng nhóm hoặc thành viên trong nhóm. <br />
+                - Có khả năng giao tiếp hiệu quả với mọi cấp độ của nhân viên. <br />
+                - Thực hiện phân tích rủi ro đối với các sản phẩm mới và xác định các thông số Critical To Quality (CTQ)
+                cho sự phát triển mới. <br />
+                - Có hiểu biết về sản xuất Lean là một lợi thế. <br />
+                - Có kiến ​​thức về quy trình sản xuất đồ nội thất bao gồm nghiên cứu thời gian và chuyển động. <br />
+
+            </label>
+        </div>
+    </ng-container>
+</nz-modal>
+<div class="ta-career-page">
+    <div class="wrap-ta-career">
+        <div class="main-section1">
+            <div class="bg-top-career"></div>
+            <div class="container-career1">
+                <div class="row align-items-center top-reverse top-recruitment">
+                    <div class="left-top-career">
+                        <img
+                            src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/pic-banner-top.png">
+                    </div>
+                    <div class="right-top-career">
+                        <div class="language-ta">
+                            <div class="icon-vn"><a routerLink="/tuyen-dung" title="Việt Nam"><img title="Việt Nam"
+                                        alt="Việt Nam"
+                                        src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/icon-vn.png"></a>
+                            </div>
+                            <div class="icon-en"><a routerLink="/career" title="English"><img title="English"
+                                        alt="English"
+                                        src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/icon-us.png"></a>
+                            </div>
+                        </div>
+                        <div class="logo">
+                            <div class="title-logo-slogan">
+                                <div class="title-company">
+                                    Công ty đồ gỗ nội thất
+                                </div>
+                                <div class="logo-ta-career">
+                                    <img
+                                        src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/logo.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="txt-recruitment">
+                            Tuyển dụng
+                        </div>
+                        <div class="list_career">
+                            <div class="list-career-top">
+                                <a class="item-job" title="Lao Động Phổ Thông" routerLink="/description/VN004">
+                                    <div style="cursor: pointer;" class="number-recruitment">
+                                        <img src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/arrow-title.svg"> 
+                                    </div>
+                                    <div style="cursor: pointer;" class="title-recruitment">Lao Động Phổ Thông</div>
+                                </a>
+                            </div>
+                            <div class="list-career-top">
+                                <a class="item-job" title="Kỹ Sư Công Nghiệp" routerLink="/description/VN002">
+                                    <div style="cursor: pointer;" class="number-recruitment">
+                                        <img src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/arrow-title.svg"> 
+                                    </div>
+                                    <div style="cursor: pointer;" class="title-recruitment">Kỹ Sư Công Nghiệp</div>
+                                </a>
+                            </div>
+                            <div class="list-career-top">
+                                <a class="item-job" title="Lập trình viên ERP" routerLink="/description/VN003">
+                                    <div style="cursor: pointer;" class="number-recruitment">
+                                        <img src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/arrow-title.svg"> 
+                                    </div>
+                                    <div style="cursor: pointer;" class="title-recruitment">Lập trình viên ERP</div>
+                                </a>
+                            </div>
+                          
+                            <div class="list-career-top">
+                                <a class="item-job" title="Kỹ sư hạ tầng" routerLink="/description/VN005">
+                                    <div style="cursor: pointer;" class="number-recruitment">
+                                        <img
+                                            src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/arrow-title.svg">
+                                    </div>
+                                    <div style="cursor: pointer;" class="title-recruitment">Kỹ sư hạ tầng</div>
+                                </a>
+                            </div>
+                            <div class="list-career-top">
+                                <a class="item-job" title="Nhân viên kế hoạch" routerLink="/description/VN006">
+                                    <div style="cursor: pointer;" class="number-recruitment">
+                                        <img
+                                            src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/arrow-title.svg">
+                                    </div>
+                                    <div style="cursor: pointer;" class="title-recruitment">Nhân viên kế hoạch</div>
+                                </a>
+                            </div>
+                            <div class="list-career-top">
+                                <a class="item-job" title="Kỹ sư sản xuất" routerLink="/description/VN007">
+                                    <div style="cursor: pointer;" class="number-recruitment">
+                                        <img
+                                            src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/arrow-title.svg">
+                                    </div>
+                                    <div style="cursor: pointer;" class="title-recruitment">Kỹ sư sản xuất</div>
+                                </a>
+                            </div>
+                            <div class="list-career-top">
+                                <a class="item-job" title="Nhân viên kiểm tra / Kiểm soát chất lượng" routerLink="/description/VN008">
+                                    <div style="cursor: pointer;" class="number-recruitment">
+                                        <img
+                                            src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/arrow-title.svg">
+                                    </div>
+                                    <div style="cursor: pointer;" class="title-recruitment">Nhân viên kiểm tra / Kiểm soát chất lượng</div>
+                                </a>
+                            </div>
+
+                            <div class="list-career-top">
+                                <a class="item-job" title="Quản Lý nhà thầu phụ" routerLink="/description/VN009">
+                                    <div style="cursor: pointer;" class="number-recruitment">
+                                        <img
+                                            src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/arrow-title.svg">
+                                    </div>
+                                    <div style="cursor: pointer;" class="title-recruitment">Quản Lý nhà thầu phụ</div>
+                                </a>
+                            </div>                      
+
+
+
+                            <div style="display: flex; padding-top: 20px;">
+                                <div class="btn-register-career">
+                                    <a routerLink="/ung-vien" title="Đăng ký ngay">
+                                        <span class="txt-register-now">Đăng ký ngay</span>
+                                    </a>
+                                </div>
+
+                                <div class="btn-register-introduce">
+                                    <a routerLink="/nguoi-gioi-thieu" title="Giới thiệu">
+                                        <span class="txt-register-now">Giới thiệu</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="main-section2">
+            <div class="container-career2">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-xl-6 col-md-12 ">
+                        <div class="bg-general-requirement">
+                            <div class="title-general-recruitment">
+                                <span>Yêu cầu chung</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-md-12">
+                        <div class="right-block2">
+                            <div class="right-content-requirement">
+                                <div class="txt-requirement">
+                                    <i><img
+                                            src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/checked.svg"></i>
+                                    <span>Ưu tiên ứng viên đã từng làm việc ở công ty nội thất</span>
+                                </div>
+                                <div class="txt-requirement">
+                                    <i><img
+                                            src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/checked.svg"></i>
+                                    <span>Có thể làm thêm giờ</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-section3">
+            <div class="container-career3">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-xl-6 col-md-12 ">
+                        <div class="left-block3">
+                            <div class="box-bg-pic">
+                                <img
+                                    src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/pic-3.jpg">
+                            </div>
+                            <div class="box-bg-pic1">
+                                <img
+                                    src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/pic-3-1.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-md-12">
+                        <div class="right_box">
+                            <div class="title_welfare">
+                                <span>CHẾ ĐỘ PHÚC LỢI</span>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="item">
+                                        <span>
+                                            <img
+                                                src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/icon-1.svg">
+                                        </span>
+                                        <p> Lương cao, chế độ phúc lợi tốt, có đầy đủ
+                                            các loại bảo hiểm theo luật định và bảo hiểm 24/24</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="item">
+                                        <span>
+                                            <img
+                                                src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/icon-2.svg">
+                                        </span>
+                                        <p>Thời gian làm việc: 7 tiếng 30 phút / ngày</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="item">
+                                        <span>
+                                            <img
+                                                src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/icon-3.svg">
+                                        </span>
+                                        <p>Cam kết tăng ca tối thiểu 50 giờ / tháng</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="item">
+                                        <span>
+                                            <img
+                                                src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/icon-4.svg">
+                                        </span>
+                                        <p>Chưa có kinh nghiệm sẽ được đào tạo</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-section4">
+            <div class="container-career4">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-xl-6 col-md-12 ">
+                        <div class="left-address-block4">
+                            <div class="title-company-block4">
+                                <span>Theodore Alexander HCM</span>
+                            </div>
+                            <div class="txt-lienhe">
+                                (Liên hệ giờ hành chánh, từ T2 – T6)
+                            </div>
+                            <div class="box-address">
+                                <div class="item-address">
+                                    <div><img
+                                            src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/icon-location.svg">
+                                    </div>
+                                    <span>Địa chỉ:</span>
+                                </div>
+                                <p>* Nhà máy TA1: Lô 50 - 57, Đường số 1, KCX Linh Trung 2, P. Bình Chiểu, Thủ Đức,
+                                    TP.HCM <br>
+                                    <strong>ĐT: <a href="tel:02837292122">(028) 37292 122</a>, Số nội bộ: 2021 hoặc
+                                        2031</strong>
+                                </p>
+                                <p>* Nhà máy TA2: Đường ĐT743, KP. Bình Phước A, P. Bình Chuẩn, Thuận An, Bình Dương
+                                    <br>
+                                    <strong>ĐT: <a href="tel:02743740772">(0274) 3740 772</a>, Số nội bộ: 111 hoặc
+                                        102</strong>
+                                </p>
+                                <p>* Nhà máy TA3: Lô 55 - 57, Đường số 2, KCX Linh Trung 1, P. Linh Trung, Thủ Đức, TP.
+                                    HCM <br>
+                                    <strong>ĐT: <a href="tel:02837245467">(028) 37245 467</a>, Số nội bộ: 1036</strong>
+                                </p>
+                            </div>
+                            <div class="box-address">
+                                <div class="item-address">
+                                    <div><img
+                                            src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/icon-email.svg">
+                                    </div>
+                                    <span>Email:</span>
+                                </div>
+                                <p><a
+                                        href="mailto:hr.recruit@theodorealexander.com">hr.recruit@theodorealexander.com</a>
+                                </p>
+                            </div>
+                            <div class="box-address">
+                                <div class="item-address">
+                                    <div><img
+                                            src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/icon-dienthoai.svg">
+                                    </div>
+                                    <span>Hotline:</span>
+                                </div>
+                                <p><a style="color: red; font-weight: 600; font-size: 20px !important;"
+                                        href="tel:0869 965 199">0869 965 199</a> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-md-12">
+                        <div class="right-address">
+                            <img
+                                src="https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/pic-4.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-section5">
+            <div class="container-career4">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-12" style="text-align: center;">
+                        © 2021 - Theodore Alexander
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav_right">
+            <div class="button-floating-introduce">
+                <a routerLink="/nguoi-gioi-thieu" title="Giới thiệu">
+                    <span>Giới thiệu</span>
+                </a>
+            </div>
+            <div class="button-floating">
+                <a routerLink="/ung-vien" title="Đăng ký ngay">
+                    <span>Đăng ký ngay</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

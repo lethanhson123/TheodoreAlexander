@@ -1,0 +1,111 @@
+<nz-modal [(nzVisible)]="isVisibleThankPopup" (nzOnCancel)="onOpenApply(false)"
+    nzCancelText="Đóng" (nzOnOk)="null" [nzOkText]="null">
+    <ng-container *nzModalTitle>
+        <div class="successfully-apply">
+            <span>Gửi mail thành công</span>
+        </div>
+    </ng-container>
+    <ng-container *nzModalContent>
+        <div class="content-apply">
+            <label>Cám ơn bạn đã gửi thông tin cho chúng tôi</label>
+            <label>Bộ phận nhân sự sẽ liên lạc với bạn theo thông tin dưới đây:</label>
+            <div style="font-weight: 500;">Họ tên: <b>{{hR_Recruitment_IntroduceService.formData.FullName}}</b></div>
+            <div style="font-weight: 500;">Điện thoại: <b>{{hR_Recruitment_IntroduceService.formData.Phone}}</b></div>
+        </div>
+    </ng-container>
+</nz-modal>
+
+
+<div class="ta-career-page">
+    <div class="wrap-ta-career">
+        <div class="main-section1">
+            <div class="container-career1">
+                <div class="align-items-center top-reverse top-recruitment">
+                    <div class="ta-popup-career">
+                        <div class="row wrapp-recommend">
+                            <div class="left-recommend col-lg-6">
+                                <H1>Công ty Đồ Gỗ Nội Thất Theodore Alexander HCM tuyển dụng cộng tác viên hỗ trợ tuyển dụng 1000 công nhân.</H1>
+
+                                    <p> (*) Công việc cụ thể:</p> 
+                                    <span>-   Đăng thông tin tuyển dụng lên các trang mạng xã hội.</span><br/>
+                                    <span>-   Giới thiệu ứng viên (người thân, bạn bè hoặc các mối quan hệ xung quanh).</span><br/>
+
+                                     <p>(*) Mức hoa hồng: 500.000đ – 1.000.000đ</p>
+                                     <span>-   Ứng viên làm việc đủ 3 tháng, bạn sẽ được nhận 500.000đ.</span><br/>
+                                	 <span>-   Ứng viên làm việc đủ 6 tháng, bạn sẽ nhận thêm 500.000đ.</span><br/>
+
+                                     <span>(*) Điều kiện hưởng hoa hồng: Ứng viên được giới thiệu phải làm đủ ít nhất 3 tháng tại TA.</span><br/>
+
+                                     <span>(*) Cách thức nhận hoa hồng: chuyển khoản hoặc tiền mặt.</span><br/>
+
+                                     <span>Hãy hợp tác với chúng tôi, BẠN KIẾM ĐƯỢC TIỀN – ỨNG VIÊN TÌM ĐƯỢC VIỆC.</span><br/>
+                                     <a routerLink="/tuyen-dung"><div class="btn-go-back-home">Trở về trang chủ</div></a>
+                            </div>
+                            <div class="right-recommend col-lg-6">
+                                <form autocomplete="off" #form="ngForm" (submit)="onSubmit()">
+                                    <div class="title-dkut-career">
+                                        <a routerLink="/tuyen-dung"><i class="bi-backspace"></i></a>
+                                        <span>Thông tin người giới thiệu</span>
+                                    </div>
+                                    <input name="ID" [(ngModel)]="hR_Recruitment_IntroduceService.formData.ID" type="hidden">
+                                    <div class="ta-name-career">
+                                        <div>
+                                            <label class="lable-input-career"> Họ tên (*) <b style="color: red;">{{fullNameError}}</b></label>
+                                            <input cdkFocusInitial placeholder="Họ tên (*)"
+                                                [(ngModel)]="hR_Recruitment_IntroduceService.formData.FullName" name="FullName" nz-input
+                                                nzSize="large" (ngModelChange)="onCheckSubmit()">
+                                        </div>
+                                        <div>
+                                            <label class="lable-input-career"> Điện thoại (*) <b style="color: red;">{{phoneError}}</b></label>
+                                            <input placeholder="Điện thoại (*)"
+                                                [(ngModel)]="hR_Recruitment_IntroduceService.formData.Phone" name="Phone" nz-input
+                                                nzSize="large" (ngModelChange)="onCheckSubmit()">
+                                        </div>
+                                        <div>
+                                            <label class="lable-input-career"> Tài khoản ngân hàng</label>
+                                            <input placeholder="Tài khoản ngân hàng" [(ngModel)]="hR_Recruitment_IntroduceService.formData.BankID"
+                                                name="BankID" nz-input
+                                                nzSize="large">
+                                        </div>
+                                        <div>
+                                            <label class="lable-input-career">Tên ngân hàng</label>
+                                            <input placeholder="Ngân hàng" [(ngModel)]="hR_Recruitment_IntroduceService.formData.BankName"
+                                                name="BankName" nz-input
+                                                nzSize="large">
+                                        </div>               
+                                        <div *ngIf="hR_Recruitment_IntroduceService.formData.Phone">                                        
+                                            <div>
+                                                <label class="lable-input-career"> Đường dẫn theo dõi</label>
+                                               <div class="path_input-career">
+                                                <input #URLRecommender style="width:100%;" value="{{domainName}}/{{hR_Recruitment_IntroduceService.formData.Phone}}" />  
+                                                <a (click)="copyText(URLRecommender)" class="btn-copy-link" title="Copy">Copy link</a>
+                                               </div>
+                                                                                     
+                                            </div>                                    
+                                        </div>            
+                                        <div>    
+                                            <br/>
+                                            <button class="submit-btn-career" title="Gửi" type="submit">Gửi</button>                     
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+        <div class="nav_right">
+            <div class="button-floating-introduce">
+                <a routerLink="/nguoi-gioi-thieu" title="Giới thiệu">
+                    <span>Giới thiệu</span>
+                </a>
+            </div>
+            <div class="button-floating">
+                <a routerLink="/ung-vien" title="Đăng ký ngay">
+                    <span>Đăng ký ngay</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

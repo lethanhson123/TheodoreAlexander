@@ -1,0 +1,813 @@
+.row{
+  margin: 0 ;
+  padding: 0;
+}
+:host {
+  //BEGIN: css to front of header and footer
+  position: absolute;
+  top: 0;
+  background-color: #ffff;
+  z-index: 999;
+  max-width: 1920px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  //END: css to front of header and footer
+}
+
+  ::ng-deep nz-modal-container .application-form-modal {
+    font-family:'Roboto', sans-serif !important;
+    font-variant:'Roboto', sans-serif !important;
+  }
+  ::ng-deep .ant-modal{
+    top:50px
+  }
+
+  html{
+    background: #f5f5f5;
+  }
+  .ta-career-page{
+    background: #f5f5f5;
+    font-family:  'Roboto', sans-serif;
+    font-style: normal;
+    font-size: 15px;
+    margin: 0 auto;
+    max-width: 1920px;
+  }
+  .wrap-ta-career{
+    margin: 0 auto;
+    font-family:  'Roboto', sans-serif;
+    font-style: normal;
+  }
+
+  .main-section1 .bg-top-career{
+    background-image: url("https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/mis.png") ;
+    background-repeat: no-repeat;
+    width: 301px;
+    height: 488px;
+    right: 0;
+    position: absolute;
+    content: "";
+    top: 50px;
+  }
+  .main-section1 .container-career1{
+     max-width: 1440px;
+     position: relative;
+     margin: 0 auto;
+     position: relative;
+     background: linear-gradient(180deg, #73D8F0 0%, #3AADC9 100%);
+  }
+  .main-section1 .left-top-career{
+    width: 45%;
+  }
+  .main-section1 .left-top-career img{
+    max-width: 100%;
+  }
+  .main-section1 .right-top-career{
+    padding-left: 50px;
+    position: relative;
+    width: 55%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    .logo{
+      display: flex;
+    }
+  }
+  .main-section1 .right-top-career .title-company{
+    font-family:  'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #212121;
+    padding-bottom: 10px;
+    text-align: center;
+    @media(max-width:1440px){
+        font-size:20px;
+        @media(max-width:1280px){
+          padding-bottom: 0;
+        }
+    }
+  }
+  .main-section1 .right-top-career .logo-ta-career{
+    padding: 5px 0;
+    text-align: center;
+  }
+  .main-section1 .right-top-career .logo-ta-career img{
+    max-width: 100%;
+  }
+  .main-section1 .right-top-career .txt-recruitment{
+  font-family:  'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 105px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  line-height: normal;
+  @media(max-width:1440px){
+      font-size:105px;
+      line-height: normal;
+      @media(max-width:1380px){
+        font-size:90px;
+        @media(max-width:1280px){
+          font-size:70px;
+          line-height: auto;
+          @media(max-width:1150px){
+            @media(max-width:1024px){
+              font-size:78px;
+              @media(max-width:1024px){
+                font-size:66px;
+                text-align: left;
+                @media(max-width:800px){
+                  font-size:100px;
+                  @media(max-width:668px){
+                    font-size:70px;
+                    @media(max-width:500px){
+                      font-size:50px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .main-section1 .right-top-career .list-career-top{
+    display: flex;
+    padding: 4px 0;
+    align-items: center;
+  }
+  .main-section1 .right-top-career .list-career-top img{
+    width: 16px;
+  }
+  .main-section1 .right-top-career .list-career-top .number-recruitment{
+    box-sizing: border-box;
+    text-align: center;
+    position: absolute;
+  }
+  .main-section1 .right-top-career .list-career-top .number-recruitment span{
+    font-family:  'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: #FFFFFF;
+  }
+  @media(max-width:1440px){
+    .main-section1 .right-top-career .list-career-top .number-recruitment span{
+      font-size:25px;
+    }
+  }
+  .main-section1 .right-top-career .list-career-top .title-recruitment{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    padding-left: 20px;
+    padding-left: 40px;
+    text-transform: capitalize;
+    @media(max-width:1440px){
+      font-size:20px;
+      @media(max-width:1199.98px){
+        padding-left: 60px;
+        font-size: 20px !important;
+        @media(max-width:768px){
+          padding-left: 60px;
+        }
+      }
+    }
+  }
+  .main-section1 .right-top-career .btn-register-career{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #FFB800 0%, #DA9000 100%);
+    padding: 10px 30px;
+    border-radius: 3px;
+    margin-right: 10px;
+  }
+  .btn-register-introduce{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #636363 0%, #000000 100%);
+    padding: 5px 10px;
+    border-radius: 3px;
+  }
+  
+  .main-section1 .right-top-career .btn-register-career .txt-register-now, .main-section1 .right-top-career .btn-register-introduce .txt-register-now{
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #fff;
+    font-family:  'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+
+  }
+  .main-section2{
+    background: #fff;
+    border-radius: 5px;
+    max-width: 1440px;
+    margin: 25px auto;
+  }
+  .bg-general-requirement{
+    background-image: url("https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/bg-dot-2.png");
+    background-repeat: no-repeat;
+    width: 640px;
+    height: 299px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .title-general-recruitment{
+    font-family:  'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    text-transform: uppercase;
+    color: #212121;
+    position: relative;
+  }
+  .title-general-recruitment span{
+    position: relative;
+    z-index: 3;
+  }
+  .title-general-recruitment::after{
+    position: absolute;
+    width: auto;
+    height: 16px;
+    background: #E0F2F7;
+    content: "";
+    right: 0px;
+    left: 0;
+    bottom: 10px;
+    z-index: 1;
+  }
+  .right-block2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .right-content-requirement{
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+  .txt-requirement{
+    display: flex;
+    align-items: baseline;
+    padding: 20px 0;
+  }
+  .txt-requirement span{
+    font-family:  'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 37px;
+    display: flex;
+    align-items: center;
+    color: #212121;
+    padding-left: 30px;
+  }
+  
+  .main-section3{
+    background: #fff;
+    border-radius: 5px;
+    max-width: 1440px;
+    margin: 25px auto;
+  }
+  .box-bg-pic img{
+    position: relative;
+    z-index: 5;
+    margin-top: 50px;
+  }
+  .box-bg-pic::after{
+    background-image: url("https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/dot-3.png");
+    background-repeat: no-repeat;
+    content: "";
+    position: absolute;
+    width: 212px;
+    height: 476px;
+    right: 50px;
+  }
+  .box-bg-pic1{
+    margin-top: 30px;
+  }
+  .box-bg-pic1 img{
+    position:relative;
+    z-index: 5;
+  }
+  .box-bg-pic1::before{
+    background-image: url("https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/dot-3.png");
+    background-repeat: no-repeat;
+    content: "";
+    position: absolute;
+    width: 212px;
+    height: 476px;
+    left: 0;
+    z-index: 1;
+  }
+  .left-block3{
+    padding-left: 50px;
+    padding-bottom: 80px;
+  }
+  .right_box .title_welfare span{
+    position: relative;
+    z-index: 3;
+  }
+  .right_box .title_welfare{
+    font-family:  'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    display: flex;
+    align-items: center;
+    color: #212121;
+    justify-content: center;  
+    padding-bottom: 40px;
+    position: relative;
+  }
+  .right_box .title_welfare::after{
+    position: absolute;
+    width: 430px;
+    height: 16px;
+    background: #E0F2F7;
+    content: "";
+    bottom: 45px;
+    z-index: 1;
+  }
+  .item{
+    width: 280px;
+    height: 336px;
+    text-align: -webkit-center;
+    margin: 0 auto;
+  }
+  .item span{
+    width: 203px;
+    height: 203px;
+    background: #F4FBFD;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .item p{
+    font-family:  'Roboto', sans-serif;
+    font-style: normal;
+    text-align: center;
+    font-size: 17px;
+    color:#212121;
+    padding-top: 15px;
+    font-weight: 400;
+  }
+  
+  .main-section4{
+    background: #fff;
+    border-radius: 5px;
+    max-width: 1440px;
+    margin: 25px auto;
+    padding: 40px 0;
+  }
+  .left-address-block4{
+    padding-left:40px;
+    padding-right: 40px;
+  }
+  .title-company-block4{
+    font-family:  'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    color: #212121;
+  }
+  @media(max-width:1300px){
+    .title-logo-slogan{
+      padding-right: 180px;
+
+    }
+  }
+  .title-company-block4 span{
+    position:relative;
+    z-index: 3;
+  }
+  .title-company-block4::after{
+    position: absolute;
+    width: 387px;
+    height: 16px;
+    background: #E0F2F7;
+    content:"";
+    z-index: 1;
+    top:26px;
+    left:55px
+  }
+  .box-address p{
+    padding-left: 50px;
+    font-family:  'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: #212121;
+    padding-top: 5px;
+  }
+  .txt-lienhe {
+    font-family:  'Roboto', sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    padding-bottom: 20px;
+    font-weight: 300;
+  }
+  .box-address .item-address{
+    display: flex;
+    align-items: center;
+  }
+  .box-address .item-address span{
+    margin-left: 20px;
+    font-family:  'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #212121;
+  }
+  
+  .right-address img{
+    position: relative;
+    z-index: 5;
+    margin-top: 50px;
+    max-width: 100%;
+  }
+  .right-address::before{
+    background-image: url("https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career/dot-4.png");
+    background-repeat: no-repeat;
+    content: "";
+    position: absolute;
+    width: 147px;
+    height: 443px;
+    z-index: 1;
+    right: 0;
+    bottom:-20px;
+  }
+  .right-address::after{
+    background-image: url("https://theodorealexander.sirv.com/website/Frontend/Live/assests/Career//dot-4.png");
+    background-repeat: no-repeat;
+    content: "";
+    position: absolute;
+    width: 147px;
+    height: 443px;
+    z-index: 1;
+    left: -20px;
+  }
+  .main-section5{
+    background: #f5f5f5;
+    border-radius: 5px;
+    max-width: 1440px;
+    padding: 0 0 25px 0;
+    margin: 0 auto;
+  }
+  .nav_right {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 0;
+    z-index: 10;
+  }
+  .button-floating{
+    position: relative;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+    background: linear-gradient(180deg, #FFB800 0%, #DA9000 100%);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 3px;
+  }
+  .button-floating-introduce{
+    position: relative;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+    background: linear-gradient(180deg, #636363 0%, #000000 100%);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 3px;
+  }
+  .nav_right .button-floating span, .nav_right .button-floating-introduce span{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+  }
+  @media (max-width: 1199.98px){
+    .left-block3{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-left: 0;
+      padding-top: 30px;
+    }
+    .right-block2{
+      padding-bottom: 30px;
+    }
+    .box-bg-pic img{
+      max-width: 100%;
+      padding-right: 10px;
+      margin-top: 0;
+    }
+    .box-bg-pic1{
+      margin-top: 0;
+    }
+    .box-bg-pic1 img{
+      max-width: 100%;
+      margin-top: 0;
+    }
+    .right-top-career{
+      width: 55%;
+    }
+    .main-section1 .right-top-career .logo{
+      display: block;
+    }
+    .title-logo-slogan{
+      padding-right: 80px;
+    }
+    .main-section1 .right-top-career .title-company{
+      font-size: 20px;
+      line-height: unset;
+      padding-bottom: 10px;
+    }
+    .main-section1 .right-top-career .logo-ta-career img{
+      max-width: 100%;
+    }
+    .main-section1 .right-top-career .list-career-top .number-recruitment span{
+      font-size: 20px;
+    }
+
+    .main-section1 .right-top-career .txt-recruitment::after{
+     display: none;
+    }
+    .main-section1 .right-top-career .list-career-top{
+      padding: 5px 0;
+    }
+    .main-section1 .right-top-career .logo-ta-career{
+      padding: 5px 0;
+    }
+
+    .main-section1 .right-top-career .btn-register-career .txt-register-now{
+      font-size: 14px;
+    }
+
+    .main-section1 .right-top-career{
+     // margin-top: -50px;
+      padding-left: 15px;
+    }
+    .main-section1 .bg-top-career{
+      display: none;
+    }
+    .bg-general-requirement{
+      height: 100px;
+      width: 100%;
+      background-repeat: repeat;
+    }
+    .txt-requirement span{
+      font-size: 25px;
+    }
+    .right-address{
+      padding-left: 40px;
+    }
+  }
+  @media (max-width: 900px){
+    .top-reverse{
+      flex-direction: column-reverse;
+    }
+    .right-top-career{
+      text-align: center;
+    }
+    .title-company{
+      text-align: center !important;
+      padding-left: 0 !important;
+    }
+    .title-logo-slogan{
+      padding-right: 0;
+      width: 80%;
+      padding-top: 40px;
+      text-align: left; 
+      @media(max-width:500px){
+        width:100%
+      }
+    }
+    .main-section1 .left-top-career{
+      width: 100%;
+      margin-top: 50px;
+    }
+    .main-section1 .left-top-career img{
+      padding: 0;
+    }
+    .main-section1 .right-top-career .btn-register-career .txt-register-now{
+     font-size: 14px;
+    }
+
+    .left-address-block4{
+      padding-left: 0;
+    }
+    .right-top-career{
+      width: 100% !important;
+      margin-top: 0 !important;
+    }
+    .bg-general-requirement{
+      width: 100%;
+    }
+    .box-bg-pic img, .box-bg-pic1 img, .right-address img{
+      max-width: 100%;
+    }
+    .right_box .title_welfare::after{
+      width: 350px;
+      top: 32px;
+      margin: 0 auto;
+    }
+    .title-company-block4::after{
+      top: 20px;
+      left: 0;
+      width: 100%;
+    }
+    .main-section1 .right-top-career .btn-register-career .arrow-btn{
+      display: none;
+    }
+    .title-general-recruitment, .right_box .title_welfare{
+      font-size: 35px;
+    }
+    .title-company-block4{
+      font-size: 24px;
+    }
+    .right-address::after, .right-address::before{
+      height: 200px;
+    }
+    .box-bg-pic1::before{
+      height: 300px;
+    }
+    .title-general-recruitment::after{
+      width: auto;
+    }
+    .left-block3{
+      display: block;
+      margin: 0 auto;
+    }
+    .box-bg-pic1{
+      margin-top: 30px;
+    }
+    .box-bg-pic img{
+      padding-right: 0;
+    }
+    .right-address{
+      padding-left: 0;
+    }
+    .main-section1 .right-top-career{
+      margin: 0 auto;
+      padding: 15px;
+    }
+    .main-section1 .right-top-career .logo-ta-career img{
+      width: 100% !important;
+    }
+  
+    .main-section1 .right-top-career .list-career-top .title-recruitment{
+      font-size:40px;
+      text-align: left;
+      @media(max-width:500px){
+        font-size: 23px;
+      }
+    }
+  }
+  ::ng-deep .ant-modal-header{
+    padding: 0;
+  }
+  ::ng-deep .ant-modal{
+    width: 600px;
+  }
+  .title-dkut-career{
+    background: #63CCE5;
+    justify-content: start;
+    align-items: center;
+    display: flex;
+    height: 70px;
+  }
+  .title-dkut-career span{
+    font-family:  'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    position: absolute;
+    left: 20px;
+  }
+
+  /*form ung tuyen*/
+  .ta-name-career{
+    padding: 20px;
+  }
+  .ta-name-career input{
+    margin: 2px 0 8px 0;
+    height: 40px;
+    border: 1px solid #909090;
+  }
+
+  .ta-name-career textarea{
+    border: 1px solid #909090;
+    margin: 10px 0;
+  }
+  ::ng-deep nz-modal-container .ant-modal .ant-modal-content .ant-form-item-control-input-content{
+    border: none;
+  }
+  ::ng-deep .ant-btn-primary{
+    
+    border: none;
+    color: #000;
+    background: #FFB800;
+  }
+  .lable-get-info{
+    font-family:  'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+  }
+  .lable-input-career{
+    font-family:  'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    margin: 0;
+  }
+  .checked-career-ta span{
+    font-family:  'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+  }
+  ::ng-deep .ant-modal-close-x{
+    color: #fff;
+  }
+  .successfully-apply{
+    font-family:  'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    background:#63CCE5 ;
+    color: #fff;
+    line-height: 30px;
+  }
+  .content-apply{
+    padding: 0;
+    font-family:  'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+  }
+  .language-ta{
+    display: flex;
+    position: absolute;
+    right: 100px;
+    .icon-vn{
+      padding-right: 5px;
+      opacity: 1;
+    }
+    .icon-en{
+      padding-right: 5px;
+      opacity: 0.3;
+    }
+    @media(max-width:1600px){
+      right: 10px;
+    }
+  }
+  ::ng-deep nz-modal-container .ant-modal .ant-modal-content{
+    overflow: auto !important;
+  }
+  input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+::ng-deep .ant-modal-close-x{
+  font-size: 25px !important;
+  outline: 0;
+}
+::ng-deep button:focus{
+  outline: none !important;
+}
+.item-job{
+  display: flex;
+  align-items: center;
+}

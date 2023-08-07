@@ -1,0 +1,64 @@
+
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using TA.Data2021.Models;
+using TA.Helpers2021;
+using TA.Data2021.Repositories;
+
+namespace TA.Data2021.Repositories
+{
+    public class StyleRepository : Repository<TA.Data2021.Models.Style>, IStyleRepository
+    {
+        private readonly TheodoreAlexander_NewContext _context;
+        public StyleRepository(TheodoreAlexander_NewContext context) : base(context)
+        {
+            _context = context;
+        }
+        public TA.Data2021.Models.Style GetByURLCode(string URLCode)
+        {
+            TA.Data2021.Models.Style result = new TA.Data2021.Models.Style();
+            SqlParameter[] parameters =
+             {
+                new SqlParameter("@URLCode",URLCode),
+            };
+            DataTable dt = SQLHelper.Fill(AppGlobal.TheodoreAlexander_NewSQLServerConectionString, "sp_StyleSelectItemsByURLCode", parameters);
+            List<TA.Data2021.Models.Style> list = SQLHelper.ToList<TA.Data2021.Models.Style>(dt);
+            if (list.Count > 0)
+            {
+                result = list[0];
+            }
+            return result;
+        }
+
+        public List<TA.Data2021.Models.Style> GetByIsActiveAndIsActiveTAUSToList(bool isActive, bool isActiveTAUS)
+        {
+            List<TA.Data2021.Models.Style> result = new List<TA.Data2021.Models.Style>();
+            SqlParameter[] parameters =
+            {
+                new SqlParameter("@IsActive",isActive),
+                new SqlParameter("@IsActiveTAUS",isActiveTAUS),
+            };
+            DataTable dt = SQLHelper.Fill(AppGlobal.TheodoreAlexander_NewSQLServerConectionString, "sp_StyleSelectItemsByIsActiveAndIsActiveTAUS", parameters);
+            result = SQLHelper.ToList<TA.Data2021.Models.Style>(dt);
+
+            return result;
+        }
+        public List<TA.Data2021.Models.Style> GetByIsActiveToList(bool isActive)
+        {
+            List<TA.Data2021.Models.Style> result = new List<TA.Data2021.Models.Style>();
+            SqlParameter[] parameters =
+            {
+                new SqlParameter("@IsActive",isActive),                
+            };
+            DataTable dt = SQLHelper.Fill(AppGlobal.TheodoreAlexander_NewSQLServerConectionString, "sp_StyleSelectItemsByIsActive", parameters);
+            result = SQLHelper.ToList<TA.Data2021.Models.Style>(dt);
+
+            return result;
+        }
+
+    }
+}
+

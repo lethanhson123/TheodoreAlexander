@@ -1,0 +1,51 @@
+<form autocomplete="off" class="row" #form="ngForm" (submit)="onSubmit(form)">
+    <div class="col s6 m6 l9">
+        <h3 class="card-title"><b>Keyword: {{sEOKeywordService.formData.Title}}</b></h3>
+    </div>
+    <div class="col s6 m6 l3">
+        <button title="Save" type="submit" class="mb-6 btn-floating waves-effect waves-light cyan"><i
+                class="material-icons">save</i></button>&nbsp;&nbsp;&nbsp;
+        <a title="Close" class="mb-6 btn-floating waves-effect waves-light purple lightrn-1" (click)="onClose()">
+            <i class="material-icons">close</i>
+        </a>
+    </div>
+    <input name="ID" [(ngModel)]="sEOKeywordService.formData.ID" type="hidden">    
+    <div class="col s6 m6 l4">
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="Title">Title</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <input placeholder="Title" name="Title" [(ngModel)]="sEOKeywordService.formData.Title" type="text">
+            </div>
+        </div> 
+    </div>
+    <div class="col s6 m6 l4">
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="Code">Code</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <input placeholder="Code" name="Code" [(ngModel)]="sEOKeywordService.formData.Code" type="text">
+            </div>
+        </div> 
+    </div>
+    <div class="col s6 m6 l4">
+        <div class="col s6 m6 l12">
+            <div class="input-field">
+                <p>
+                    <label>
+                        <input type="checkbox" class="filled-in" name="Active"
+                            [(ngModel)]="sEOKeywordService.formData.Active" />
+                        <span>Active</span>
+                    </label>
+                </p>
+
+            </div>
+        </div> 
+    </div>
+</form>

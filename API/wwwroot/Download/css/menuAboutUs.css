@@ -1,0 +1,93 @@
+﻿.block_menu_desktop_item {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: #faf8f8;
+    top: 40px;
+    padding: 30px 30px;
+    z-index: 7;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.09);
+    background: linear-gradient(#f8f8f8, #e8e8e8);
+}
+
+    .block_menu_desktop_item ul {
+        line-height: 1.5rem;
+    }
+
+        .block_menu_desktop_item ul li {
+            padding: 5px 0;
+        }
+
+            .block_menu_desktop_item ul li h3 a {
+                font-size: 20px;
+                color: #000;
+            }
+
+            .block_menu_desktop_item ul li a {
+                font-size: 14px;
+                color: #000;
+            }
+
+@media (max-width: 1440px) {
+    .block_menu_desktop_item ul li a {
+        font-size: 13px;
+    }
+}
+
+.button_about ul li a {
+    font-size: 14px;
+    color: #969696 !important;
+}
+
+.block_menu_desktop_item ul li a:hover {
+    color: #eea501;
+}
+
+.block_menu_desktop_item h3 {
+    text-transform: uppercase;
+    font-family: "HurmeGeometricSans1-Regular";
+    line-height: 1rem;
+    margin: 10px 0;
+}
+
+.block_menu_desktop_item.block_menu_desktop_aboutus ul li {
+    text-align: center;
+}
+
+::ng-deep ngb-accordion .card {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+}
+
+::ng-deep ngb-accordion .card-body {
+    padding: 0;
+}
+
+::ng-deep ngb-accordion .card-header {
+    padding: 0;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+}
+
+::ng-deep ngb-accordion .btn-link {
+    color: #212121;
+    font-size: 14px;
+}
+
+.icon-arrow_menu_mobile, .icon-arrow_dropdown {
+    font-size: 8px;
+    margin: 0 0 0 5px;
+    vertical-align: middle;
+}
+
+::ng-deep ngb-accordion .btn:hover {
+    color: #eea501;
+}
+
+::ng-deep ngb-accordion .card-body .button_about ul li a {
+    color: #969696;
+}

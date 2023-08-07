@@ -1,0 +1,146 @@
+<form autocomplete="off" class="row" #form="ngForm" (submit)="onSubmit(form)">
+    <div class="col s6 m6 l9">
+        <h3 class="card-title"><b>Detail: {{bannerDetailService.formData.Name}}</b></h3>
+    </div>
+    <div class="col s6 m6 l3">
+        <button title="Save" type="submit" class="mb-6 btn-floating waves-effect waves-light cyan"><i
+                class="material-icons">save</i></button>&nbsp;&nbsp;&nbsp;
+        <a title="Close" class="mb-6 btn-floating waves-effect waves-light purple lightrn-1" (click)="onClose()">
+            <i class="material-icons">close</i>
+        </a>
+    </div>
+    <input name="ID" [(ngModel)]="bannerDetailService.formData.ID" type="hidden">
+    <input name="ParentID" [(ngModel)]="bannerDetailService.formData.ParentID" type="hidden">
+    <input name="ImageDesktop" [(ngModel)]="bannerDetailService.formData.ImageDesktop" type="hidden">
+    <input name="ImageMobile" [(ngModel)]="bannerDetailService.formData.ImageMobile" type="hidden">
+    <input name="ImageName" [(ngModel)]="bannerDetailService.formData.ImageName" type="hidden">
+    <input name="URLImageDesktop" [(ngModel)]="bannerDetailService.formData.URLImageDesktop" type="hidden">
+    <input name="URLImageMobile" [(ngModel)]="bannerDetailService.formData.URLImageMobile" type="hidden">
+    <input name="URLImageName" [(ngModel)]="bannerDetailService.formData.URLImageName" type="hidden">  
+    <div class="col s6 m6 l4">
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="Name">Name</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <input placeholder="Name" name="Name" [(ngModel)]="bannerDetailService.formData.Name" type="text">
+            </div>
+        </div>    
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="Description">Description</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <input placeholder="Description" name="Description" [(ngModel)]="bannerDetailService.formData.Description" type="text">
+            </div>
+        </div>    
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="QuickTitle">Quick Title</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <input placeholder="Quick Title" name="QuickTitle" [(ngModel)]="bannerDetailService.formData.QuickTitle" type="text">
+            </div>
+        </div>            
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="URL">URL</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <input placeholder="URL" name="URL" [(ngModel)]="bannerDetailService.formData.URL" type="text">
+            </div>
+        </div>            
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="SortOrder">Sort</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <input placeholder="Sort" name="SortOrder" [(ngModel)]="bannerDetailService.formData.SortOrder" type="text">
+            </div>
+        </div> 
+        <div class="col s12 m12 l4">
+            <div class="input-field">
+                <p>
+                    <label>
+                        <input type="checkbox" class="filled-in" name="Active"
+                            [(ngModel)]="bannerDetailService.formData.Active" />
+                        <span>Active</span>
+                    </label>
+                </p>
+            </div>
+        </div>
+        <div class="col s12 m12 l4">
+            <div class="input-field">
+                <p>
+                    <label>
+                        <input type="checkbox" class="filled-in" name="IsUSShow"
+                            [(ngModel)]="bannerDetailService.formData.IsUSShow" />
+                        <span>US</span>
+                    </label>
+                </p>
+            </div>
+        </div>
+        <div class="col s12 m12 l4">
+            <div class="input-field">
+                <p>
+                    <label>
+                        <input type="checkbox" class="filled-in" name="IsInternationalShow"
+                            [(ngModel)]="bannerDetailService.formData.IsInternationalShow" />
+                        <span>International</span>
+                    </label>
+                </p>
+            </div>
+        </div>      
+    </div>
+    <div class="col s6 m6 l8">
+        <div class="col s6 m6 l4">            
+            <div class="col s12 m12 l12">
+                <div class="input-field">
+                    <label for="ImageDesktop">Desktop</label>
+                </div>
+                <br/>
+                <br/>                
+                <input type="file" accept="image/*" (change)="changeImageDesktop($event)">
+                <br/>
+                <br/> 
+                <a target="_blank" style="border-color: #000000; border-style: solid; border-width: 1px;" *ngIf="bannerDetailService.formData.URLImageDesktop" title="{{bannerDetailService.formData.URLImageDesktop}}" href="{{bannerDetailService.formData.URLImageDesktop}}"><img width="200px" height="200px" title="{{bannerDetailService.formData.URLImageDesktop}}" alt="{{bannerDetailService.formData.URLImageDesktop}}" src="{{bannerDetailService.formData.URLImageDesktop}}"></a>
+            </div>
+        </div>
+        <div class="col s6 m6 l4">
+            <div class="col s12 m12 l12">
+                <div class="input-field">
+                    <label for="ImageMobile">Mobile</label>
+                </div>
+                <br/>
+                <br/>                
+                <input type="file" accept="image/*" (change)="changeImageMobile($event)">
+                <br/>
+                <br/> 
+                <a target="_blank" style="border-color: #000000; border-style: solid; border-width: 1px;" *ngIf="bannerDetailService.formData.URLImageMobile" title="{{bannerDetailService.formData.URLImageMobile}}" href="{{bannerDetailService.formData.URLImageMobile}}"><img width="200px" height="200px" title="{{bannerDetailService.formData.URLImageMobile}}" alt="{{bannerDetailService.formData.URLImageMobile}}" src="{{bannerDetailService.formData.URLImageMobile}}"></a>
+            </div>            
+        </div>
+        <div class="col s6 m6 l4">
+            <div class="col s12 m12 l12">
+                <div class="input-field">
+                    <label for="ImageName">Logo</label>
+                </div>
+                <br/>
+                <br/>                
+                <input type="file" accept="image/*" (change)="changeImageName($event)">
+                <br/>
+                <br/> 
+                <a target="_blank" style="border-color: #000000; border-style: solid; border-width: 1px;" *ngIf="bannerDetailService.formData.URLImageName" title="{{bannerDetailService.formData.URLImageName}}" href="{{bannerDetailService.formData.URLImageName}}"><img width="200px" height="200px" title="{{bannerDetailService.formData.URLImageName}}" alt="{{bannerDetailService.formData.URLImageName}}" src="{{bannerDetailService.formData.URLImageName}}"></a>
+            </div>               
+        </div>        
+    </div>      
+</form>

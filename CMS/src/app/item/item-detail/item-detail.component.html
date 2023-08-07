@@ -1,0 +1,68 @@
+<form autocomplete="off" class="row" #form="ngForm" (submit)="onSubmit(form)">
+    <div class="col s6 m6 l9">
+        <h3 class="card-title"><b>Item: {{itemService.formData.ProductName}}</b></h3>
+    </div>
+    <div class="col s6 m6 l3">
+        <button title="Save" type="submit" class="mb-6 btn-floating waves-effect waves-light cyan"><i
+                class="material-icons">save</i></button>&nbsp;&nbsp;&nbsp;
+        <a title="Close" class="mb-6 btn-floating waves-effect waves-light purple lightrn-1" (click)="onClose()">
+            <i class="material-icons">close</i>
+        </a>
+    </div>
+    <input name="ID" [(ngModel)]="itemService.formData.ID" type="hidden">    
+    <div class="col s4 m4 l4">
+        <div class="input-field">
+            <label for="Name">Product Name</label>
+        </div>
+    </div>
+    <div class="col s8 m8 l8">
+        <div class="input-field">      
+            <input placeholder="Name" name="Name" [(ngModel)]="itemService.formData.ProductName"
+            type="text">
+        </div>
+    </div>
+    <div class="col s4 m4 l4">
+        <div class="input-field">
+            <label for="SKU">SKU</label>
+        </div>
+    </div>
+    <div class="col s8 m8 l8">
+        <div class="input-field">      
+            <input placeholder="SKU" name="SKU" [(ngModel)]="itemService.formData.SKU"
+            type="text">
+        </div>
+    </div>
+    <div class="col s4 m4 l4">
+        <div class="input-field">
+            <label for="URLCode">URLCode</label>
+        </div>
+    </div>
+    <div class="col s8 m8 l8">
+        <div class="input-field">      
+            <input placeholder="URLCode" name="URLCode" [(ngModel)]="itemService.formData.URLCode"
+            type="text">
+        </div>
+    </div>   
+    <div class="col s4 m4 l4">
+        <div class="input-field">
+            <label for="Image">Image</label>
+        </div>
+    </div>
+    <div class="col s8 m8 l8">
+        <div class="input-field">      
+            <input placeholder="Image" name="Image" [(ngModel)]="itemService.formData.Image"
+            type="text">
+        </div>
+    </div>   
+    <div class="col s4 m4 l4">
+        <div class="input-field">
+            <label for="ImageSirv">ImageSirv</label>
+        </div>
+    </div>
+    <div class="col s8 m8 l8">
+        <div class="input-field">      
+            <input placeholder="ImageSirv" name="ImageSirv" [(ngModel)]="itemService.formData.ImageSirv"
+            type="text">
+        </div>
+    </div>   
+</form>

@@ -1,0 +1,103 @@
+<div class="row">
+    <div class="col s12">
+        <div class="container">
+            <div class="section section-data-tables">
+                <div class="row">
+                    <div class="col s12 m12 l12">
+                        <div class="card card card-default scrollspy">
+                            <div class="card-content">
+                                <div class="row">
+                                    <div class="col s10 m10 l10">
+                                        <h3 class="card-title"><b>Designer <span *ngIf="designerService.list">({{designerService.list.length}} items)</span></b></h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s6 m6 l10">
+                                        <input matInput [(ngModel)]="searchString" placeholder="Search by Name, URLCode"
+                                            autocomplete="off" (keyup)="onSearch()">
+                                    </div>
+                                    <div class="col s6 m6 l2">
+                                        <a title="Add" (click)="onAdd(0)"
+                                            class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                                class="material-icons">add</i></a>&nbsp;&nbsp;&nbsp;
+                                    </div>
+                                    <div class="KhungOverflow">
+                                        <table class="responsive-table">
+                                            <thead
+                                                style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>Icon</th>
+                                                    <th>Main</th>
+                                                    <th>Background</th>
+                                                    <th>Name</th>
+                                                    <th>Display Name</th>
+                                                    <th>URLCode</th>
+                                                    <th>Sort</th>
+                                                    <th>Active</th>
+                                                    <th>Story</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr *ngFor="let item of designerService.list; let i = index;">
+                                                    <td style="width:20px;">{{i +1 }}</td>
+                                                    <td><a *ngIf="item.ImageIcon" target="_blank"
+                                                            href="{{item.URLImageIcon}}" title="{{item.URLImageIcon}}">
+                                                            <img class="responsive-img" width="100px" height="100px"
+                                                                title="{{item.URLImageIcon}}"
+                                                                alt="{{item.URLImageIcon}}"
+                                                                src="{{item.URLImageMain}}?w=100&h=100"></a></td>
+                                                    <td><a *ngIf="item.ImageMain" target="_blank"
+                                                            href="{{item.URLImageMain}}" title="{{item.URLImageMain}}">
+                                                            <img class="responsive-img" width="100px" height="100px"
+                                                                title="{{item.URLImageMain}}"
+                                                                alt="{{item.URLImageMain}}"
+                                                                src="{{item.URLImageMain}}?w=100&h=100"></a></td>
+                                                    <td><a *ngIf="item.ImageBackground" target="_blank"
+                                                            href="{{item.URLImageBackground}}"
+                                                            title="{{item.URLImageBackground}}">
+                                                            <img class="responsive-img" width="100px" height="100px"
+                                                                title="{{item.URLImageBackground}}"
+                                                                alt="{{item.URLImageMain}}"
+                                                                src="{{item.URLImageBackground}}?w=100&h=100"></a></td>
+                                                    <td><b>{{item.Name}}</b></td>
+                                                    <td>{{item.DisplayName}}</td>
+                                                    <td>{{item.URLCode}}</td>
+                                                    <td>{{item.SortCode}}</td>
+                                                    <td>{{item.IsActive}}</td>
+                                                    <td>{{item.IsStory}}</td>
+                                                    <td><a title="View" (click)="onAdd(item.ID)"
+                                                            class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                                                class="material-icons">info</i></a></td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot
+                                                style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>Icon</th>
+                                                    <th>Main</th>
+                                                    <th>Background</th>
+                                                    <th>Name</th>
+                                                    <th>Display Name</th>
+                                                    <th>URLCode</th>
+                                                    <th>Sort</th>
+                                                    <th>Active</th>
+                                                    <th>Story</th>
+                                                    <th></th>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-loading *ngIf="isShowLoading"></app-loading>

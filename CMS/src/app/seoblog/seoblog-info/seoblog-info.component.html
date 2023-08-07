@@ -1,0 +1,212 @@
+<div class="row">
+    <div class="col s12">
+        <div id="input-fields" class="card card-tabs">
+            <form autocomplete="off" class="row" #form="ngForm" (submit)="onSubmit(form)">
+                <div class="card-content">
+                    <div class="card-title">
+                        <div class="row">
+                            <div class="col s6 m6 l10">
+                                <div class="col s4 m4 l2">
+                                    <a title="List" href="javascript:window.open('','_self').close();"
+                                        style="padding-top: 3px;"
+                                        class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                            class="material-icons">arrow_back</i></a>&nbsp;&nbsp;&nbsp;
+                                    <a target="_blank" title="Website"
+                                            href="{{website}}{{article}}/{{sEOBlogService.formData.URLCode}}.html" style="padding-top: 3px;"
+                                            class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                                class="material-icons">public</i></a>&nbsp;&nbsp;&nbsp;
+                                    <button title="Save" type="submit" style="padding-top: 3px;"
+                                        class="mb-6 btn-floating waves-effect waves-light cyan"><i
+                                            class="material-icons">save</i></button>
+                                </div>
+                                <div class="col s6 m6 l10">
+                                    <h3 class="card-title">Blog:
+                                        <b>{{sEOBlogService.formData.Title}}</b></h3>
+                                </div>
+                            </div>
+                            <div class="col s6 m6 l2">
+                                <ul class="tabs">
+                                    <li class="tab col s12 p-0"><a class="active p-0" href="#ItemInfo">Info</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ItemInfo">
+                        <input name="ID" [(ngModel)]="sEOBlogService.formData.ID" type="hidden">
+                        <div class="row">
+                            <div class="col s12 m12 l6">                                
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="Title">Title</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Title" name="Title"
+                                            [(ngModel)]="sEOBlogService.formData.Title" type="text">
+                                    </div>
+                                </div>        
+                                
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="Description">Description</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="Description" name="Description"
+                                            [(ngModel)]="sEOBlogService.formData.Description" type="text">
+                                    </div>
+                                </div>                         
+                               
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="METAKeyword">METAKeyword</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="METAKeyword" name="METAKeyword"
+                                            [(ngModel)]="sEOBlogService.formData.METAKeyword" type="text">
+                                    </div>
+                                </div>  
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="METADescription">METADescription</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="METADescription" name="METADescription"
+                                            [(ngModel)]="sEOBlogService.formData.METADescription" type="text">
+                                    </div>
+                                </div>  
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="URLCode">URLCode</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <input placeholder="URLCode" name="URLCode"
+                                            [(ngModel)]="sEOBlogService.formData.URLCode" type="text">
+                                    </div>
+                                </div>    
+                                <div class="col s12 m12 l6">                                                                           
+                                        <a target="_blank" style="border-color: #000000; border-style: solid; border-width: 1px;" *ngIf="sEOBlogService.formData.URLImage" title="{{sEOBlogService.formData.URLImage}}" href="{{sEOBlogService.formData.URLImage}}"><img width="100px" height="100px" title="{{sEOBlogService.formData.URLImage}}" alt="{{sEOBlogService.formData.URLImage}}" src="{{sEOBlogService.formData.URLImage}}"></a>                                    
+                                </div>    
+                                <div class="col s12 m12 l6">                                                                           
+                                    <div class="input-field">
+                                        <p>
+                                            <label>
+                                                <input type="checkbox" class="filled-in" name="Active"
+                                                    [(ngModel)]="sEOBlogService.formData.Active" />
+                                                <span>Active</span>
+                                            </label>
+                                        </p>
+                                    </div>
+                                </div>                                                                                                   
+                            </div>
+                            <div class="col s12 m12 l6">   
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="SEOBlogTemplateContent">SEOBlogTemplateContent</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <textarea placeholder="SEOBlogTemplateContent" name="SEOBlogTemplateContent" class="materialize-textarea"
+                                            [(ngModel)]="sEOBlogService.formData.SEOBlogTemplateContent" type="text"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l4">
+                                    <div class="input-field">
+                                        <label for="DesignerContent">DesignerContent</label>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6 l8">
+                                    <div class="input-field">
+                                        <textarea placeholder="DesignerContent" name="DesignerContent" class="materialize-textarea"
+                                            [(ngModel)]="sEOBlogService.formData.DesignerContent" type="text"></textarea>
+                                    </div>
+                                </div>       
+                                              
+                            </div>                                                  
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>  
+        <div id="input-fields" class="card card-tabs">            
+            <div class="card-content">                 
+                <div id="ItemInfo">                        
+                        <div class="row">
+                            <div class="col s12 m12 l4">        
+                                <div class="KhungOverflow">
+                                    <table class="responsive-table">
+                                        <thead
+                                            style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                            <tr>           
+                                                <th>No</th>                                         
+                                                <th>Store ({{sEOBlogStoreService.list.length}})</th>
+                                                <th>Address</th>                                                
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of sEOBlogStoreService.list; let i = index;">      
+                                                <td style="width:20px;">{{i +1 }}</td>                                                  
+                                                <td>{{item.Title}}</td>       
+                                                <td>{{item.Address}}</td>                                                                                                
+                                            </tr>
+                                        </tbody>                                        
+                                    </table>                                    
+                                </div>                        
+                            </div>
+                            <div class="col s12 m12 l4">   
+                                <div class="KhungOverflow">      
+                                    <table class="responsive-table">
+                                        <thead
+                                            style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                            <tr>         
+                                                <th>No</th>                                           
+                                                <th>Type ({{sEOBlogTypeService.list.length}})</th>                                                                                             
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of sEOBlogTypeService.list; let i = index;">       
+                                                <td style="width:20px;">{{i +1 }}</td>                                                 
+                                                <td>{{item.Title}}</td>                                                       
+                                            </tr>
+                                        </tbody>                                        
+                                    </table>                                   
+                                </div>                      
+                            </div>
+                            <div class="col s12 m12 l4">    
+                                <table class="responsive-table">
+                                    <thead
+                                        style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                        <tr>      
+                                            <th>No</th>                                              
+                                            <th>Product name ({{sEOBlogItemService.list.length}})</th>
+                                            <th>SKU</th>                                                
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let item of sEOBlogItemService.list; let i = index;">     
+                                            <td style="width:20px;">{{i +1 }}</td>                                                   
+                                            <td>{{item.Title}}</td>                                                       
+                                            <td>{{item.CodeManage}}</td>  
+                                        </tr>
+                                    </tbody>                                        
+                                </table>                              
+                            </div>
+                        </div>
+                </div>
+            </div>            
+        </div>           
+    </div>
+</div>
+<app-loading *ngIf="isShowLoading"></app-loading>

@@ -1,0 +1,101 @@
+<div class="row">
+    <div class="col s12">
+        <div class="container">
+            <div class="section section-data-tables">
+                <div class="row">
+                    <div class="col s12 m12 l12">
+                        <div class="card card card-default scrollspy">
+                            <div class="card-content">
+                                <div class="row">
+                                    <div class="col s10 m10 l10">
+                                        <h3 class="card-title"><b>SEO Keyword</b></h3>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s6 m6 l2">  
+                                        <mat-select class="browser-default"
+                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                            name="countryID" [(ngModel)]="countryID">                                            
+                                            <mat-option *ngFor="let item of countryService.list" [value]="item.ID">
+                                                {{item.Name}}
+                                            </mat-option>
+                                        </mat-select>                                                                                 
+                                    </div>                                    
+                                    <div class="col s6 m6 l1">  
+                                        <button title="Search" (click)="onSearch()"
+                                            class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                                class="material-icons">search</i></button>&nbsp;&nbsp;&nbsp;                                                                                                                                                                      
+                                    </div>     
+                                    <div class="col s6 m6 l5">   
+                                        <input type="text" [(ngModel)]="uRLCodeList" placeholder="uRLCodeList">                                                                               
+                                    </div>   
+                                    <div class="col s6 m6 l4">   
+                                        <button title="Image" (click)="onInitializationHTMLKeywordPageInLIVEByURLCodeList()"
+                                        class="mb-6 btn waves-effect waves-light green darken-1">Keyword HTML page</button>&nbsp;&nbsp;&nbsp;                                                                           
+                                    </div>           
+                                    <div class="KhungOverflow">
+                                        <table class="responsive-table">
+                                            <thead
+                                                style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                                <tr>
+                                                    <th>No</th>                                                    
+                                                    <th>Keyword</th>
+                                                    <th>Count</th>         
+                                                    <th>Begin</th>     
+                                                    <th>End</th>                                                                                                           
+                                                    <th>HTML page</th>
+                                                    <th>Sitemap</th>
+                                                    <th>Create</th>
+                                                    <th>Delete</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr
+                                                    *ngFor="let item of sEOBlogService.list; let i = index;">
+                                                    <td style="width:20px;">{{i +1 }}</td>                                                    
+                                                    <td><b>{{item.Keyword}}</b></td>
+                                                    <td>{{item.Count}}</td>          
+                                                    <td><input type="number" [(ngModel)]="item.RowBegin"></td>                    
+                                                    <td><input type="number" [(ngModel)]="item.RowEnd"></td>
+                                                    <td><a title="HTML page" (click)="onHTMLPage(item)"
+                                                        class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                                            class="material-icons">sync</i></a></td>
+                                                    <td><a title="Sitemap" (click)="onSitemap(item)"
+                                                        class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                                            class="material-icons">cloud_upload</i></a></td>
+                                                    <td><a title="Create" (click)="onCreate(item)"
+                                                        class="mb-6 btn-floating waves-effect waves-light cyan"><i
+                                                            class="material-icons">save</i></a></td>    
+                                                    <td><a title="Delete" (click)="onDelete(item)"
+                                                        class="mb-6 btn-floating waves-effect waves-light red accent-2"><i
+                                                            class="material-icons">delete_outline</i></a></td>                                       
+                                                </tr>
+                                            </tbody>
+                                            <tfoot
+                                                style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                                <tr>
+                                                    <th>No</th>                                                    
+                                                    <th>Keyword</th>
+                                                    <th>Count</th>         
+                                                    <th>Begin</th>     
+                                                    <th>End</th>                                                                                                           
+                                                    <th>HTML page</th>
+                                                    <th>Sitemap</th>
+                                                    <th>Create</th>
+                                                    <th>Delete</th>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>                             
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<app-loading *ngIf="isShowLoading"></app-loading>

@@ -1,0 +1,108 @@
+<div class="row">
+    <div class="col s12">
+        <div class="container">
+            <div class="section section-data-tables">
+                <div class="row">
+                    <div class="col s12 m12 l12">
+                        <div class="card card card-default scrollspy">
+                            <div class="card-content">
+                                <div class="row">
+                                    <div class="col s10 m10 l10">
+                                        <h3 class="card-title"><b>City <span *ngIf="cityService.list">({{cityService.list.length}} items)</span></b></h3>
+                                    </div>
+                                </div>
+                                <div class="row">     
+                                    <div class="col s6 m6 l4">
+                                        <mat-select class="browser-default"
+                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                            name="countryID" [(ngModel)]="countryID" (selectionChange)="onCountryChange()">                                            
+                                            <mat-option *ngFor="let item of countryService.list" [value]="item.ID">
+                                                {{item.Name}}
+                                            </mat-option>
+                                        </mat-select>      
+                                    </div>  
+                                    <div class="col s6 m6 l4">
+                                        <mat-select class="browser-default"
+                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                            name="regionID" [(ngModel)]="regionID">                                            
+                                            <mat-option *ngFor="let item of regionService.list" [value]="item.ID">
+                                                {{item.Name}}
+                                            </mat-option>
+                                        </mat-select>      
+                                    </div>  
+                                    <div class="col s6 m6 l2">
+                                        <input matInput [(ngModel)]="searchString"
+                                            placeholder="Search by Name"
+                                            autocomplete="off">
+                                    </div>          
+                                    <div class="col s6 m6 l2">       
+                                        <button title="Search" (click)="onSearch()"
+                                            class="mb-6 btn-floating waves-effect waves-light green darken-1"><i
+                                                class="material-icons">search</i></button>&nbsp;&nbsp;&nbsp;                                
+                                    </div>                                          
+                                    <div class="KhungOverflow">
+                                        <table class="responsive-table">
+                                            <thead
+                                                style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                                <tr>
+                                                    <th>No</th>    
+                                                    <th>Region</th>                                                  
+                                                    <th>Name</th>                                                      
+                                                    <th>Latitude</th>                                                      
+                                                    <th>Longitude</th>                                                      
+                                                    <th>Population</th>                                                      
+                                                    <th>Timezone</th>                                                      
+                                                    <th>GMToffset</th>                                                      
+                                                    <th></th>    
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr
+                                                    *ngFor="let item of cityService.list; let i = index;">
+                                                    <td style="width:20px;">{{i +1 }}</td>     
+                                                    <td style="width:200px;">
+                                                        <mat-select class="browser-default"
+                                                            style="border-bottom-color: #000000; border-bottom-width: 1px; border-bottom-style: solid; padding: 10px;"
+                                                            name="item.Region_ID" [(ngModel)]="item.Region_ID">                                            
+                                                            <mat-option *ngFor="let region of regionService.list" [value]="region.ID">
+                                                                {{region.Name}}
+                                                            </mat-option>
+                                                        </mat-select>      
+                                                    </td>                                                                                                                                           
+                                                    <td><input name="Name" type="text" [(ngModel)]="item.Name"></td>      
+                                                    <td><input name="Latitude" type="text" [(ngModel)]="item.Latitude"></td>   
+                                                    <td><input name="Longitude" type="text" [(ngModel)]="item.Longitude"></td>   
+                                                    <td><input name="Population" type="text" [(ngModel)]="item.Population"></td>   
+                                                    <td><input name="Timezone" type="text" [(ngModel)]="item.Timezone"></td>   
+                                                    <td><input name="GMToffset" type="text" [(ngModel)]="item.GMToffset"></td>                                                        
+                                                    <td>                                                       
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot
+                                                style="background-color: #f5f5f5; color: #000000; font-weight: bold;">
+                                                <tr>
+                                                    <th>No</th>    
+                                                    <th>Region</th>                                                  
+                                                    <th>Name</th>                                                      
+                                                    <th>Latitude</th>                                                      
+                                                    <th>Longitude</th>                                                      
+                                                    <th>Population</th>                                                      
+                                                    <th>Timezone</th>                                                      
+                                                    <th>GMToffset</th>                                                      
+                                                    <th></th>   
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-loading *ngIf="isShowLoading"></app-loading>

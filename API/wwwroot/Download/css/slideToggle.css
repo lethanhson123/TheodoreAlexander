@@ -1,0 +1,36 @@
+﻿:host {
+    min-width: 120px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 1199.98px) {
+    :host {
+        min-width: 60px;
+    }
+}
+
+:host .toogle-top-header {
+    font-family: 'HurmeGeometricSans1-Light';
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #4b4b4b;
+}
+
+@media (max-width: 1199.98px) {
+    :host .toogle-top-header {
+        font-size: 13px;
+        color: #212121;
+    }
+}
+
+:host ::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    width: 32px;
+    height: 12px;
+}
+
+:host ::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+    height: 18px;
+    width: 18px;
+}

@@ -1,0 +1,90 @@
+﻿input[type="checkbox"]
+{    
+    width:20px;
+    height:20px;   
+    background-color:transparent;
+    
+}
+
+
+a {
+    color: #000000;
+}
+
+    a:hover {
+        color: #dc0609;
+    }
+
+body {
+    font-family:Montserrat;
+}
+
+footer {
+    color: #ffffff;
+}
+
+    footer a {
+        color: #ffffff;
+    }
+
+    footer ul li {
+        list-style: none;
+        margin-left: -30px;
+    }
+
+.ProductItem {     
+    padding: 0px;
+    margin-bottom:-8px;
+    margin-top:10px;
+    margin-right:-28px;
+    border-color: #dc0609;
+    border-style: solid;
+    border-width: 1px;
+}
+.ProductItem1 {
+    height:570px;        
+    padding: 2px;
+    margin-bottom:-8px;
+    margin-top:10px;
+    margin-right:-28px;
+    border-color: #dc0609;
+    border-style: solid;
+    border-width: 1px;
+}
+.ProductItem2 {
+    height:420px;        
+    padding: 2px;
+    margin-bottom:-8px;
+    margin-top:10px;
+    margin-right:-28px;
+    border-color: #dc0609;
+    border-style: solid;
+    border-width: 1px;
+}
+    .ProductItem:hover {
+        border-color: #dc0609;
+        border-style: solid;
+        border-width: 1px;
+    }
+@media (max-width:768px) {
+   .ProductItem {
+    height:300px;  
+    }
+    .ProductItem1 {
+    height:340px;  
+    }
+     .ProductItem2 {
+    height:260px;  
+    }
+}
+#MyAlert
+{
+    width:300px;
+    height:auto;
+     position: absolute;  
+    left:0;
+    right:0;
+    bottom: 0;       
+    z-index: 1050;
+}
+

@@ -1,0 +1,183 @@
+
+<nz-modal [(nzVisible)]="isVisibleThankPopup" (nzOnCancel)="onOpenApply(false)"
+nzCancelText="Đóng" (nzOnOk)="null" [nzOkText]="null">
+<ng-container *nzModalTitle>
+    <div class="successfully-apply">
+        <span>Ứng Tuyển Thành Công</span>
+    </div>
+</ng-container>
+<ng-container *nzModalContent>
+    <div class="content-apply">
+        <label>Cám ơn bạn đã ứng tuyển cho công việc <b>{{hR_Recruitment_CareerService.formData.JobFunction}}</b><span
+                *ngIf="hR_Recruitment_CareerService.formData.Experience"> với kinh nghiệm <b>{{hR_Recruitment_CareerService.formData.Experience}}</b></span></label>
+        <label>Bộ phận nhân sự sẽ liên lạc với bạn theo thông tin dưới đây:</label>
+        <div style="font-weight: 500;">Họ tên: <b>{{hR_Recruitment_CareerService.formData.FullName}}</b></div>
+        <div style="font-weight: 500;">Điện thoại: <b>{{hR_Recruitment_CareerService.formData.Phone}}</b></div>
+        <div style="font-weight: 500;" *ngIf="hR_Recruitment_CareerService.formData.Email">Email:
+            <b>{{hR_Recruitment_CareerService.formData.Email}}</b>
+        </div>
+    </div>
+</ng-container>
+</nz-modal>
+
+
+<div class="ta-career-page">
+    <div class="wrap-ta-career">
+        <div class="main-section1">
+            <div class="container-career1">
+                <div class="align-items-center top-reverse top-recruitment">
+                    <div class="ta-popup-career">
+                        <form autocomplete="off" #form="ngForm" (submit)="onSubmit()">
+                            <div class="title-dkut-career">
+                                <a routerLink="/tuyen-dung"><i class="bi-backspace"></i></a>
+                                <span>Thông tin ứng viên</span>
+                            </div>
+                            <input name="ID" [(ngModel)]="hR_Recruitment_CareerService.formData.ID" type="hidden">
+                            <div class="ta-name-career" style="padding: 30px;">
+                                <div>
+                                    <label class="lable-input-career"> Họ tên (*) <b style="color: red;">{{fullNameError}}</b></label>
+                                    <input cdkFocusInitial placeholder="Họ tên (*)"
+                                        [(ngModel)]="hR_Recruitment_CareerService.formData.FullName" name="FullName" nz-input
+                                        nzSize="large" (ngModelChange)="onCheckSubmit()">
+                                </div>
+                                <div>
+                                    <label class="lable-input-career"> Điện thoại (*) <b style="color: red;">{{phoneError}}</b></label>
+                                    <input placeholder="Điện thoại (*)"
+                                        [(ngModel)]="hR_Recruitment_CareerService.formData.Phone" name="Phone" nz-input
+                                        nzSize="large" (ngModelChange)="onCheckSubmit()">
+                                </div>
+                                <div>
+                                    <label class="lable-input-career"> Địa chỉ</label>
+                                    <input placeholder="Địa chỉ" [(ngModel)]="hR_Recruitment_CareerService.formData.Address"
+                                        name="Address" nz-input
+                                        nzSize="large">
+                                </div>
+                                <div>
+                                    <label class="lable-input-career"> Email</label>
+                                    <input placeholder="Email" [(ngModel)]="hR_Recruitment_CareerService.formData.Email"
+                                        name="Email" nz-input
+                                        nzSize="large">
+                                </div>
+                                <div>
+                                    <label class="lable-input-career">Công việc ứng tuyển</label>
+                                    <input placeholder="Công việc ứng tuyển"
+                                        [(ngModel)]="hR_Recruitment_CareerService.formData.JobFunction"
+                                        name="JobFunction" nz-input
+                                        nzSize="large" [nzAutocomplete]="auto" style="position: relative;" />
+                                    <nz-autocomplete #auto>
+                                        <nz-auto-option nzValue="Lao động phổ thông">Kỹ Sư Công Nghiệp </nz-auto-option>
+                                        <nz-auto-option nzValue="Lao động phổ thông">Lập Trình Viên ERP </nz-auto-option>
+                                        <nz-auto-option nzValue="Lao động phổ thông">Nhân Viên Kế Hoạch </nz-auto-option>
+                                        <nz-auto-option nzValue="Lao động phổ thông">Kỹ Sư Sản Xuất </nz-auto-option>
+                                        <nz-auto-option nzValue="Lao động phổ thông">Nhân Viên Kiểm Tra / Kiểm Soát Chất Lượng </nz-auto-option>
+                                        <nz-auto-option nzValue="Lao động phổ thông">Quản Lý Nhà Thầu Phụ </nz-auto-option>
+                                        <nz-auto-option nzValue="Lao động phổ thông">Nhân Viên Thiết Kế Đồ Họa </nz-auto-option>
+                                        <nz-auto-option nzValue="Lao động phổ thông">------------------------------ </nz-auto-option>
+                                        <nz-auto-option nzValue="Lao động phổ thông">Thợ vận hành máy CNC</nz-auto-option>
+                                        <nz-auto-option nzValue="Lao động phổ thông">Đóng Gói</nz-auto-option>
+                                        <nz-auto-option nzValue="Lao động phổ thông">Thợ Ráp Đồng </nz-auto-option>
+                                        <nz-auto-option nzValue="Lao động phổ thông">Thợ Phun Sơn </nz-auto-option>
+                                        <nz-auto-option nzValue="Lao động phổ thông">Thợ Mộc </nz-auto-option>
+                                        <nz-auto-option nzValue="Lao động phổ thông">Thợ Lắp Ráp </nz-auto-option>
+                                        <nz-auto-option nzValue="Sơn phun / Hoàn thiện màu">Sơn Phun / Hoàn Thiện Màu</nz-auto-option>
+                                        <nz-auto-option nzValue="Công nhân bọc ghế">Công Nhân Bọc Ghế</nz-auto-option>
+                                        <nz-auto-option nzValue="Công nhân chà nhám">Công Nhân Chà Nhám</nz-auto-option>
+                                        <nz-auto-option nzValue="Lao động phổ thông">Lao Động Phổ Thông</nz-auto-option>
+                                    </nz-autocomplete>
+                                </div>
+                                <div>
+                                    <label class="lable-input-career">Kinh nghiệm</label>
+                                    <textarea placeholder="Kinh nghiệm: ví dụ, 03 năm làm nghề mộc"
+                                        [(ngModel)]="hR_Recruitment_CareerService.formData.Experience" name="Experience" nz-input
+                                        nzSize="large"
+                                        rows="2"></textarea>
+                                </div>
+                                <div>
+                                    <label class="lable-get-info">
+                                        Bạn thấy thông tin tuyển dụng từ đâu?
+                                    </label>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox"
+                                                    [(ngModel)]="hR_Recruitment_CareerService.formData.IsBanner"
+                                                    name="IsBanner" style="cursor: pointer;" />
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span style="padding: 5px;">Băng rôn/Áp
+                                                        phích</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox"
+                                                    [(ngModel)]="hR_Recruitment_CareerService.formData.IsFacebook"
+                                                    name="IsFacebook" style="cursor: pointer;" />
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span style="padding: 5px;">Facebook</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox"
+                                                    [(ngModel)]="hR_Recruitment_CareerService.formData.IsZalo"
+                                                    name="IsZalo" style="cursor: pointer;" />
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span style="padding: 5px;">Zalo</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox"
+                                                    [(ngModel)]="hR_Recruitment_CareerService.formData.IsFriend"
+                                                    name="IsFriend" style="cursor: pointer;" />
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <span style="padding: 5px;">Người thân</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div *ngIf="hR_Recruitment_CareerService.formData.IsFriend">                                    
+                                    <div>
+                                        <label class="lable-input-career"> Điện thoại người thân</label>
+                                        <input placeholder="Điện thoại"
+                                            [(ngModel)]="hR_Recruitment_CareerService.formData.RecommendPhone"
+                                            name="RecommendPhone" nz-input
+                                            nzSize="large">
+                                    </div>
+                                    <div>
+                                        <label class="lable-input-career"> Tên người thân</label>
+                                        <input placeholder="Người thân"
+                                            [(ngModel)]="hR_Recruitment_CareerService.formData.RecommendFullName"
+                                            name="RecommendFullName" nz-input
+                                            nzSize="large">
+                                    </div>
+                                </div>                               
+                                <div>    
+                                    <button class="submit-btn-career"  title="Gửi" type="submit">Gửi</button>                     
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>        
+        <div class="nav_right">
+            <div class="button-floating-introduce">
+                <a routerLink="/nguoi-gioi-thieu" title="Giới thiệu">
+                    <span>Giới thiệu</span>
+                </a>
+            </div>
+            <div class="button-floating">
+                <a routerLink="/ung-vien" title="Đăng ký ngay">
+                    <span>Đăng ký ngay</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

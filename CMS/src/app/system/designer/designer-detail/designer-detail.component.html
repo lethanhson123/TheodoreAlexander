@@ -1,0 +1,208 @@
+<form autocomplete="off" class="row" #form="ngForm" (submit)="onSubmit(form)">
+    <div class="col s6 m6 l9">
+        <h3 class="card-title"><b>Designer: {{designerService.formData.Name}}</b></h3>
+    </div>
+    <div class="col s6 m6 l3">
+        <button title="Save" type="submit" class="mb-6 btn-floating waves-effect waves-light cyan"><i
+                class="material-icons">save</i></button>&nbsp;&nbsp;&nbsp;
+        <a title="Close" class="mb-6 btn-floating waves-effect waves-light purple lightrn-1" (click)="onClose()">
+            <i class="material-icons">close</i>
+        </a>
+    </div>
+    <input name="ID" [(ngModel)]="designerService.formData.ID" type="hidden">
+    <input name="ImageIcon" [(ngModel)]="designerService.formData.ImageIcon" type="hidden">
+    <input name="ImageMain" [(ngModel)]="designerService.formData.ImageMain" type="hidden">
+    <input name="ImageBackground" [(ngModel)]="designerService.formData.ImageBackground" type="hidden">
+    <div class="col s6 m6 l6">
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="Name">Name</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <input placeholder="Name" name="Name" [(ngModel)]="designerService.formData.Name" type="text">
+            </div>
+        </div>
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="DisplayName">Display Name</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <input placeholder="Display Name" name="DisplayName" [(ngModel)]="designerService.formData.DisplayName"
+                    type="text">
+            </div>
+        </div>
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="Title001">Title 001</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <input placeholder="Title 001" name="Title001" [(ngModel)]="designerService.formData.Title001"
+                    type="text">
+            </div>
+        </div>
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="Title002">Title 002</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <input placeholder="Title 002" name="Title002" [(ngModel)]="designerService.formData.Title002"
+                    type="text">
+            </div>
+        </div>        
+        
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="Description">Description</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <input placeholder="Description" name="Description" [(ngModel)]="designerService.formData.Description"
+                    type="text">
+            </div>
+        </div>
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="DescriptionLong">Description long</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <input placeholder="Description long" name="DescriptionLong" [(ngModel)]="designerService.formData.DescriptionLong"
+                    type="text">
+            </div>
+        </div>        
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="SortCode">Sort</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <input placeholder="Sort" name="SortCode" [(ngModel)]="designerService.formData.SortCode" type="text">
+            </div>
+        </div>
+        <div class="col s12 m12 l12">
+            <div class="col s6 m6 l4">
+                <div class="input-field">
+                    <p>
+                        <label>
+                            <input type="checkbox" class="filled-in" name="IsActive"
+                                [(ngModel)]="designerService.formData.IsActive" />
+                            <span>Active</span>
+                        </label>
+                    </p>
+    
+                </div>
+            </div>
+            <div class="col s6 m6 l4">
+                <div class="input-field">
+                    <p>
+                        <label>
+                            <input type="checkbox" class="filled-in" name="IsStory"
+                                [(ngModel)]="designerService.formData.IsStory" />
+                            <span>Story</span>
+                        </label>
+                    </p>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col s6 m6 l6">        
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="URLCode">URLCode</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <input placeholder="URLCode" name="URLCode" [(ngModel)]="designerService.formData.URLCode" type="text">
+            </div>
+        </div>
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="METAKeyword">METAKeyword</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <input placeholder="METAKeyword" name="METAKeyword" [(ngModel)]="designerService.formData.METAKeyword"
+                    type="text">
+            </div>
+        </div>
+        <div class="col s4 m4 l4">
+            <div class="input-field">
+                <label for="METADescription">METADescription</label>
+            </div>
+        </div>
+        <div class="col s8 m8 l8">
+            <div class="input-field">
+                <input placeholder="METADescription" name="METADescription"
+                    [(ngModel)]="designerService.formData.METADescription" type="text">
+            </div>
+        </div>        
+        <div class="col s12 m12 l4">
+            <div class="input-field">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="ImageIcon">Icon</label>
+                        </td>
+                        <td>
+                            <input type="file" accept="image/*" (change)="changeImageIcon($event)">
+                        </td>
+                    </tr>
+                </table>                              
+                <a target="_blank" href="{{designerService.formData.URLImageIcon}}" *ngIf="designerService.formData.URLImageIcon"
+                    title="{{designerService.formData.URLImageIcon}}">
+                    <img class="responsive-img" width="100%" title="{{designerService.formData.URLImageIcon}}" *ngIf="designerService.formData.URLImageIcon"
+                        alt="{{designerService.formData.URLImageIcon}}" [src]="designerService.formData.URLImageIcon"></a>
+            </div>
+        </div>  
+        <div class="col s12 m12 l4">
+            <div class="input-field">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="ImageMain">Main</label>
+                        </td>
+                        <td>
+                            <input type="file" accept="image/*" (change)="changeImageMain($event)">
+                        </td>
+                    </tr>
+                </table>                     
+                <a target="_blank" href="{{designerService.formData.URLImageMain}}" *ngIf="designerService.formData.URLImageMain"
+                    title="{{designerService.formData.URLImageMain}}">
+                    <img class="responsive-img" width="100%" title="{{designerService.formData.URLImageMain}}" *ngIf="designerService.formData.URLImageMain"
+                        alt="{{designerService.formData.URLImageMain}}" [src]="designerService.formData.URLImageMain"></a>
+            </div>
+        </div>        
+        <div class="col s12 m12 l4">
+            <div class="input-field">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="ImageBackground">Background</label>
+                        </td>
+                        <td>
+                            <input type="file" accept="image/*" (change)="changeImageBackground($event)">
+                        </td>
+                    </tr>
+                </table>                     
+                <a target="_blank" href="{{designerService.formData.URLImageBackground}}" *ngIf="designerService.formData.URLImageBackground"
+                title="{{designerService.formData.URLImageBackground}}">
+                <img class="responsive-img" width="100%" title="{{designerService.formData.URLImageBackground}}" *ngIf="designerService.formData.URLImageBackground"
+                    alt="{{designerService.formData.URLImageBackground}}" [src]="designerService.formData.URLImageBackground"></a>
+            </div>
+        </div>                
+    </div>
+</form>
